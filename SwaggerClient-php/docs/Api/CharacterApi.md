@@ -33,7 +33,7 @@ Public information about a character  --- Alternate route: `/v4/characters/{char
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\CharacterApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\CharacterApi();
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
@@ -87,7 +87,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CharacterApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\CharacterApi();
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -143,7 +143,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CharacterApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\CharacterApi();
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $page = 1; // int | Which page of results to return
@@ -201,7 +201,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CharacterApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\CharacterApi();
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -254,7 +254,7 @@ Get a list of all the corporations a character has been a member of  --- Alterna
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\CharacterApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\CharacterApi();
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
@@ -308,7 +308,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CharacterApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\CharacterApi();
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -364,7 +364,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CharacterApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\CharacterApi();
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -420,7 +420,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CharacterApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\CharacterApi();
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -476,7 +476,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CharacterApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\CharacterApi();
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -529,7 +529,7 @@ Get portrait urls for a character  --- Alternate route: `/v2/characters/{charact
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\CharacterApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\CharacterApi();
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
@@ -583,7 +583,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CharacterApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\CharacterApi();
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -639,7 +639,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CharacterApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\CharacterApi();
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -692,7 +692,7 @@ Resolve a set of character IDs to character names  --- Alternate route: `/v1/cha
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\CharacterApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\CharacterApi();
 $character_ids = array(56); // int[] | A comma separated list of character IDs
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
@@ -743,8 +743,8 @@ Bulk lookup of character IDs to corporation, alliance and faction  --- Alternate
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\CharacterApi(new \Http\Adapter\Guzzle6\Client());
-$characters = array(new \Swagger\Client\Model\int[]()); // int[] | The character IDs to fetch affiliations for. All characters must exist, or none will be returned.
+$api_instance = new Swagger\Client\Api\CharacterApi();
+$characters = array(new int[]()); // int[] | The character IDs to fetch affiliations for. All characters must exist, or none will be returned.
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
@@ -797,7 +797,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CharacterApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\CharacterApi();
 $character_id = 56; // int | An EVE character ID
 $characters = new \Swagger\Client\Model\PostCharactersCharacterIdCspaCharacters(); // \Swagger\Client\Model\PostCharactersCharacterIdCspaCharacters | The target characters to calculate the charge for
 $datasource = "tranquility"; // string | The server name you would like data from
@@ -819,7 +819,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **character_id** | **int**| An EVE character ID |
- **characters** | [**\Swagger\Client\Model\PostCharactersCharacterIdCspaCharacters**](../Model/PostCharactersCharacterIdCspaCharacters.md)| The target characters to calculate the charge for |
+ **characters** | [**\Swagger\Client\Model\PostCharactersCharacterIdCspaCharacters**](../Model/\Swagger\Client\Model\PostCharactersCharacterIdCspaCharacters.md)| The target characters to calculate the charge for |
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **token** | **string**| Access token to use if unable to set a header | [optional]
  **user_agent** | **string**| Client identifier, takes precedence over headers | [optional]

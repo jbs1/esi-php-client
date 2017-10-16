@@ -21,7 +21,7 @@ Shows sovereignty data for campaigns.  --- Alternate route: `/v1/sovereignty/cam
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\SovereigntyApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\SovereigntyApi();
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
@@ -70,7 +70,7 @@ Shows sovereignty information for solar systems  --- Alternate route: `/v1/sover
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\SovereigntyApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\SovereigntyApi();
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
@@ -119,7 +119,7 @@ Shows sovereignty data for structures.  --- Alternate route: `/v1/sovereignty/st
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\SovereigntyApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\SovereigntyApi();
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent

@@ -19,11 +19,11 @@ Get the systems between origin and destination  --- Alternate route: `/legacy/ro
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\RoutesApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\RoutesApi();
 $destination = 56; // int | destination solar system ID
 $origin = 56; // int | origin solar system ID
 $avoid = array(56); // int[] | avoid solar system ID(s)
-$connections = array(new \Swagger\Client\Model\int[]()); // int[][] | connected solar system pairs
+$connections = array(new int[]()); // int[][] | connected solar system pairs
 $datasource = "tranquility"; // string | The server name you would like data from
 $flag = "shortest"; // string | route security preference
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers

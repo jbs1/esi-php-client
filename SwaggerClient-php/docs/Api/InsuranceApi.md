@@ -19,7 +19,7 @@ Return available insurance levels for all ship types  --- Alternate route: `/v1/
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\InsuranceApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\InsuranceApi();
 $datasource = "tranquility"; // string | The server name you would like data from
 $language = "en-us"; // string | Language to use in the response
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers

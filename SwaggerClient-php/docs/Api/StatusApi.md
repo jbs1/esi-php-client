@@ -19,7 +19,7 @@ EVE Server status  --- Alternate route: `/v1/status/`  Alternate route: `/legacy
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\StatusApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\StatusApi();
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent

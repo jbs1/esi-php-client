@@ -25,7 +25,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\IndustryApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\IndustryApi();
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $include_completed = true; // bool | Whether retrieve completed character industry jobs as well
@@ -83,7 +83,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\IndustryApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\IndustryApi();
 $corporation_id = 56; // int | An EVE corporation ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $include_completed = false; // bool | Whether retrieve completed industry jobs as well
@@ -140,7 +140,7 @@ Return a list of industry facilities  --- Alternate route: `/v1/industry/facilit
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\IndustryApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\IndustryApi();
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
@@ -189,7 +189,7 @@ Return cost indices for solar systems  --- Alternate route: `/v1/industry/system
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\IndustryApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\IndustryApi();
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent

@@ -45,7 +45,7 @@ Get a list of bloodlines  --- Alternate route: `/v1/universe/bloodlines/`  Alter
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\UniverseApi();
 $datasource = "tranquility"; // string | The server name you would like data from
 $language = "en-us"; // string | Language to use in the response
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
@@ -96,7 +96,7 @@ Get a list of item categories  --- Alternate route: `/v1/universe/categories/`  
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\UniverseApi();
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
@@ -145,7 +145,7 @@ Get information of an item category  --- Alternate route: `/v1/universe/categori
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\UniverseApi();
 $category_id = 56; // int | An Eve item category ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $language = "en-us"; // string | Language to use in the response
@@ -198,7 +198,7 @@ Get a list of constellations  --- Alternate route: `/v1/universe/constellations/
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\UniverseApi();
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
@@ -247,7 +247,7 @@ Get information on a constellation  --- Alternate route: `/v1/universe/constella
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\UniverseApi();
 $constellation_id = 56; // int | constellation_id integer
 $datasource = "tranquility"; // string | The server name you would like data from
 $language = "en-us"; // string | Language to use in the response
@@ -300,7 +300,7 @@ Get a list of factions  --- Alternate route: `/v1/universe/factions/`  Alternate
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\UniverseApi();
 $datasource = "tranquility"; // string | The server name you would like data from
 $language = "en-us"; // string | Language to use in the response
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
@@ -351,7 +351,7 @@ Get a list of graphics  --- Alternate route: `/v1/universe/graphics/`  Alternate
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\UniverseApi();
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
@@ -400,7 +400,7 @@ Get information on a graphic  --- Alternate route: `/v1/universe/graphics/{graph
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\UniverseApi();
 $graphic_id = 56; // int | graphic_id integer
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
@@ -451,7 +451,7 @@ Get a list of item groups  --- Alternate route: `/v1/universe/groups/`  Alternat
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\UniverseApi();
 $datasource = "tranquility"; // string | The server name you would like data from
 $page = 1; // int | Which page of results to return
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
@@ -502,7 +502,7 @@ Get information on an item group  --- Alternate route: `/v1/universe/groups/{gro
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\UniverseApi();
 $group_id = 56; // int | An Eve item group ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $language = "en-us"; // string | Language to use in the response
@@ -555,7 +555,7 @@ Get information on a moon  --- Alternate route: `/v1/universe/moons/{moon_id}/` 
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\UniverseApi();
 $moon_id = 56; // int | moon_id integer
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
@@ -606,7 +606,7 @@ Get information on a planet  --- Alternate route: `/v1/universe/planets/{planet_
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\UniverseApi();
 $planet_id = 56; // int | planet_id integer
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
@@ -657,7 +657,7 @@ Get a list of character races  --- Alternate route: `/v1/universe/races/`  Alter
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\UniverseApi();
 $datasource = "tranquility"; // string | The server name you would like data from
 $language = "en-us"; // string | Language to use in the response
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
@@ -708,7 +708,7 @@ Get a list of regions  --- Alternate route: `/v1/universe/regions/`  Alternate r
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\UniverseApi();
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
@@ -757,7 +757,7 @@ Get information on a region  --- Alternate route: `/v1/universe/regions/{region_
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\UniverseApi();
 $region_id = 56; // int | region_id integer
 $datasource = "tranquility"; // string | The server name you would like data from
 $language = "en-us"; // string | Language to use in the response
@@ -810,7 +810,7 @@ Get information on a stargate  --- Alternate route: `/v1/universe/stargates/{sta
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\UniverseApi();
 $stargate_id = 56; // int | stargate_id integer
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
@@ -861,7 +861,7 @@ Get information on a star  --- Alternate route: `/v1/universe/stars/{star_id}/` 
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\UniverseApi();
 $star_id = 56; // int | star_id integer
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
@@ -912,7 +912,7 @@ Get information on a station  --- Alternate route: `/v2/universe/stations/{stati
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\UniverseApi();
 $station_id = 56; // int | station_id integer
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
@@ -963,7 +963,7 @@ List all public structures  --- Alternate route: `/v1/universe/structures/`  Alt
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\UniverseApi();
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
@@ -1015,7 +1015,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\UniverseApi();
 $structure_id = 789; // int | An Eve structure ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -1068,7 +1068,7 @@ Get the number of jumps in solar systems within the last hour ending at the time
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\UniverseApi();
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
@@ -1117,7 +1117,7 @@ Get the number of ship, pod and NPC kills per solar system within the last hour 
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\UniverseApi();
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
@@ -1166,7 +1166,7 @@ Get a list of solar systems  --- Alternate route: `/v1/universe/systems/`  Alter
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\UniverseApi();
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
@@ -1215,7 +1215,7 @@ Get information on a solar system  --- Alternate route: `/v3/universe/systems/{s
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\UniverseApi();
 $system_id = 56; // int | system_id integer
 $datasource = "tranquility"; // string | The server name you would like data from
 $language = "en-us"; // string | Language to use in the response
@@ -1268,7 +1268,7 @@ Get a list of type ids  --- Alternate route: `/v1/universe/types/`  Alternate ro
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\UniverseApi();
 $datasource = "tranquility"; // string | The server name you would like data from
 $page = 1; // int | Which page of results to return
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
@@ -1319,7 +1319,7 @@ Get information on a type  --- Alternate route: `/v3/universe/types/{type_id}/` 
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\UniverseApi();
 $type_id = 56; // int | An Eve item type ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $language = "en-us"; // string | Language to use in the response
@@ -1372,8 +1372,8 @@ Resolve a set of IDs to names and categories. Supported ID's for resolving are: 
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
-$ids = array(new \Swagger\Client\Model\int[]()); // int[] | The ids to resolve
+$api_instance = new Swagger\Client\Api\UniverseApi();
+$ids = array(new int[]()); // int[] | The ids to resolve
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent

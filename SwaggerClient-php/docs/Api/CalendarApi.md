@@ -25,7 +25,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CalendarApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\CalendarApi();
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $from_event = 56; // int | The event ID to retrieve events from
@@ -83,7 +83,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CalendarApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\CalendarApi();
 $character_id = 56; // int | An EVE character ID
 $event_id = 56; // int | The id of the event requested
 $datasource = "tranquility"; // string | The server name you would like data from
@@ -141,7 +141,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CalendarApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\CalendarApi();
 $character_id = 56; // int | An EVE character ID
 $event_id = 56; // int | The id of the event requested
 $datasource = "tranquility"; // string | The server name you would like data from
@@ -199,7 +199,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CalendarApi(new \Http\Adapter\Guzzle6\Client());
+$api_instance = new Swagger\Client\Api\CalendarApi();
 $character_id = 56; // int | An EVE character ID
 $event_id = 56; // int | The ID of the event requested
 $response = new \Swagger\Client\Model\PutCharactersCharacterIdCalendarEventIdResponse(); // \Swagger\Client\Model\PutCharactersCharacterIdCalendarEventIdResponse | The response value to set, overriding current value.
@@ -222,7 +222,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **character_id** | **int**| An EVE character ID |
  **event_id** | **int**| The ID of the event requested |
- **response** | [**\Swagger\Client\Model\PutCharactersCharacterIdCalendarEventIdResponse**](../Model/PutCharactersCharacterIdCalendarEventIdResponse.md)| The response value to set, overriding current value. |
+ **response** | [**\Swagger\Client\Model\PutCharactersCharacterIdCalendarEventIdResponse**](../Model/\Swagger\Client\Model\PutCharactersCharacterIdCalendarEventIdResponse.md)| The response value to set, overriding current value. |
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **token** | **string**| Access token to use if unable to set a header | [optional]
  **user_agent** | **string**| Client identifier, takes precedence over headers | [optional]
