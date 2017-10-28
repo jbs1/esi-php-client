@@ -24,7 +24,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\PlanetaryInteractionApi();
+$api_instance = new Swagger\Client\Api\PlanetaryInteractionApi(new \Http\Adapter\Guzzle6\Client());
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -80,7 +80,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\PlanetaryInteractionApi();
+$api_instance = new Swagger\Client\Api\PlanetaryInteractionApi(new \Http\Adapter\Guzzle6\Client());
 $character_id = 56; // int | An EVE character ID
 $planet_id = 56; // int | Planet id of the target planet
 $datasource = "tranquility"; // string | The server name you would like data from
@@ -135,7 +135,7 @@ Get information on a planetary factory schematic  --- Alternate route: `/v1/univ
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\PlanetaryInteractionApi();
+$api_instance = new Swagger\Client\Api\PlanetaryInteractionApi(new \Http\Adapter\Guzzle6\Client());
 $schematic_id = 56; // int | A PI schematic ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers

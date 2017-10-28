@@ -22,7 +22,7 @@ Get a list of dogma attribute ids  --- Alternate route: `/v1/dogma/attributes/` 
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DogmaApi();
+$api_instance = new Swagger\Client\Api\DogmaApi(new \Http\Adapter\Guzzle6\Client());
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
@@ -71,7 +71,7 @@ Get information on a dogma attribute  --- Alternate route: `/v1/dogma/attributes
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DogmaApi();
+$api_instance = new Swagger\Client\Api\DogmaApi(new \Http\Adapter\Guzzle6\Client());
 $attribute_id = 56; // int | A dogma attribute ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
@@ -122,7 +122,7 @@ Get a list of dogma effect ids  --- Alternate route: `/v1/dogma/effects/`  Alter
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DogmaApi();
+$api_instance = new Swagger\Client\Api\DogmaApi(new \Http\Adapter\Guzzle6\Client());
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
@@ -171,7 +171,7 @@ Get information on a dogma effect  --- Alternate route: `/v2/dogma/effects/{effe
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DogmaApi();
+$api_instance = new Swagger\Client\Api\DogmaApi(new \Http\Adapter\Guzzle6\Client());
 $effect_id = 56; // int | A dogma effect ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers

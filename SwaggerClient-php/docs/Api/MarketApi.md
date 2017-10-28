@@ -30,7 +30,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\MarketApi();
+$api_instance = new Swagger\Client\Api\MarketApi(new \Http\Adapter\Guzzle6\Client());
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -86,7 +86,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\MarketApi();
+$api_instance = new Swagger\Client\Api\MarketApi(new \Http\Adapter\Guzzle6\Client());
 $corporation_id = 56; // int | An EVE corporation ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $page = 1; // int | Which page of results to return
@@ -141,7 +141,7 @@ Get a list of item groups  --- Alternate route: `/v1/markets/groups/`  Alternate
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\MarketApi();
+$api_instance = new Swagger\Client\Api\MarketApi(new \Http\Adapter\Guzzle6\Client());
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
@@ -190,7 +190,7 @@ Get information on an item group  --- Alternate route: `/v1/markets/groups/{mark
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\MarketApi();
+$api_instance = new Swagger\Client\Api\MarketApi(new \Http\Adapter\Guzzle6\Client());
 $market_group_id = 56; // int | An Eve item group ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $language = "en-us"; // string | Language to use in the response
@@ -243,7 +243,7 @@ Return a list of prices  --- Alternate route: `/v1/markets/prices/`  Alternate r
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\MarketApi();
+$api_instance = new Swagger\Client\Api\MarketApi(new \Http\Adapter\Guzzle6\Client());
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
@@ -292,7 +292,7 @@ Return a list of historical market statistics for the specified type in a region
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\MarketApi();
+$api_instance = new Swagger\Client\Api\MarketApi(new \Http\Adapter\Guzzle6\Client());
 $region_id = 56; // int | Return statistics in this region
 $type_id = 56; // int | Return statistics for this type
 $datasource = "tranquility"; // string | The server name you would like data from
@@ -345,7 +345,7 @@ Return a list of orders in a region  --- Alternate route: `/v1/markets/{region_i
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\MarketApi();
+$api_instance = new Swagger\Client\Api\MarketApi(new \Http\Adapter\Guzzle6\Client());
 $order_type = "all"; // string | Filter buy/sell orders, return all orders by default. If you query without type_id, we always return both buy and sell orders.
 $region_id = 56; // int | Return orders in this region
 $datasource = "tranquility"; // string | The server name you would like data from
@@ -402,7 +402,7 @@ Return a list of type IDs that have active orders in the region, for efficient m
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\MarketApi();
+$api_instance = new Swagger\Client\Api\MarketApi(new \Http\Adapter\Guzzle6\Client());
 $region_id = 56; // int | Return statistics in this region
 $datasource = "tranquility"; // string | The server name you would like data from
 $page = 1; // int | Which page of results to return
@@ -458,7 +458,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\MarketApi();
+$api_instance = new Swagger\Client\Api\MarketApi(new \Http\Adapter\Guzzle6\Client());
 $structure_id = 789; // int | Return orders in this structure
 $datasource = "tranquility"; // string | The server name you would like data from
 $page = 1; // int | Which page of results to return

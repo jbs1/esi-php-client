@@ -35,7 +35,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\FleetsApi();
+$api_instance = new Swagger\Client\Api\FleetsApi(new \Http\Adapter\Guzzle6\Client());
 $fleet_id = 789; // int | ID for a fleet
 $member_id = 56; // int | The character ID of a member in this fleet
 $datasource = "tranquility"; // string | The server name you would like data from
@@ -92,7 +92,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\FleetsApi();
+$api_instance = new Swagger\Client\Api\FleetsApi(new \Http\Adapter\Guzzle6\Client());
 $fleet_id = 789; // int | ID for a fleet
 $squad_id = 789; // int | The squad to delete
 $datasource = "tranquility"; // string | The server name you would like data from
@@ -149,7 +149,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\FleetsApi();
+$api_instance = new Swagger\Client\Api\FleetsApi(new \Http\Adapter\Guzzle6\Client());
 $fleet_id = 789; // int | ID for a fleet
 $wing_id = 789; // int | The wing to delete
 $datasource = "tranquility"; // string | The server name you would like data from
@@ -206,7 +206,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\FleetsApi();
+$api_instance = new Swagger\Client\Api\FleetsApi(new \Http\Adapter\Guzzle6\Client());
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -262,7 +262,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\FleetsApi();
+$api_instance = new Swagger\Client\Api\FleetsApi(new \Http\Adapter\Guzzle6\Client());
 $fleet_id = 789; // int | ID for a fleet
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -318,7 +318,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\FleetsApi();
+$api_instance = new Swagger\Client\Api\FleetsApi(new \Http\Adapter\Guzzle6\Client());
 $fleet_id = 789; // int | ID for a fleet
 $datasource = "tranquility"; // string | The server name you would like data from
 $language = "en-us"; // string | Language to use in the response
@@ -376,7 +376,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\FleetsApi();
+$api_instance = new Swagger\Client\Api\FleetsApi(new \Http\Adapter\Guzzle6\Client());
 $fleet_id = 789; // int | ID for a fleet
 $datasource = "tranquility"; // string | The server name you would like data from
 $language = "en-us"; // string | Language to use in the response
@@ -434,7 +434,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\FleetsApi();
+$api_instance = new Swagger\Client\Api\FleetsApi(new \Http\Adapter\Guzzle6\Client());
 $fleet_id = 789; // int | ID for a fleet
 $invitation = new \Swagger\Client\Model\PostFleetsFleetIdMembersInvitation(); // \Swagger\Client\Model\PostFleetsFleetIdMembersInvitation | Details of the invitation
 $datasource = "tranquility"; // string | The server name you would like data from
@@ -455,7 +455,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fleet_id** | **int**| ID for a fleet |
- **invitation** | [**\Swagger\Client\Model\PostFleetsFleetIdMembersInvitation**](../Model/\Swagger\Client\Model\PostFleetsFleetIdMembersInvitation.md)| Details of the invitation |
+ **invitation** | [**\Swagger\Client\Model\PostFleetsFleetIdMembersInvitation**](../Model/PostFleetsFleetIdMembersInvitation.md)| Details of the invitation |
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **token** | **string**| Access token to use if unable to set a header | [optional]
  **user_agent** | **string**| Client identifier, takes precedence over headers | [optional]
@@ -491,7 +491,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\FleetsApi();
+$api_instance = new Swagger\Client\Api\FleetsApi(new \Http\Adapter\Guzzle6\Client());
 $fleet_id = 789; // int | ID for a fleet
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -547,7 +547,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\FleetsApi();
+$api_instance = new Swagger\Client\Api\FleetsApi(new \Http\Adapter\Guzzle6\Client());
 $fleet_id = 789; // int | ID for a fleet
 $wing_id = 789; // int | The wing_id to create squad in
 $datasource = "tranquility"; // string | The server name you would like data from
@@ -605,7 +605,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\FleetsApi();
+$api_instance = new Swagger\Client\Api\FleetsApi(new \Http\Adapter\Guzzle6\Client());
 $fleet_id = 789; // int | ID for a fleet
 $new_settings = new \Swagger\Client\Model\PutFleetsFleetIdNewSettings(); // \Swagger\Client\Model\PutFleetsFleetIdNewSettings | What to update for this fleet
 $datasource = "tranquility"; // string | The server name you would like data from
@@ -626,7 +626,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fleet_id** | **int**| ID for a fleet |
- **new_settings** | [**\Swagger\Client\Model\PutFleetsFleetIdNewSettings**](../Model/\Swagger\Client\Model\PutFleetsFleetIdNewSettings.md)| What to update for this fleet |
+ **new_settings** | [**\Swagger\Client\Model\PutFleetsFleetIdNewSettings**](../Model/PutFleetsFleetIdNewSettings.md)| What to update for this fleet |
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **token** | **string**| Access token to use if unable to set a header | [optional]
  **user_agent** | **string**| Client identifier, takes precedence over headers | [optional]
@@ -662,7 +662,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\FleetsApi();
+$api_instance = new Swagger\Client\Api\FleetsApi(new \Http\Adapter\Guzzle6\Client());
 $fleet_id = 789; // int | ID for a fleet
 $member_id = 56; // int | The character ID of a member in this fleet
 $movement = new \Swagger\Client\Model\PutFleetsFleetIdMembersMemberIdMovement(); // \Swagger\Client\Model\PutFleetsFleetIdMembersMemberIdMovement | Details of the invitation
@@ -685,7 +685,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fleet_id** | **int**| ID for a fleet |
  **member_id** | **int**| The character ID of a member in this fleet |
- **movement** | [**\Swagger\Client\Model\PutFleetsFleetIdMembersMemberIdMovement**](../Model/\Swagger\Client\Model\PutFleetsFleetIdMembersMemberIdMovement.md)| Details of the invitation |
+ **movement** | [**\Swagger\Client\Model\PutFleetsFleetIdMembersMemberIdMovement**](../Model/PutFleetsFleetIdMembersMemberIdMovement.md)| Details of the invitation |
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **token** | **string**| Access token to use if unable to set a header | [optional]
  **user_agent** | **string**| Client identifier, takes precedence over headers | [optional]
@@ -721,7 +721,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\FleetsApi();
+$api_instance = new Swagger\Client\Api\FleetsApi(new \Http\Adapter\Guzzle6\Client());
 $fleet_id = 789; // int | ID for a fleet
 $naming = new \Swagger\Client\Model\PutFleetsFleetIdSquadsSquadIdNaming(); // \Swagger\Client\Model\PutFleetsFleetIdSquadsSquadIdNaming | New name of the squad
 $squad_id = 789; // int | The squad to rename
@@ -743,7 +743,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fleet_id** | **int**| ID for a fleet |
- **naming** | [**\Swagger\Client\Model\PutFleetsFleetIdSquadsSquadIdNaming**](../Model/\Swagger\Client\Model\PutFleetsFleetIdSquadsSquadIdNaming.md)| New name of the squad |
+ **naming** | [**\Swagger\Client\Model\PutFleetsFleetIdSquadsSquadIdNaming**](../Model/PutFleetsFleetIdSquadsSquadIdNaming.md)| New name of the squad |
  **squad_id** | **int**| The squad to rename |
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **token** | **string**| Access token to use if unable to set a header | [optional]
@@ -780,7 +780,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\FleetsApi();
+$api_instance = new Swagger\Client\Api\FleetsApi(new \Http\Adapter\Guzzle6\Client());
 $fleet_id = 789; // int | ID for a fleet
 $naming = new \Swagger\Client\Model\PutFleetsFleetIdWingsWingIdNaming(); // \Swagger\Client\Model\PutFleetsFleetIdWingsWingIdNaming | New name of the wing
 $wing_id = 789; // int | The wing to rename
@@ -802,7 +802,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fleet_id** | **int**| ID for a fleet |
- **naming** | [**\Swagger\Client\Model\PutFleetsFleetIdWingsWingIdNaming**](../Model/\Swagger\Client\Model\PutFleetsFleetIdWingsWingIdNaming.md)| New name of the wing |
+ **naming** | [**\Swagger\Client\Model\PutFleetsFleetIdWingsWingIdNaming**](../Model/PutFleetsFleetIdWingsWingIdNaming.md)| New name of the wing |
  **wing_id** | **int**| The wing to rename |
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **token** | **string**| Access token to use if unable to set a header | [optional]

@@ -27,7 +27,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\WalletApi();
+$api_instance = new Swagger\Client\Api\WalletApi(new \Http\Adapter\Guzzle6\Client());
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -83,7 +83,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\WalletApi();
+$api_instance = new Swagger\Client\Api\WalletApi(new \Http\Adapter\Guzzle6\Client());
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $from_id = 789; // int | Only show journal entries happened before the transaction referenced by this id
@@ -141,7 +141,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\WalletApi();
+$api_instance = new Swagger\Client\Api\WalletApi(new \Http\Adapter\Guzzle6\Client());
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $from_id = 789; // int | Only show transactions happened before the one referenced by this id
@@ -199,7 +199,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\WalletApi();
+$api_instance = new Swagger\Client\Api\WalletApi(new \Http\Adapter\Guzzle6\Client());
 $corporation_id = 56; // int | An EVE corporation ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -255,7 +255,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\WalletApi();
+$api_instance = new Swagger\Client\Api\WalletApi(new \Http\Adapter\Guzzle6\Client());
 $corporation_id = 56; // int | An EVE corporation ID
 $division = 56; // int | Wallet key of the division to fetch journals from
 $datasource = "tranquility"; // string | The server name you would like data from
@@ -315,7 +315,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\WalletApi();
+$api_instance = new Swagger\Client\Api\WalletApi(new \Http\Adapter\Guzzle6\Client());
 $corporation_id = 56; // int | An EVE corporation ID
 $division = 56; // int | Wallet key of the division to fetch journals from
 $datasource = "tranquility"; // string | The server name you would like data from

@@ -26,7 +26,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\OpportunitiesApi();
+$api_instance = new Swagger\Client\Api\OpportunitiesApi(new \Http\Adapter\Guzzle6\Client());
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -79,7 +79,7 @@ Return a list of opportunities groups  --- Alternate route: `/v1/opportunities/g
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\OpportunitiesApi();
+$api_instance = new Swagger\Client\Api\OpportunitiesApi(new \Http\Adapter\Guzzle6\Client());
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
@@ -128,7 +128,7 @@ Return information of an opportunities group  --- Alternate route: `/v1/opportun
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\OpportunitiesApi();
+$api_instance = new Swagger\Client\Api\OpportunitiesApi(new \Http\Adapter\Guzzle6\Client());
 $group_id = 56; // int | ID of an opportunities group
 $datasource = "tranquility"; // string | The server name you would like data from
 $language = "en-us"; // string | Language to use in the response
@@ -181,7 +181,7 @@ Return a list of opportunities tasks  --- Alternate route: `/v1/opportunities/ta
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\OpportunitiesApi();
+$api_instance = new Swagger\Client\Api\OpportunitiesApi(new \Http\Adapter\Guzzle6\Client());
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
@@ -230,7 +230,7 @@ Return information of an opportunities task  --- Alternate route: `/v1/opportuni
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\OpportunitiesApi();
+$api_instance = new Swagger\Client\Api\OpportunitiesApi(new \Http\Adapter\Guzzle6\Client());
 $task_id = 56; // int | ID of an opportunities task
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers

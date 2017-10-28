@@ -21,7 +21,7 @@ Return a list of wars  --- Alternate route: `/v1/wars/`  Alternate route: `/lega
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\WarsApi();
+$api_instance = new Swagger\Client\Api\WarsApi(new \Http\Adapter\Guzzle6\Client());
 $datasource = "tranquility"; // string | The server name you would like data from
 $max_war_id = 56; // int | Only return wars with ID smaller than this.
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
@@ -72,7 +72,7 @@ Return details about a war  --- Alternate route: `/v1/wars/{war_id}/`  Alternate
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\WarsApi();
+$api_instance = new Swagger\Client\Api\WarsApi(new \Http\Adapter\Guzzle6\Client());
 $war_id = 56; // int | ID for a war
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
@@ -123,7 +123,7 @@ Return a list of kills related to a war  --- Alternate route: `/v1/wars/{war_id}
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\WarsApi();
+$api_instance = new Swagger\Client\Api\WarsApi(new \Http\Adapter\Guzzle6\Client());
 $war_id = 56; // int | A valid war ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $page = 1; // int | Which page of results to return

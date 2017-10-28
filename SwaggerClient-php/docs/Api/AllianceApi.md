@@ -23,7 +23,7 @@ List all active player alliances  --- Alternate route: `/v1/alliances/`  Alterna
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\AllianceApi();
+$api_instance = new Swagger\Client\Api\AllianceApi(new \Http\Adapter\Guzzle6\Client());
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
@@ -72,7 +72,7 @@ Public information about an alliance  --- Alternate route: `/v2/alliances/{allia
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\AllianceApi();
+$api_instance = new Swagger\Client\Api\AllianceApi(new \Http\Adapter\Guzzle6\Client());
 $alliance_id = 56; // int | An EVE alliance ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
@@ -123,7 +123,7 @@ List all current member corporations of an alliance  --- Alternate route: `/v1/a
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\AllianceApi();
+$api_instance = new Swagger\Client\Api\AllianceApi(new \Http\Adapter\Guzzle6\Client());
 $alliance_id = 56; // int | An EVE alliance ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
@@ -174,7 +174,7 @@ Get the icon urls for a alliance  --- Alternate route: `/v1/alliances/{alliance_
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\AllianceApi();
+$api_instance = new Swagger\Client\Api\AllianceApi(new \Http\Adapter\Guzzle6\Client());
 $alliance_id = 56; // int | An EVE alliance ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
@@ -225,7 +225,7 @@ Resolve a set of alliance IDs to alliance names  --- Alternate route: `/v1/allia
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\AllianceApi();
+$api_instance = new Swagger\Client\Api\AllianceApi(new \Http\Adapter\Guzzle6\Client());
 $alliance_ids = array(56); // int[] | A comma separated list of alliance IDs
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers

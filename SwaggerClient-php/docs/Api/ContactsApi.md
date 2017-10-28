@@ -27,9 +27,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\ContactsApi();
+$api_instance = new Swagger\Client\Api\ContactsApi(new \Http\Adapter\Guzzle6\Client());
 $character_id = 56; // int | An EVE character ID
-$contact_ids = array(new int[]()); // int[] | A list of contacts to delete
+$contact_ids = array(new \Swagger\Client\Model\int[]()); // int[] | A list of contacts to delete
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
@@ -84,7 +84,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\ContactsApi();
+$api_instance = new Swagger\Client\Api\ContactsApi(new \Http\Adapter\Guzzle6\Client());
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $page = 1; // int | Which page of results to return
@@ -142,7 +142,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\ContactsApi();
+$api_instance = new Swagger\Client\Api\ContactsApi(new \Http\Adapter\Guzzle6\Client());
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -198,7 +198,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\ContactsApi();
+$api_instance = new Swagger\Client\Api\ContactsApi(new \Http\Adapter\Guzzle6\Client());
 $corporation_id = 56; // int | An EVE corporation ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $page = 1; // int | Which page of results to return
@@ -256,9 +256,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\ContactsApi();
+$api_instance = new Swagger\Client\Api\ContactsApi(new \Http\Adapter\Guzzle6\Client());
 $character_id = 56; // int | An EVE character ID
-$contact_ids = array(new int[]()); // int[] | A list of contacts to add
+$contact_ids = array(new \Swagger\Client\Model\int[]()); // int[] | A list of contacts to add
 $standing = 3.4; // float | Standing for the new contact
 $datasource = "tranquility"; // string | The server name you would like data from
 $label_id = 0; // int | Add a custom label to the new contact
@@ -320,9 +320,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\ContactsApi();
+$api_instance = new Swagger\Client\Api\ContactsApi(new \Http\Adapter\Guzzle6\Client());
 $character_id = 56; // int | An EVE character ID
-$contact_ids = array(new int[]()); // int[] | A list of contacts to edit
+$contact_ids = array(new \Swagger\Client\Model\int[]()); // int[] | A list of contacts to edit
 $standing = 3.4; // float | Standing for the contact
 $datasource = "tranquility"; // string | The server name you would like data from
 $label_id = 0; // int | Add a custom label to the contact, use 0 for clearing label

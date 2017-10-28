@@ -35,7 +35,7 @@ Public information about a corporation  --- Alternate route: `/v3/corporations/{
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\CorporationApi();
+$api_instance = new Swagger\Client\Api\CorporationApi(new \Http\Adapter\Guzzle6\Client());
 $corporation_id = 56; // int | An EVE corporation ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
@@ -86,7 +86,7 @@ Get a list of all the alliances a corporation has been a member of  --- Alternat
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\CorporationApi();
+$api_instance = new Swagger\Client\Api\CorporationApi(new \Http\Adapter\Guzzle6\Client());
 $corporation_id = 56; // int | An EVE corporation ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
@@ -140,7 +140,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CorporationApi();
+$api_instance = new Swagger\Client\Api\CorporationApi(new \Http\Adapter\Guzzle6\Client());
 $corporation_id = 56; // int | An EVE corporation ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $page = 1; // int | Which page of results to return
@@ -198,7 +198,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CorporationApi();
+$api_instance = new Swagger\Client\Api\CorporationApi(new \Http\Adapter\Guzzle6\Client());
 $corporation_id = 56; // int | An EVE corporation ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $page = 1; // int | Which page of results to return
@@ -256,7 +256,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CorporationApi();
+$api_instance = new Swagger\Client\Api\CorporationApi(new \Http\Adapter\Guzzle6\Client());
 $corporation_id = 56; // int | An EVE corporation ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -309,7 +309,7 @@ Get the icon urls for a corporation  --- Alternate route: `/v1/corporations/{cor
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\CorporationApi();
+$api_instance = new Swagger\Client\Api\CorporationApi(new \Http\Adapter\Guzzle6\Client());
 $corporation_id = 56; // int | An EVE corporation ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
@@ -363,7 +363,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CorporationApi();
+$api_instance = new Swagger\Client\Api\CorporationApi(new \Http\Adapter\Guzzle6\Client());
 $corporation_id = 56; // int | An EVE corporation ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -419,7 +419,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CorporationApi();
+$api_instance = new Swagger\Client\Api\CorporationApi(new \Http\Adapter\Guzzle6\Client());
 $corporation_id = 56; // int | An EVE corporation ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -475,7 +475,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CorporationApi();
+$api_instance = new Swagger\Client\Api\CorporationApi(new \Http\Adapter\Guzzle6\Client());
 $corporation_id = 56; // int | An EVE corporation ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -531,7 +531,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CorporationApi();
+$api_instance = new Swagger\Client\Api\CorporationApi(new \Http\Adapter\Guzzle6\Client());
 $corporation_id = 56; // int | An EVE corporation ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -587,7 +587,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CorporationApi();
+$api_instance = new Swagger\Client\Api\CorporationApi(new \Http\Adapter\Guzzle6\Client());
 $corporation_id = 56; // int | An EVE corporation ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $page = 1; // int | Which page of results to return
@@ -645,7 +645,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CorporationApi();
+$api_instance = new Swagger\Client\Api\CorporationApi(new \Http\Adapter\Guzzle6\Client());
 $corporation_id = 56; // int | An EVE corporation ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $page = 1; // int | Which page of results to return
@@ -703,7 +703,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CorporationApi();
+$api_instance = new Swagger\Client\Api\CorporationApi(new \Http\Adapter\Guzzle6\Client());
 $corporation_id = 56; // int | An EVE corporation ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $language = "en-us"; // string | Language to use in the response
@@ -763,7 +763,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CorporationApi();
+$api_instance = new Swagger\Client\Api\CorporationApi(new \Http\Adapter\Guzzle6\Client());
 $corporation_id = 56; // int | An EVE corporation ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -816,7 +816,7 @@ Resolve a set of corporation IDs to corporation names  --- Alternate route: `/v1
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\CorporationApi();
+$api_instance = new Swagger\Client\Api\CorporationApi(new \Http\Adapter\Guzzle6\Client());
 $corporation_ids = array(56); // int[] | A comma separated list of corporation IDs
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
@@ -867,7 +867,7 @@ Get a list of npc corporations  --- Alternate route: `/v1/corporations/npccorps/
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\CorporationApi();
+$api_instance = new Swagger\Client\Api\CorporationApi(new \Http\Adapter\Guzzle6\Client());
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
@@ -919,9 +919,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure OAuth2 access token for authorization: evesso
 Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CorporationApi();
+$api_instance = new Swagger\Client\Api\CorporationApi(new \Http\Adapter\Guzzle6\Client());
 $corporation_id = 56; // int | An EVE corporation ID
-$new_schedule = array(new PutCorporationsCorporationIdStructuresStructureIdNewSchedule()); // \Swagger\Client\Model\PutCorporationsCorporationIdStructuresStructureIdNewSchedule[] | New vulnerability window schedule for the structure
+$new_schedule = array(new \Swagger\Client\Model\PutCorporationsCorporationIdStructuresStructureIdNewSchedule()); // \Swagger\Client\Model\PutCorporationsCorporationIdStructuresStructureIdNewSchedule[] | New vulnerability window schedule for the structure
 $structure_id = 789; // int | A structure ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
