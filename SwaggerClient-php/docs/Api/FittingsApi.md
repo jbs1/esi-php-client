@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 Delete fitting
 
-Delete a fitting from a character  --- Alternate route: `/v1/characters/{character_id}/fittings/{fitting_id}/`  Alternate route: `/legacy/characters/{character_id}/fittings/{fitting_id}/`  Alternate route: `/dev/characters/{character_id}/fittings/{fitting_id}/`
+Delete a fitting from a character  --- Alternate route: `/dev/characters/{character_id}/fittings/{fitting_id}/`  Alternate route: `/legacy/characters/{character_id}/fittings/{fitting_id}/`  Alternate route: `/v1/characters/{character_id}/fittings/{fitting_id}/`
 
 ### Example
 ```php
@@ -71,7 +71,7 @@ void (empty response body)
 
 Get fittings
 
-Return fittings of a character  --- Alternate route: `/v1/characters/{character_id}/fittings/`  Alternate route: `/legacy/characters/{character_id}/fittings/`  Alternate route: `/dev/characters/{character_id}/fittings/`  --- This route is cached for up to 300 seconds
+Return fittings of a character  --- Alternate route: `/dev/characters/{character_id}/fittings/`  Alternate route: `/legacy/characters/{character_id}/fittings/`  Alternate route: `/v1/characters/{character_id}/fittings/`  --- This route is cached for up to 300 seconds
 
 ### Example
 ```php
@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
 
 Create fitting
 
-Save a new fitting for a character  --- Alternate route: `/v1/characters/{character_id}/fittings/`  Alternate route: `/legacy/characters/{character_id}/fittings/`  Alternate route: `/dev/characters/{character_id}/fittings/`
+Save a new fitting for a character  --- Alternate route: `/dev/characters/{character_id}/fittings/`  Alternate route: `/legacy/characters/{character_id}/fittings/`  Alternate route: `/v1/characters/{character_id}/fittings/`
 
 ### Example
 ```php

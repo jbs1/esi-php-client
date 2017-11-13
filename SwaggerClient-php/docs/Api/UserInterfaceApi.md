@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 Set Autopilot Waypoint
 
-Set a solar system as autopilot waypoint  --- Alternate route: `/v2/ui/autopilot/waypoint/`  Alternate route: `/dev/ui/autopilot/waypoint/`
+Set a solar system as autopilot waypoint  --- Alternate route: `/dev/ui/autopilot/waypoint/`  Alternate route: `/v2/ui/autopilot/waypoint/`
 
 ### Example
 ```php
@@ -75,7 +75,7 @@ void (empty response body)
 
 Open Contract Window
 
-Open the contract window inside the client  --- Alternate route: `/v1/ui/openwindow/contract/`  Alternate route: `/legacy/ui/openwindow/contract/`  Alternate route: `/dev/ui/openwindow/contract/`
+Open the contract window inside the client  --- Alternate route: `/dev/ui/openwindow/contract/`  Alternate route: `/legacy/ui/openwindow/contract/`  Alternate route: `/v1/ui/openwindow/contract/`
 
 ### Example
 ```php
@@ -130,7 +130,7 @@ void (empty response body)
 
 Open Information Window
 
-Open the information window for a character, corporation or alliance inside the client  --- Alternate route: `/v1/ui/openwindow/information/`  Alternate route: `/legacy/ui/openwindow/information/`  Alternate route: `/dev/ui/openwindow/information/`
+Open the information window for a character, corporation or alliance inside the client  --- Alternate route: `/dev/ui/openwindow/information/`  Alternate route: `/legacy/ui/openwindow/information/`  Alternate route: `/v1/ui/openwindow/information/`
 
 ### Example
 ```php
@@ -185,7 +185,7 @@ void (empty response body)
 
 Open Market Details
 
-Open the market details window for a specific typeID inside the client  --- Alternate route: `/v1/ui/openwindow/marketdetails/`  Alternate route: `/legacy/ui/openwindow/marketdetails/`  Alternate route: `/dev/ui/openwindow/marketdetails/`
+Open the market details window for a specific typeID inside the client  --- Alternate route: `/dev/ui/openwindow/marketdetails/`  Alternate route: `/legacy/ui/openwindow/marketdetails/`  Alternate route: `/v1/ui/openwindow/marketdetails/`
 
 ### Example
 ```php
@@ -240,7 +240,7 @@ void (empty response body)
 
 Open New Mail Window
 
-Open the New Mail window, according to settings from the request if applicable  --- Alternate route: `/v1/ui/openwindow/newmail/`  Alternate route: `/legacy/ui/openwindow/newmail/`  Alternate route: `/dev/ui/openwindow/newmail/`
+Open the New Mail window, according to settings from the request if applicable  --- Alternate route: `/dev/ui/openwindow/newmail/`  Alternate route: `/legacy/ui/openwindow/newmail/`  Alternate route: `/v1/ui/openwindow/newmail/`
 
 ### Example
 ```php

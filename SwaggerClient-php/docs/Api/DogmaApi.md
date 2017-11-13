@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 Get attributes
 
-Get a list of dogma attribute ids  --- Alternate route: `/v1/dogma/attributes/`  Alternate route: `/legacy/dogma/attributes/`  Alternate route: `/dev/dogma/attributes/`  --- This route expires daily at 11:05
+Get a list of dogma attribute ids  --- Alternate route: `/dev/dogma/attributes/`  Alternate route: `/legacy/dogma/attributes/`  Alternate route: `/v1/dogma/attributes/`  --- This route expires daily at 11:05
 
 ### Example
 ```php
@@ -64,7 +64,7 @@ No authorization required
 
 Get attribute information
 
-Get information on a dogma attribute  --- Alternate route: `/v1/dogma/attributes/{attribute_id}/`  Alternate route: `/legacy/dogma/attributes/{attribute_id}/`  Alternate route: `/dev/dogma/attributes/{attribute_id}/`  --- This route expires daily at 11:05
+Get information on a dogma attribute  --- Alternate route: `/dev/dogma/attributes/{attribute_id}/`  Alternate route: `/legacy/dogma/attributes/{attribute_id}/`  Alternate route: `/v1/dogma/attributes/{attribute_id}/`  --- This route expires daily at 11:05
 
 ### Example
 ```php
@@ -115,7 +115,7 @@ No authorization required
 
 Get effects
 
-Get a list of dogma effect ids  --- Alternate route: `/v1/dogma/effects/`  Alternate route: `/legacy/dogma/effects/`  Alternate route: `/dev/dogma/effects/`  --- This route expires daily at 11:05
+Get a list of dogma effect ids  --- Alternate route: `/dev/dogma/effects/`  Alternate route: `/legacy/dogma/effects/`  Alternate route: `/v1/dogma/effects/`  --- This route expires daily at 11:05
 
 ### Example
 ```php
@@ -164,7 +164,7 @@ No authorization required
 
 Get effect information
 
-Get information on a dogma effect  --- Alternate route: `/v2/dogma/effects/{effect_id}/`  Alternate route: `/dev/dogma/effects/{effect_id}/`  --- This route expires daily at 11:05
+Get information on a dogma effect  --- Alternate route: `/dev/dogma/effects/{effect_id}/`  Alternate route: `/v2/dogma/effects/{effect_id}/`  --- This route expires daily at 11:05
 
 ### Example
 ```php

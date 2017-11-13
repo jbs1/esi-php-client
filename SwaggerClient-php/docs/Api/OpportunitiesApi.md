@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 Get a character's completed tasks
 
-Return a list of tasks finished by a character  --- Alternate route: `/v1/characters/{character_id}/opportunities/`  Alternate route: `/legacy/characters/{character_id}/opportunities/`  Alternate route: `/dev/characters/{character_id}/opportunities/`  --- This route is cached for up to 3600 seconds
+Return a list of tasks finished by a character  --- Alternate route: `/dev/characters/{character_id}/opportunities/`  Alternate route: `/legacy/characters/{character_id}/opportunities/`  Alternate route: `/v1/characters/{character_id}/opportunities/`  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```php
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 
 Get opportunities groups
 
-Return a list of opportunities groups  --- Alternate route: `/v1/opportunities/groups/`  Alternate route: `/legacy/opportunities/groups/`  Alternate route: `/dev/opportunities/groups/`  --- This route expires daily at 11:05
+Return a list of opportunities groups  --- Alternate route: `/dev/opportunities/groups/`  Alternate route: `/legacy/opportunities/groups/`  Alternate route: `/v1/opportunities/groups/`  --- This route expires daily at 11:05
 
 ### Example
 ```php
@@ -121,7 +121,7 @@ No authorization required
 
 Get opportunities group
 
-Return information of an opportunities group  --- Alternate route: `/v1/opportunities/groups/{group_id}/`  Alternate route: `/legacy/opportunities/groups/{group_id}/`  Alternate route: `/dev/opportunities/groups/{group_id}/`  --- This route expires daily at 11:05
+Return information of an opportunities group  --- Alternate route: `/dev/opportunities/groups/{group_id}/`  Alternate route: `/legacy/opportunities/groups/{group_id}/`  Alternate route: `/v1/opportunities/groups/{group_id}/`  --- This route expires daily at 11:05
 
 ### Example
 ```php
@@ -174,7 +174,7 @@ No authorization required
 
 Get opportunities tasks
 
-Return a list of opportunities tasks  --- Alternate route: `/v1/opportunities/tasks/`  Alternate route: `/legacy/opportunities/tasks/`  Alternate route: `/dev/opportunities/tasks/`  --- This route expires daily at 11:05
+Return a list of opportunities tasks  --- Alternate route: `/dev/opportunities/tasks/`  Alternate route: `/legacy/opportunities/tasks/`  Alternate route: `/v1/opportunities/tasks/`  --- This route expires daily at 11:05
 
 ### Example
 ```php
@@ -223,7 +223,7 @@ No authorization required
 
 Get opportunities task
 
-Return information of an opportunities task  --- Alternate route: `/v1/opportunities/tasks/{task_id}/`  Alternate route: `/legacy/opportunities/tasks/{task_id}/`  Alternate route: `/dev/opportunities/tasks/{task_id}/`  --- This route expires daily at 11:05
+Return information of an opportunities task  --- Alternate route: `/dev/opportunities/tasks/{task_id}/`  Alternate route: `/legacy/opportunities/tasks/{task_id}/`  Alternate route: `/v1/opportunities/tasks/{task_id}/`  --- This route expires daily at 11:05
 
 ### Example
 ```php

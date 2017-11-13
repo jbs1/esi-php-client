@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 List sovereignty campaigns
 
-Shows sovereignty data for campaigns.  --- Alternate route: `/v1/sovereignty/campaigns/`  Alternate route: `/legacy/sovereignty/campaigns/`  Alternate route: `/dev/sovereignty/campaigns/`  --- This route is cached for up to 5 seconds
+Shows sovereignty data for campaigns.  --- Alternate route: `/dev/sovereignty/campaigns/`  Alternate route: `/legacy/sovereignty/campaigns/`  Alternate route: `/v1/sovereignty/campaigns/`  --- This route is cached for up to 5 seconds
 
 ### Example
 ```php
@@ -63,7 +63,7 @@ No authorization required
 
 List sovereignty of systems
 
-Shows sovereignty information for solar systems  --- Alternate route: `/v1/sovereignty/map/`  Alternate route: `/legacy/sovereignty/map/`  Alternate route: `/dev/sovereignty/map/`  --- This route is cached for up to 3600 seconds
+Shows sovereignty information for solar systems  --- Alternate route: `/dev/sovereignty/map/`  Alternate route: `/legacy/sovereignty/map/`  Alternate route: `/v1/sovereignty/map/`  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```php
@@ -112,7 +112,7 @@ No authorization required
 
 List sovereignty structures
 
-Shows sovereignty data for structures.  --- Alternate route: `/v1/sovereignty/structures/`  Alternate route: `/legacy/sovereignty/structures/`  Alternate route: `/dev/sovereignty/structures/`  --- This route is cached for up to 120 seconds
+Shows sovereignty data for structures.  --- Alternate route: `/dev/sovereignty/structures/`  Alternate route: `/legacy/sovereignty/structures/`  Alternate route: `/v1/sovereignty/structures/`  --- This route is cached for up to 120 seconds
 
 ### Example
 ```php

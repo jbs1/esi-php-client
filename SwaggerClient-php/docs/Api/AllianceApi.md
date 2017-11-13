@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 List all alliances
 
-List all active player alliances  --- Alternate route: `/v1/alliances/`  Alternate route: `/legacy/alliances/`  Alternate route: `/dev/alliances/`  --- This route is cached for up to 3600 seconds
+List all active player alliances  --- Alternate route: `/dev/alliances/`  Alternate route: `/legacy/alliances/`  Alternate route: `/v1/alliances/`  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```php
@@ -116,7 +116,7 @@ No authorization required
 
 List alliance's corporations
 
-List all current member corporations of an alliance  --- Alternate route: `/v1/alliances/{alliance_id}/corporations/`  Alternate route: `/legacy/alliances/{alliance_id}/corporations/`  Alternate route: `/dev/alliances/{alliance_id}/corporations/`  --- This route is cached for up to 3600 seconds
+List all current member corporations of an alliance  --- Alternate route: `/dev/alliances/{alliance_id}/corporations/`  Alternate route: `/legacy/alliances/{alliance_id}/corporations/`  Alternate route: `/v1/alliances/{alliance_id}/corporations/`  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```php
@@ -167,7 +167,7 @@ No authorization required
 
 Get alliance icon
 
-Get the icon urls for a alliance  --- Alternate route: `/v1/alliances/{alliance_id}/icons/`  Alternate route: `/legacy/alliances/{alliance_id}/icons/`  Alternate route: `/dev/alliances/{alliance_id}/icons/`  --- This route is cached for up to 3600 seconds
+Get the icon urls for a alliance  --- Alternate route: `/dev/alliances/{alliance_id}/icons/`  Alternate route: `/legacy/alliances/{alliance_id}/icons/`  Alternate route: `/v1/alliances/{alliance_id}/icons/`  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```php
@@ -218,7 +218,7 @@ No authorization required
 
 Get alliance names
 
-Resolve a set of alliance IDs to alliance names  --- Alternate route: `/v1/alliances/names/`  Alternate route: `/legacy/alliances/names/`  --- This route is cached for up to 3600 seconds
+Resolve a set of alliance IDs to alliance names  --- Alternate route: `/legacy/alliances/names/`  Alternate route: `/v1/alliances/names/`  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```php

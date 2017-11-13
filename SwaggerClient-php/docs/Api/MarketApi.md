@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 List orders from a character
 
-List market orders placed by a character  --- Alternate route: `/v1/characters/{character_id}/orders/`  Alternate route: `/legacy/characters/{character_id}/orders/`  Alternate route: `/dev/characters/{character_id}/orders/`  --- This route is cached for up to 3600 seconds
+List market orders placed by a character  --- Alternate route: `/dev/characters/{character_id}/orders/`  Alternate route: `/legacy/characters/{character_id}/orders/`  Alternate route: `/v1/characters/{character_id}/orders/`  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```php
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 List orders from a corporation
 
-List market orders placed on behalf of a corporation  --- Alternate route: `/v1/corporations/{corporation_id}/orders/`  Alternate route: `/legacy/corporations/{corporation_id}/orders/`  Alternate route: `/dev/corporations/{corporation_id}/orders/`  --- This route is cached for up to 3600 seconds
+List market orders placed on behalf of a corporation  --- Alternate route: `/dev/corporations/{corporation_id}/orders/`  Alternate route: `/legacy/corporations/{corporation_id}/orders/`  Alternate route: `/v1/corporations/{corporation_id}/orders/`  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```php
@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
 
 Get item groups
 
-Get a list of item groups  --- Alternate route: `/v1/markets/groups/`  Alternate route: `/legacy/markets/groups/`  Alternate route: `/dev/markets/groups/`  --- This route expires daily at 11:05
+Get a list of item groups  --- Alternate route: `/dev/markets/groups/`  Alternate route: `/legacy/markets/groups/`  Alternate route: `/v1/markets/groups/`  --- This route expires daily at 11:05
 
 ### Example
 ```php
@@ -183,7 +183,7 @@ No authorization required
 
 Get item group information
 
-Get information on an item group  --- Alternate route: `/v1/markets/groups/{market_group_id}/`  Alternate route: `/legacy/markets/groups/{market_group_id}/`  Alternate route: `/dev/markets/groups/{market_group_id}/`  --- This route expires daily at 11:05
+Get information on an item group  --- Alternate route: `/dev/markets/groups/{market_group_id}/`  Alternate route: `/legacy/markets/groups/{market_group_id}/`  Alternate route: `/v1/markets/groups/{market_group_id}/`  --- This route expires daily at 11:05
 
 ### Example
 ```php
@@ -236,7 +236,7 @@ No authorization required
 
 List market prices
 
-Return a list of prices  --- Alternate route: `/v1/markets/prices/`  Alternate route: `/legacy/markets/prices/`  Alternate route: `/dev/markets/prices/`  --- This route is cached for up to 3600 seconds
+Return a list of prices  --- Alternate route: `/dev/markets/prices/`  Alternate route: `/legacy/markets/prices/`  Alternate route: `/v1/markets/prices/`  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```php
@@ -285,7 +285,7 @@ No authorization required
 
 List historical market statistics in a region
 
-Return a list of historical market statistics for the specified type in a region  --- Alternate route: `/v1/markets/{region_id}/history/`  Alternate route: `/legacy/markets/{region_id}/history/`  Alternate route: `/dev/markets/{region_id}/history/`  --- This route is cached for up to 3600 seconds
+Return a list of historical market statistics for the specified type in a region  --- Alternate route: `/dev/markets/{region_id}/history/`  Alternate route: `/legacy/markets/{region_id}/history/`  Alternate route: `/v1/markets/{region_id}/history/`  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```php
@@ -338,7 +338,7 @@ No authorization required
 
 List orders in a region
 
-Return a list of orders in a region  --- Alternate route: `/v1/markets/{region_id}/orders/`  Alternate route: `/legacy/markets/{region_id}/orders/`  Alternate route: `/dev/markets/{region_id}/orders/`  --- This route is cached for up to 300 seconds
+Return a list of orders in a region  --- Alternate route: `/dev/markets/{region_id}/orders/`  Alternate route: `/legacy/markets/{region_id}/orders/`  Alternate route: `/v1/markets/{region_id}/orders/`  --- This route is cached for up to 300 seconds
 
 ### Example
 ```php
@@ -395,7 +395,7 @@ No authorization required
 
 List type IDs relevant to a market
 
-Return a list of type IDs that have active orders in the region, for efficient market indexing.  --- Alternate route: `/v1/markets/{region_id}/types/`  Alternate route: `/legacy/markets/{region_id}/types/`  Alternate route: `/dev/markets/{region_id}/types/`  --- This route is cached for up to 600 seconds
+Return a list of type IDs that have active orders in the region, for efficient market indexing.  --- Alternate route: `/dev/markets/{region_id}/types/`  Alternate route: `/legacy/markets/{region_id}/types/`  Alternate route: `/v1/markets/{region_id}/types/`  --- This route is cached for up to 600 seconds
 
 ### Example
 ```php
@@ -448,7 +448,7 @@ No authorization required
 
 List orders in a structure
 
-Return all orders in a structure  --- Alternate route: `/v1/markets/structures/{structure_id}/`  Alternate route: `/legacy/markets/structures/{structure_id}/`  Alternate route: `/dev/markets/structures/{structure_id}/`  --- This route is cached for up to 300 seconds
+Return all orders in a structure  --- Alternate route: `/dev/markets/structures/{structure_id}/`  Alternate route: `/legacy/markets/structures/{structure_id}/`  Alternate route: `/v1/markets/structures/{structure_id}/`  --- This route is cached for up to 300 seconds
 
 ### Example
 ```php

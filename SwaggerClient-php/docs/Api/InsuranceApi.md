@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 List insurance levels
 
-Return available insurance levels for all ship types  --- Alternate route: `/v1/insurance/prices/`  Alternate route: `/legacy/insurance/prices/`  Alternate route: `/dev/insurance/prices/`  --- This route is cached for up to 3600 seconds
+Return available insurance levels for all ship types  --- Alternate route: `/dev/insurance/prices/`  Alternate route: `/legacy/insurance/prices/`  Alternate route: `/v1/insurance/prices/`  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```php

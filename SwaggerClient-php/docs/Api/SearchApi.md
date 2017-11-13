@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 
 Search on a string
 
-Search for entities that match a given sub-string.  --- Alternate route: `/v1/search/`  Alternate route: `/legacy/search/`  --- This route is cached for up to 3600 seconds
+Search for entities that match a given sub-string.  --- Alternate route: `/legacy/search/`  Alternate route: `/v1/search/`  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```php

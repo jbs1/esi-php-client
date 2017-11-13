@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 Get a character's wallet balance
 
-Returns a character's wallet balance  --- Alternate route: `/v1/characters/{character_id}/wallet/`  Alternate route: `/legacy/characters/{character_id}/wallet/`  Alternate route: `/dev/characters/{character_id}/wallet/`  --- This route is cached for up to 120 seconds
+Returns a character's wallet balance  --- Alternate route: `/dev/characters/{character_id}/wallet/`  Alternate route: `/legacy/characters/{character_id}/wallet/`  Alternate route: `/v1/characters/{character_id}/wallet/`  --- This route is cached for up to 120 seconds
 
 ### Example
 ```php
@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 
 Get character wallet journal
 
-Retrieve character wallet journal  --- Alternate route: `/v2/characters/{character_id}/wallet/journal/`  Alternate route: `/dev/characters/{character_id}/wallet/journal/`  --- This route is cached for up to 3600 seconds
+Retrieve character wallet journal  --- Alternate route: `/v2/characters/{character_id}/wallet/journal/`  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```php
@@ -131,7 +131,7 @@ Name | Type | Description  | Notes
 
 Get wallet transactions
 
-Get wallet transactions of a character  --- Alternate route: `/v1/characters/{character_id}/wallet/transactions/`  Alternate route: `/legacy/characters/{character_id}/wallet/transactions/`  Alternate route: `/dev/characters/{character_id}/wallet/transactions/`  --- This route is cached for up to 3600 seconds
+Get wallet transactions of a character  --- Alternate route: `/dev/characters/{character_id}/wallet/transactions/`  Alternate route: `/legacy/characters/{character_id}/wallet/transactions/`  Alternate route: `/v1/characters/{character_id}/wallet/transactions/`  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```php
@@ -189,7 +189,7 @@ Name | Type | Description  | Notes
 
 Returns a corporation's wallet balance
 
-Get a corporation's wallets  --- Alternate route: `/v1/corporations/{corporation_id}/wallets/`  Alternate route: `/legacy/corporations/{corporation_id}/wallets/`  Alternate route: `/dev/corporations/{corporation_id}/wallets/`  --- This route is cached for up to 300 seconds
+Get a corporation's wallets  --- Alternate route: `/dev/corporations/{corporation_id}/wallets/`  Alternate route: `/legacy/corporations/{corporation_id}/wallets/`  Alternate route: `/v1/corporations/{corporation_id}/wallets/`  --- This route is cached for up to 300 seconds
 
 ### Example
 ```php
@@ -245,7 +245,7 @@ Name | Type | Description  | Notes
 
 Get corporation wallet journal
 
-Retrieve corporation wallet journal  --- Alternate route: `/v1/corporations/{corporation_id}/wallets/{division}/journal/`  Alternate route: `/legacy/corporations/{corporation_id}/wallets/{division}/journal/`  Alternate route: `/dev/corporations/{corporation_id}/wallets/{division}/journal/`  --- This route is cached for up to 3600 seconds
+Retrieve corporation wallet journal  --- Alternate route: `/legacy/corporations/{corporation_id}/wallets/{division}/journal/`  Alternate route: `/v1/corporations/{corporation_id}/wallets/{division}/journal/`  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```php
@@ -305,7 +305,7 @@ Name | Type | Description  | Notes
 
 Get corporation wallet transactions
 
-Get wallet transactions of a corporation  --- Alternate route: `/v1/corporations/{corporation_id}/wallets/{division}/transactions/`  Alternate route: `/legacy/corporations/{corporation_id}/wallets/{division}/transactions/`  Alternate route: `/dev/corporations/{corporation_id}/wallets/{division}/transactions/`  --- This route is cached for up to 3600 seconds
+Get wallet transactions of a corporation  --- Alternate route: `/dev/corporations/{corporation_id}/wallets/{division}/transactions/`  Alternate route: `/legacy/corporations/{corporation_id}/wallets/{division}/transactions/`  Alternate route: `/v1/corporations/{corporation_id}/wallets/{division}/transactions/`  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```php

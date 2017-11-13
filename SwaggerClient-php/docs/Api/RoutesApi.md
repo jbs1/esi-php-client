@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 Get route
 
-Get the systems between origin and destination  --- Alternate route: `/legacy/route/{origin}/{destination}/`  Alternate route: `/dev/route/{origin}/{destination}/`  Alternate route: `/v1/route/{origin}/{destination}/`  --- This route is cached for up to 86400 seconds
+Get the systems between origin and destination  --- Alternate route: `/dev/route/{origin}/{destination}/`  Alternate route: `/legacy/route/{origin}/{destination}/`  Alternate route: `/v1/route/{origin}/{destination}/`  --- This route is cached for up to 86400 seconds
 
 ### Example
 ```php

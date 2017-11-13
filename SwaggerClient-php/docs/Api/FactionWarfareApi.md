@@ -4,6 +4,8 @@ All URIs are relative to *https://esi.tech.ccp.is/latest*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**getCharactersCharacterIdFwStats**](FactionWarfareApi.md#getCharactersCharacterIdFwStats) | **GET** /characters/{character_id}/fw/stats/ | Overview of a character involved in faction warfare
+[**getCorporationsCorporationIdFwStats**](FactionWarfareApi.md#getCorporationsCorporationIdFwStats) | **GET** /corporations/{corporation_id}/fw/stats/ | Overview of a corporation involved in faction warfare
 [**getFwLeaderboards**](FactionWarfareApi.md#getFwLeaderboards) | **GET** /fw/leaderboards/ | List of the top factions in faction warfare
 [**getFwLeaderboardsCharacters**](FactionWarfareApi.md#getFwLeaderboardsCharacters) | **GET** /fw/leaderboards/characters/ | List of the top pilots in faction warfare
 [**getFwLeaderboardsCorporations**](FactionWarfareApi.md#getFwLeaderboardsCorporations) | **GET** /fw/leaderboards/corporations/ | List of the top corporations in faction warfare
@@ -12,12 +14,124 @@ Method | HTTP request | Description
 [**getFwWars**](FactionWarfareApi.md#getFwWars) | **GET** /fw/wars/ | Data about which NPC factions are at war
 
 
+# **getCharactersCharacterIdFwStats**
+> \Swagger\Client\Model\GetCharactersCharacterIdFwStatsOk getCharactersCharacterIdFwStats($character_id, $datasource, $token, $user_agent, $x_user_agent)
+
+Overview of a character involved in faction warfare
+
+Statistical overview of a character involved in faction warfare  --- Alternate route: `/dev/characters/{character_id}/fw/stats/`  Alternate route: `/legacy/characters/{character_id}/fw/stats/`  Alternate route: `/v1/characters/{character_id}/fw/stats/`  --- This route expires daily at 11:05
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: evesso
+Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$api_instance = new Swagger\Client\Api\FactionWarfareApi(new \Http\Adapter\Guzzle6\Client());
+$character_id = 56; // int | An EVE character ID
+$datasource = "tranquility"; // string | The server name you would like data from
+$token = "token_example"; // string | Access token to use if unable to set a header
+$user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
+$x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
+
+try {
+    $result = $api_instance->getCharactersCharacterIdFwStats($character_id, $datasource, $token, $user_agent, $x_user_agent);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling FactionWarfareApi->getCharactersCharacterIdFwStats: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **character_id** | **int**| An EVE character ID |
+ **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **token** | **string**| Access token to use if unable to set a header | [optional]
+ **user_agent** | **string**| Client identifier, takes precedence over headers | [optional]
+ **x_user_agent** | **string**| Client identifier, takes precedence over User-Agent | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\GetCharactersCharacterIdFwStatsOk**](../Model/GetCharactersCharacterIdFwStatsOk.md)
+
+### Authorization
+
+[evesso](../../README.md#evesso)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getCorporationsCorporationIdFwStats**
+> \Swagger\Client\Model\GetCorporationsCorporationIdFwStatsOk getCorporationsCorporationIdFwStats($corporation_id, $datasource, $token, $user_agent, $x_user_agent)
+
+Overview of a corporation involved in faction warfare
+
+Statistics about a corporation involved in faction warfare  --- Alternate route: `/dev/corporations/{corporation_id}/fw/stats/`  Alternate route: `/legacy/corporations/{corporation_id}/fw/stats/`  Alternate route: `/v1/corporations/{corporation_id}/fw/stats/`  --- This route expires daily at 11:05
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: evesso
+Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$api_instance = new Swagger\Client\Api\FactionWarfareApi(new \Http\Adapter\Guzzle6\Client());
+$corporation_id = 56; // int | An EVE corporation ID
+$datasource = "tranquility"; // string | The server name you would like data from
+$token = "token_example"; // string | Access token to use if unable to set a header
+$user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
+$x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
+
+try {
+    $result = $api_instance->getCorporationsCorporationIdFwStats($corporation_id, $datasource, $token, $user_agent, $x_user_agent);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling FactionWarfareApi->getCorporationsCorporationIdFwStats: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **corporation_id** | **int**| An EVE corporation ID |
+ **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **token** | **string**| Access token to use if unable to set a header | [optional]
+ **user_agent** | **string**| Client identifier, takes precedence over headers | [optional]
+ **x_user_agent** | **string**| Client identifier, takes precedence over User-Agent | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\GetCorporationsCorporationIdFwStatsOk**](../Model/GetCorporationsCorporationIdFwStatsOk.md)
+
+### Authorization
+
+[evesso](../../README.md#evesso)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **getFwLeaderboards**
 > \Swagger\Client\Model\GetFwLeaderboardsOk getFwLeaderboards($datasource, $user_agent, $x_user_agent)
 
 List of the top factions in faction warfare
 
-Top 4 leaderboard of factions for kills and victory points separated by total, last week and yesterday.  --- Alternate route: `/v1/fw/leaderboards/`  Alternate route: `/legacy/fw/leaderboards/`  Alternate route: `/dev/fw/leaderboards/`  --- This route expires daily at 11:05
+Top 4 leaderboard of factions for kills and victory points separated by total, last week and yesterday.  --- Alternate route: `/dev/fw/leaderboards/`  Alternate route: `/legacy/fw/leaderboards/`  Alternate route: `/v1/fw/leaderboards/`  --- This route expires daily at 11:05
 
 ### Example
 ```php
@@ -66,7 +180,7 @@ No authorization required
 
 List of the top pilots in faction warfare
 
-Top 100 leaderboard of pilots for kills and victory points separated by total, last week and yesterday.  --- Alternate route: `/v1/fw/leaderboards/characters/`  Alternate route: `/legacy/fw/leaderboards/characters/`  Alternate route: `/dev/fw/leaderboards/characters/`  --- This route expires daily at 11:05
+Top 100 leaderboard of pilots for kills and victory points separated by total, last week and yesterday.  --- Alternate route: `/dev/fw/leaderboards/characters/`  Alternate route: `/legacy/fw/leaderboards/characters/`  Alternate route: `/v1/fw/leaderboards/characters/`  --- This route expires daily at 11:05
 
 ### Example
 ```php
@@ -115,7 +229,7 @@ No authorization required
 
 List of the top corporations in faction warfare
 
-Top 10 leaderboard of corporations for kills and victory points separated by total, last week and yesterday.  --- Alternate route: `/v1/fw/leaderboards/corporations/`  Alternate route: `/legacy/fw/leaderboards/corporations/`  Alternate route: `/dev/fw/leaderboards/corporations/`  --- This route expires daily at 11:05
+Top 10 leaderboard of corporations for kills and victory points separated by total, last week and yesterday.  --- Alternate route: `/dev/fw/leaderboards/corporations/`  Alternate route: `/legacy/fw/leaderboards/corporations/`  Alternate route: `/v1/fw/leaderboards/corporations/`  --- This route expires daily at 11:05
 
 ### Example
 ```php
@@ -164,7 +278,7 @@ No authorization required
 
 An overview of statistics about factions involved in faction warfare
 
-Statistical overviews of factions involved in faction warfare  --- Alternate route: `/v1/fw/stats/`  Alternate route: `/legacy/fw/stats/`  Alternate route: `/dev/fw/stats/`  --- This route expires daily at 11:05
+Statistical overviews of factions involved in faction warfare  --- Alternate route: `/dev/fw/stats/`  Alternate route: `/legacy/fw/stats/`  Alternate route: `/v1/fw/stats/`  --- This route expires daily at 11:05
 
 ### Example
 ```php
@@ -213,7 +327,7 @@ No authorization required
 
 Ownership of faction warfare systems
 
-An overview of the current ownership of faction warfare solar systems  --- Alternate route: `/v1/fw/systems/`  Alternate route: `/legacy/fw/systems/`  Alternate route: `/dev/fw/systems/`  --- This route is cached for up to 1800 seconds
+An overview of the current ownership of faction warfare solar systems  --- Alternate route: `/dev/fw/systems/`  Alternate route: `/legacy/fw/systems/`  Alternate route: `/v1/fw/systems/`  --- This route is cached for up to 1800 seconds
 
 ### Example
 ```php
@@ -262,7 +376,7 @@ No authorization required
 
 Data about which NPC factions are at war
 
-Data about which NPC factions are at war  --- Alternate route: `/v1/fw/wars/`  Alternate route: `/legacy/fw/wars/`  Alternate route: `/dev/fw/wars/`  --- This route expires daily at 11:05
+Data about which NPC factions are at war  --- Alternate route: `/dev/fw/wars/`  Alternate route: `/legacy/fw/wars/`  Alternate route: `/v1/fw/wars/`  --- This route expires daily at 11:05
 
 ### Example
 ```php

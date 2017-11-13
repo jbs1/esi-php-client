@@ -19,5 +19,5 @@ composer install -d SwaggerClient-php
 
 The current stable version of 2.2.3 leads to `Exception in thread "main" java.lang.RuntimeException: Could not generate api file for 'Assets'`  
 while the SNAPSHOT versions of 2.2.3 and 3.0.0 lead to Accesstoken auth failing by throwing an  
-`resulted in a `403 Forbidden` response:\n{"error": "Missing or invalid token.", "sso_status": 400}`.  
+`resulted in a '403 Forbidden' response:\n{"error": "Missing or invalid token.", "sso_status": 400}`.  
 Version 2.2.2 and below seem to be working fine.

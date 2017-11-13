@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 Retrieve the uptime and player counts
 
-EVE Server status  --- Alternate route: `/v1/status/`  Alternate route: `/legacy/status/`  Alternate route: `/dev/status/`  --- This route is cached for up to 30 seconds
+EVE Server status  --- Alternate route: `/dev/status/`  Alternate route: `/legacy/status/`  Alternate route: `/v1/status/`  --- This route is cached for up to 30 seconds
 
 ### Example
 ```php

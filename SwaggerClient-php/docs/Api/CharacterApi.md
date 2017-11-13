@@ -16,6 +16,7 @@ Method | HTTP request | Description
 [**getCharactersCharacterIdPortrait**](CharacterApi.md#getCharactersCharacterIdPortrait) | **GET** /characters/{character_id}/portrait/ | Get character portraits
 [**getCharactersCharacterIdRoles**](CharacterApi.md#getCharactersCharacterIdRoles) | **GET** /characters/{character_id}/roles/ | Get character corporation roles
 [**getCharactersCharacterIdStandings**](CharacterApi.md#getCharactersCharacterIdStandings) | **GET** /characters/{character_id}/standings/ | Get standings
+[**getCharactersCharacterIdTitles**](CharacterApi.md#getCharactersCharacterIdTitles) | **GET** /characters/{character_id}/titles/ | Get character corporation titles
 [**getCharactersNames**](CharacterApi.md#getCharactersNames) | **GET** /characters/names/ | Get character names
 [**postCharactersAffiliation**](CharacterApi.md#postCharactersAffiliation) | **POST** /characters/affiliation/ | Character affiliation
 [**postCharactersCharacterIdCspa**](CharacterApi.md#postCharactersCharacterIdCspa) | **POST** /characters/{character_id}/cspa/ | Calculate a CSPA charge cost
@@ -26,7 +27,7 @@ Method | HTTP request | Description
 
 Get character's public information
 
-Public information about a character  --- Alternate route: `/v4/characters/{character_id}/`  Alternate route: `/dev/characters/{character_id}/`  --- This route is cached for up to 3600 seconds
+Public information about a character  --- Alternate route: `/dev/characters/{character_id}/`  Alternate route: `/v4/characters/{character_id}/`  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```php
@@ -77,7 +78,7 @@ No authorization required
 
 Get agents research
 
-Return a list of agents research information for a character. The formula for finding the current research points with an agent is: currentPoints = remainderPoints + pointsPerDay * days(currentTime - researchStartDate)  --- Alternate route: `/v1/characters/{character_id}/agents_research/`  Alternate route: `/legacy/characters/{character_id}/agents_research/`  Alternate route: `/dev/characters/{character_id}/agents_research/`  --- This route is cached for up to 3600 seconds
+Return a list of agents research information for a character. The formula for finding the current research points with an agent is: currentPoints = remainderPoints + pointsPerDay * days(currentTime - researchStartDate)  --- Alternate route: `/dev/characters/{character_id}/agents_research/`  Alternate route: `/legacy/characters/{character_id}/agents_research/`  Alternate route: `/v1/characters/{character_id}/agents_research/`  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```php
@@ -133,7 +134,7 @@ Name | Type | Description  | Notes
 
 Get blueprints
 
-Return a list of blueprints the character owns  --- Alternate route: `/v2/characters/{character_id}/blueprints/`  Alternate route: `/dev/characters/{character_id}/blueprints/`  --- This route is cached for up to 3600 seconds
+Return a list of blueprints the character owns  --- Alternate route: `/dev/characters/{character_id}/blueprints/`  Alternate route: `/v2/characters/{character_id}/blueprints/`  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```php
@@ -191,7 +192,7 @@ Name | Type | Description  | Notes
 
 Get chat channels
 
-Return chat channels that a character is the owner or operator of  --- Alternate route: `/v1/characters/{character_id}/chat_channels/`  Alternate route: `/legacy/characters/{character_id}/chat_channels/`  Alternate route: `/dev/characters/{character_id}/chat_channels/`  --- This route is cached for up to 300 seconds
+Return chat channels that a character is the owner or operator of  --- Alternate route: `/dev/characters/{character_id}/chat_channels/`  Alternate route: `/legacy/characters/{character_id}/chat_channels/`  Alternate route: `/v1/characters/{character_id}/chat_channels/`  --- This route is cached for up to 300 seconds
 
 ### Example
 ```php
@@ -247,7 +248,7 @@ Name | Type | Description  | Notes
 
 Get corporation history
 
-Get a list of all the corporations a character has been a member of  --- Alternate route: `/v1/characters/{character_id}/corporationhistory/`  Alternate route: `/legacy/characters/{character_id}/corporationhistory/`  Alternate route: `/dev/characters/{character_id}/corporationhistory/`  --- This route is cached for up to 3600 seconds
+Get a list of all the corporations a character has been a member of  --- Alternate route: `/dev/characters/{character_id}/corporationhistory/`  Alternate route: `/legacy/characters/{character_id}/corporationhistory/`  Alternate route: `/v1/characters/{character_id}/corporationhistory/`  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```php
@@ -298,7 +299,7 @@ No authorization required
 
 Get jump fatigue
 
-Return a character's jump activation and fatigue information  --- Alternate route: `/v1/characters/{character_id}/fatigue/`  Alternate route: `/legacy/characters/{character_id}/fatigue/`  Alternate route: `/dev/characters/{character_id}/fatigue/`  --- This route is cached for up to 300 seconds
+Return a character's jump activation and fatigue information  --- Alternate route: `/dev/characters/{character_id}/fatigue/`  Alternate route: `/legacy/characters/{character_id}/fatigue/`  Alternate route: `/v1/characters/{character_id}/fatigue/`  --- This route is cached for up to 300 seconds
 
 ### Example
 ```php
@@ -354,7 +355,7 @@ Name | Type | Description  | Notes
 
 Get medals
 
-Return a list of medals the character has  --- Alternate route: `/v1/characters/{character_id}/medals/`  Alternate route: `/legacy/characters/{character_id}/medals/`  Alternate route: `/dev/characters/{character_id}/medals/`  --- This route is cached for up to 3600 seconds
+Return a list of medals the character has  --- Alternate route: `/dev/characters/{character_id}/medals/`  Alternate route: `/legacy/characters/{character_id}/medals/`  Alternate route: `/v1/characters/{character_id}/medals/`  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```php
@@ -410,7 +411,7 @@ Name | Type | Description  | Notes
 
 Get character notifications
 
-Return character notifications  --- Alternate route: `/v1/characters/{character_id}/notifications/`  Alternate route: `/legacy/characters/{character_id}/notifications/`  Alternate route: `/dev/characters/{character_id}/notifications/`  --- This route is cached for up to 600 seconds
+Return character notifications  --- Alternate route: `/dev/characters/{character_id}/notifications/`  Alternate route: `/legacy/characters/{character_id}/notifications/`  Alternate route: `/v1/characters/{character_id}/notifications/`  --- This route is cached for up to 600 seconds
 
 ### Example
 ```php
@@ -466,7 +467,7 @@ Name | Type | Description  | Notes
 
 Get new contact notifications
 
-Return notifications about having been added to someone's contact list  --- Alternate route: `/v1/characters/{character_id}/notifications/contacts/`  Alternate route: `/legacy/characters/{character_id}/notifications/contacts/`  Alternate route: `/dev/characters/{character_id}/notifications/contacts/`  --- This route is cached for up to 600 seconds
+Return notifications about having been added to someone's contact list  --- Alternate route: `/dev/characters/{character_id}/notifications/contacts/`  Alternate route: `/legacy/characters/{character_id}/notifications/contacts/`  Alternate route: `/v1/characters/{character_id}/notifications/contacts/`  --- This route is cached for up to 600 seconds
 
 ### Example
 ```php
@@ -522,7 +523,7 @@ Name | Type | Description  | Notes
 
 Get character portraits
 
-Get portrait urls for a character  --- Alternate route: `/v2/characters/{character_id}/portrait/`  Alternate route: `/dev/characters/{character_id}/portrait/`  --- This route is cached for up to 3600 seconds
+Get portrait urls for a character  --- Alternate route: `/dev/characters/{character_id}/portrait/`  Alternate route: `/v2/characters/{character_id}/portrait/`  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```php
@@ -573,7 +574,7 @@ No authorization required
 
 Get character corporation roles
 
-Returns a character's corporation roles  --- Alternate route: `/v1/characters/{character_id}/roles/`  Alternate route: `/legacy/characters/{character_id}/roles/`  --- This route is cached for up to 3600 seconds
+Returns a character's corporation roles  --- Alternate route: `/legacy/characters/{character_id}/roles/`  Alternate route: `/v1/characters/{character_id}/roles/`  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```php
@@ -629,7 +630,7 @@ Name | Type | Description  | Notes
 
 Get standings
 
-Return character standings from agents, NPC corporations, and factions  --- Alternate route: `/v1/characters/{character_id}/standings/`  Alternate route: `/legacy/characters/{character_id}/standings/`  Alternate route: `/dev/characters/{character_id}/standings/`  --- This route is cached for up to 3600 seconds
+Return character standings from agents, NPC corporations, and factions  --- Alternate route: `/dev/characters/{character_id}/standings/`  Alternate route: `/legacy/characters/{character_id}/standings/`  Alternate route: `/v1/characters/{character_id}/standings/`  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```php
@@ -680,12 +681,68 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **getCharactersCharacterIdTitles**
+> \Swagger\Client\Model\GetCharactersCharacterIdTitles200Ok[] getCharactersCharacterIdTitles($character_id, $datasource, $token, $user_agent, $x_user_agent)
+
+Get character corporation titles
+
+Returns a character's titles  --- Alternate route: `/dev/characters/{character_id}/titles/`  Alternate route: `/legacy/characters/{character_id}/titles/`  Alternate route: `/v1/characters/{character_id}/titles/`  --- This route is cached for up to 3600 seconds
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: evesso
+Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$api_instance = new Swagger\Client\Api\CharacterApi(new \Http\Adapter\Guzzle6\Client());
+$character_id = 56; // int | An EVE character ID
+$datasource = "tranquility"; // string | The server name you would like data from
+$token = "token_example"; // string | Access token to use if unable to set a header
+$user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
+$x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
+
+try {
+    $result = $api_instance->getCharactersCharacterIdTitles($character_id, $datasource, $token, $user_agent, $x_user_agent);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CharacterApi->getCharactersCharacterIdTitles: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **character_id** | **int**| An EVE character ID |
+ **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **token** | **string**| Access token to use if unable to set a header | [optional]
+ **user_agent** | **string**| Client identifier, takes precedence over headers | [optional]
+ **x_user_agent** | **string**| Client identifier, takes precedence over User-Agent | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\GetCharactersCharacterIdTitles200Ok[]**](../Model/GetCharactersCharacterIdTitles200Ok.md)
+
+### Authorization
+
+[evesso](../../README.md#evesso)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **getCharactersNames**
 > \Swagger\Client\Model\GetCharactersNames200Ok[] getCharactersNames($character_ids, $datasource, $user_agent, $x_user_agent)
 
 Get character names
 
-Resolve a set of character IDs to character names  --- Alternate route: `/v1/characters/names/`  Alternate route: `/legacy/characters/names/`  Alternate route: `/dev/characters/names/`  --- This route is cached for up to 3600 seconds
+Resolve a set of character IDs to character names  --- Alternate route: `/dev/characters/names/`  Alternate route: `/legacy/characters/names/`  Alternate route: `/v1/characters/names/`  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```php
@@ -736,7 +793,7 @@ No authorization required
 
 Character affiliation
 
-Bulk lookup of character IDs to corporation, alliance and faction  --- Alternate route: `/v1/characters/affiliation/`  Alternate route: `/legacy/characters/affiliation/`  Alternate route: `/dev/characters/affiliation/`  --- This route is cached for up to 3600 seconds
+Bulk lookup of character IDs to corporation, alliance and faction  --- Alternate route: `/dev/characters/affiliation/`  Alternate route: `/legacy/characters/affiliation/`  Alternate route: `/v1/characters/affiliation/`  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```php
@@ -787,7 +844,7 @@ No authorization required
 
 Calculate a CSPA charge cost
 
-Takes a source character ID in the url and a set of target character ID's in the body, returns a CSPA charge cost  --- Alternate route: `/v3/characters/{character_id}/cspa/`  Alternate route: `/legacy/characters/{character_id}/cspa/`
+Takes a source character ID in the url and a set of target character ID's in the body, returns a CSPA charge cost  --- Alternate route: `/legacy/characters/{character_id}/cspa/`  Alternate route: `/v3/characters/{character_id}/cspa/`
 
 ### Example
 ```php
