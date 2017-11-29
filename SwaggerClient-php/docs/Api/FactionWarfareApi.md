@@ -27,9 +27,14 @@ Statistical overview of a character involved in faction warfare  --- Alternate r
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\FactionWarfareApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\FactionWarfareApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -37,7 +42,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCharactersCharacterIdFwStats($character_id, $datasource, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCharactersCharacterIdFwStats($character_id, $datasource, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FactionWarfareApi->getCharactersCharacterIdFwStats: ', $e->getMessage(), PHP_EOL;
@@ -83,9 +88,14 @@ Statistics about a corporation involved in faction warfare  --- Alternate route:
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\FactionWarfareApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\FactionWarfareApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $corporation_id = 56; // int | An EVE corporation ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -93,7 +103,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCorporationsCorporationIdFwStats($corporation_id, $datasource, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCorporationsCorporationIdFwStats($corporation_id, $datasource, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FactionWarfareApi->getCorporationsCorporationIdFwStats: ', $e->getMessage(), PHP_EOL;
@@ -138,13 +148,17 @@ Top 4 leaderboard of factions for kills and victory points separated by total, l
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\FactionWarfareApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\FactionWarfareApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getFwLeaderboards($datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getFwLeaderboards($datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FactionWarfareApi->getFwLeaderboards: ', $e->getMessage(), PHP_EOL;
@@ -187,13 +201,17 @@ Top 100 leaderboard of pilots for kills and victory points separated by total, l
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\FactionWarfareApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\FactionWarfareApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getFwLeaderboardsCharacters($datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getFwLeaderboardsCharacters($datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FactionWarfareApi->getFwLeaderboardsCharacters: ', $e->getMessage(), PHP_EOL;
@@ -236,13 +254,17 @@ Top 10 leaderboard of corporations for kills and victory points separated by tot
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\FactionWarfareApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\FactionWarfareApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getFwLeaderboardsCorporations($datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getFwLeaderboardsCorporations($datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FactionWarfareApi->getFwLeaderboardsCorporations: ', $e->getMessage(), PHP_EOL;
@@ -285,13 +307,17 @@ Statistical overviews of factions involved in faction warfare  --- Alternate rou
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\FactionWarfareApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\FactionWarfareApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getFwStats($datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getFwStats($datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FactionWarfareApi->getFwStats: ', $e->getMessage(), PHP_EOL;
@@ -334,13 +360,17 @@ An overview of the current ownership of faction warfare solar systems  --- Alter
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\FactionWarfareApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\FactionWarfareApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getFwSystems($datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getFwSystems($datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FactionWarfareApi->getFwSystems: ', $e->getMessage(), PHP_EOL;
@@ -383,13 +413,17 @@ Data about which NPC factions are at war  --- Alternate route: `/dev/fw/wars/`  
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\FactionWarfareApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\FactionWarfareApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getFwWars($datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getFwWars($datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FactionWarfareApi->getFwWars: ', $e->getMessage(), PHP_EOL;

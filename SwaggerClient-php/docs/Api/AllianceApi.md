@@ -23,13 +23,17 @@ List all active player alliances  --- Alternate route: `/dev/alliances/`  Altern
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\AllianceApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\AllianceApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getAlliances($datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getAlliances($datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AllianceApi->getAlliances: ', $e->getMessage(), PHP_EOL;
@@ -72,14 +76,18 @@ Public information about an alliance  --- Alternate route: `/v2/alliances/{allia
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\AllianceApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\AllianceApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $alliance_id = 56; // int | An EVE alliance ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getAlliancesAllianceId($alliance_id, $datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getAlliancesAllianceId($alliance_id, $datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AllianceApi->getAlliancesAllianceId: ', $e->getMessage(), PHP_EOL;
@@ -123,14 +131,18 @@ List all current member corporations of an alliance  --- Alternate route: `/dev/
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\AllianceApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\AllianceApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $alliance_id = 56; // int | An EVE alliance ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getAlliancesAllianceIdCorporations($alliance_id, $datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getAlliancesAllianceIdCorporations($alliance_id, $datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AllianceApi->getAlliancesAllianceIdCorporations: ', $e->getMessage(), PHP_EOL;
@@ -174,14 +186,18 @@ Get the icon urls for a alliance  --- Alternate route: `/dev/alliances/{alliance
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\AllianceApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\AllianceApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $alliance_id = 56; // int | An EVE alliance ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getAlliancesAllianceIdIcons($alliance_id, $datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getAlliancesAllianceIdIcons($alliance_id, $datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AllianceApi->getAlliancesAllianceIdIcons: ', $e->getMessage(), PHP_EOL;
@@ -225,14 +241,18 @@ Resolve a set of alliance IDs to alliance names  --- Alternate route: `/legacy/a
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\AllianceApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\AllianceApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $alliance_ids = array(56); // int[] | A comma separated list of alliance IDs
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getAlliancesNames($alliance_ids, $datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getAlliancesNames($alliance_ids, $datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AllianceApi->getAlliancesNames: ', $e->getMessage(), PHP_EOL;

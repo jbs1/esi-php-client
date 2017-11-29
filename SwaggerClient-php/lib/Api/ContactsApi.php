@@ -32,6 +32,7 @@ use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
+use GuzzleHttp\RequestOptions;
 use Swagger\Client\ApiException;
 use Swagger\Client\Configuration;
 use Swagger\Client\HeaderSelector;
@@ -123,14 +124,15 @@ class ContactsApi
         $request = $this->deleteCharactersCharacterIdContactsRequest($character_id, $contact_ids, $datasource, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -220,7 +222,7 @@ class ContactsApi
         $request = $this->deleteCharactersCharacterIdContactsRequest($character_id, $contact_ids, $datasource, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     return [null, $response->getStatusCode(), $response->getHeaders()];
@@ -418,14 +420,15 @@ class ContactsApi
         $request = $this->getAlliancesAllianceIdContactsRequest($alliance_id, $datasource, $page, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -537,7 +540,7 @@ class ContactsApi
         $request = $this->getAlliancesAllianceIdContactsRequest($alliance_id, $datasource, $page, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -744,14 +747,15 @@ class ContactsApi
         $request = $this->getCharactersCharacterIdContactsRequest($character_id, $datasource, $page, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -863,7 +867,7 @@ class ContactsApi
         $request = $this->getCharactersCharacterIdContactsRequest($character_id, $datasource, $page, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -1068,14 +1072,15 @@ class ContactsApi
         $request = $this->getCharactersCharacterIdContactsLabelsRequest($character_id, $datasource, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -1185,7 +1190,7 @@ class ContactsApi
         $request = $this->getCharactersCharacterIdContactsLabelsRequest($character_id, $datasource, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -1387,14 +1392,15 @@ class ContactsApi
         $request = $this->getCorporationsCorporationIdContactsRequest($corporation_id, $datasource, $page, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -1506,7 +1512,7 @@ class ContactsApi
         $request = $this->getCorporationsCorporationIdContactsRequest($corporation_id, $datasource, $page, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -1719,14 +1725,15 @@ class ContactsApi
         $request = $this->postCharactersCharacterIdContactsRequest($character_id, $contact_ids, $standing, $datasource, $label_id, $token, $user_agent, $watched, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -1844,7 +1851,7 @@ class ContactsApi
         $request = $this->postCharactersCharacterIdContactsRequest($character_id, $contact_ids, $standing, $datasource, $label_id, $token, $user_agent, $watched, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -2089,14 +2096,15 @@ class ContactsApi
         $request = $this->putCharactersCharacterIdContactsRequest($character_id, $contact_ids, $standing, $datasource, $label_id, $token, $user_agent, $watched, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -2192,7 +2200,7 @@ class ContactsApi
         $request = $this->putCharactersCharacterIdContactsRequest($character_id, $contact_ids, $standing, $datasource, $label_id, $token, $user_agent, $watched, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     return [null, $response->getStatusCode(), $response->getHeaders()];
@@ -2374,4 +2382,22 @@ class ContactsApi
         );
     }
 
+    /**
+     * Create http client option
+     *
+     * @throws \RuntimeException on file opening failure
+     * @return array of http client options
+     */
+    protected function createHttpClientOption()
+    {
+        $options = [];
+        if ($this->config->getDebug()) {
+            $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'a');
+            if (!$options[RequestOptions::DEBUG]) {
+                throw new \RuntimeException('Failed to open the debug file: ' . $this->config->getDebugFile());
+            }
+        }
+
+        return $options;
+    }
 }

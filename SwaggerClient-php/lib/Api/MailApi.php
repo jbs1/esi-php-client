@@ -32,6 +32,7 @@ use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
+use GuzzleHttp\RequestOptions;
 use Swagger\Client\ApiException;
 use Swagger\Client\Configuration;
 use Swagger\Client\HeaderSelector;
@@ -123,14 +124,15 @@ class MailApi
         $request = $this->deleteCharactersCharacterIdMailLabelsLabelIdRequest($character_id, $label_id, $datasource, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -228,7 +230,7 @@ class MailApi
         $request = $this->deleteCharactersCharacterIdMailLabelsLabelIdRequest($character_id, $label_id, $datasource, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     return [null, $response->getStatusCode(), $response->getHeaders()];
@@ -430,14 +432,15 @@ class MailApi
         $request = $this->deleteCharactersCharacterIdMailMailIdRequest($character_id, $mail_id, $datasource, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -527,7 +530,7 @@ class MailApi
         $request = $this->deleteCharactersCharacterIdMailMailIdRequest($character_id, $mail_id, $datasource, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     return [null, $response->getStatusCode(), $response->getHeaders()];
@@ -732,14 +735,15 @@ class MailApi
         $request = $this->getCharactersCharacterIdMailRequest($character_id, $datasource, $labels, $last_mail_id, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -853,7 +857,7 @@ class MailApi
         $request = $this->getCharactersCharacterIdMailRequest($character_id, $datasource, $labels, $last_mail_id, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -1073,14 +1077,15 @@ class MailApi
         $request = $this->getCharactersCharacterIdMailLabelsRequest($character_id, $datasource, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -1190,7 +1195,7 @@ class MailApi
         $request = $this->getCharactersCharacterIdMailLabelsRequest($character_id, $datasource, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -1390,14 +1395,15 @@ class MailApi
         $request = $this->getCharactersCharacterIdMailListsRequest($character_id, $datasource, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -1507,7 +1513,7 @@ class MailApi
         $request = $this->getCharactersCharacterIdMailListsRequest($character_id, $datasource, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -1709,14 +1715,15 @@ class MailApi
         $request = $this->getCharactersCharacterIdMailMailIdRequest($character_id, $mail_id, $datasource, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -1836,7 +1843,7 @@ class MailApi
         $request = $this->getCharactersCharacterIdMailMailIdRequest($character_id, $mail_id, $datasource, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -2053,14 +2060,15 @@ class MailApi
         $request = $this->postCharactersCharacterIdMailRequest($character_id, $mail, $datasource, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -2180,7 +2188,7 @@ class MailApi
         $request = $this->postCharactersCharacterIdMailRequest($character_id, $mail, $datasource, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -2392,14 +2400,15 @@ class MailApi
         $request = $this->postCharactersCharacterIdMailLabelsRequest($character_id, $datasource, $label, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -2511,7 +2520,7 @@ class MailApi
         $request = $this->postCharactersCharacterIdMailLabelsRequest($character_id, $datasource, $label, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -2718,14 +2727,15 @@ class MailApi
         $request = $this->putCharactersCharacterIdMailMailIdRequest($character_id, $contents, $mail_id, $datasource, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -2825,7 +2835,7 @@ class MailApi
         $request = $this->putCharactersCharacterIdMailMailIdRequest($character_id, $contents, $mail_id, $datasource, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     return [null, $response->getStatusCode(), $response->getHeaders()];
@@ -2994,4 +3004,22 @@ class MailApi
         );
     }
 
+    /**
+     * Create http client option
+     *
+     * @throws \RuntimeException on file opening failure
+     * @return array of http client options
+     */
+    protected function createHttpClientOption()
+    {
+        $options = [];
+        if ($this->config->getDebug()) {
+            $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'a');
+            if (!$options[RequestOptions::DEBUG]) {
+                throw new \RuntimeException('Failed to open the debug file: ' . $this->config->getDebugFile());
+            }
+        }
+
+        return $options;
+    }
 }

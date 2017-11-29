@@ -23,9 +23,14 @@ Returns a list of all planetary colonies owned by a character.  --- Alternate ro
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\PlanetaryInteractionApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\PlanetaryInteractionApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -33,7 +38,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCharactersCharacterIdPlanets($character_id, $datasource, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCharactersCharacterIdPlanets($character_id, $datasource, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PlanetaryInteractionApi->getCharactersCharacterIdPlanets: ', $e->getMessage(), PHP_EOL;
@@ -79,9 +84,14 @@ Returns full details on the layout of a single planetary colony, including links
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\PlanetaryInteractionApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\PlanetaryInteractionApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $character_id = 56; // int | An EVE character ID
 $planet_id = 56; // int | Planet id of the target planet
 $datasource = "tranquility"; // string | The server name you would like data from
@@ -90,7 +100,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCharactersCharacterIdPlanetsPlanetId($character_id, $planet_id, $datasource, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCharactersCharacterIdPlanetsPlanetId($character_id, $planet_id, $datasource, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PlanetaryInteractionApi->getCharactersCharacterIdPlanetsPlanetId: ', $e->getMessage(), PHP_EOL;
@@ -137,9 +147,14 @@ List customs offices owned by a corporation  --- Alternate route: `/dev/corporat
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\PlanetaryInteractionApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\PlanetaryInteractionApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $corporation_id = 56; // int | An EVE corporation ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $page = 1; // int | Which page of results to return
@@ -148,7 +163,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCorporationsCorporationIdCustomsOffices($corporation_id, $datasource, $page, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCorporationsCorporationIdCustomsOffices($corporation_id, $datasource, $page, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PlanetaryInteractionApi->getCorporationsCorporationIdCustomsOffices: ', $e->getMessage(), PHP_EOL;
@@ -194,14 +209,18 @@ Get information on a planetary factory schematic  --- Alternate route: `/dev/uni
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\PlanetaryInteractionApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\PlanetaryInteractionApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $schematic_id = 56; // int | A PI schematic ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getUniverseSchematicsSchematicId($schematic_id, $datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getUniverseSchematicsSchematicId($schematic_id, $datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PlanetaryInteractionApi->getUniverseSchematicsSchematicId: ', $e->getMessage(), PHP_EOL;

@@ -23,9 +23,14 @@ Get 50 event summaries from the calendar. If no from_event ID is given, the reso
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CalendarApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\CalendarApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $from_event = 56; // int | The event ID to retrieve events from
@@ -34,7 +39,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCharactersCharacterIdCalendar($character_id, $datasource, $from_event, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCharactersCharacterIdCalendar($character_id, $datasource, $from_event, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CalendarApi->getCharactersCharacterIdCalendar: ', $e->getMessage(), PHP_EOL;
@@ -81,9 +86,14 @@ Get all the information for a specific event  --- Alternate route: `/dev/charact
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CalendarApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\CalendarApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $character_id = 56; // int | An EVE character ID
 $event_id = 56; // int | The id of the event requested
 $datasource = "tranquility"; // string | The server name you would like data from
@@ -92,7 +102,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCharactersCharacterIdCalendarEventId($character_id, $event_id, $datasource, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCharactersCharacterIdCalendarEventId($character_id, $event_id, $datasource, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CalendarApi->getCharactersCharacterIdCalendarEventId: ', $e->getMessage(), PHP_EOL;
@@ -139,9 +149,14 @@ Get all invited attendees for a given event  --- Alternate route: `/dev/characte
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CalendarApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\CalendarApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $character_id = 56; // int | An EVE character ID
 $event_id = 56; // int | The id of the event requested
 $datasource = "tranquility"; // string | The server name you would like data from
@@ -150,7 +165,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCharactersCharacterIdCalendarEventIdAttendees($character_id, $event_id, $datasource, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCharactersCharacterIdCalendarEventIdAttendees($character_id, $event_id, $datasource, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CalendarApi->getCharactersCharacterIdCalendarEventIdAttendees: ', $e->getMessage(), PHP_EOL;
@@ -197,9 +212,14 @@ Set your response status to an event  --- Alternate route: `/dev/characters/{cha
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CalendarApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\CalendarApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $character_id = 56; // int | An EVE character ID
 $event_id = 56; // int | The ID of the event requested
 $response = new \Swagger\Client\Model\PutCharactersCharacterIdCalendarEventIdResponse(); // \Swagger\Client\Model\PutCharactersCharacterIdCalendarEventIdResponse | The response value to set, overriding current value.
@@ -209,7 +229,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $api_instance->putCharactersCharacterIdCalendarEventId($character_id, $event_id, $response, $datasource, $token, $user_agent, $x_user_agent);
+    $apiInstance->putCharactersCharacterIdCalendarEventId($character_id, $event_id, $response, $datasource, $token, $user_agent, $x_user_agent);
 } catch (Exception $e) {
     echo 'Exception when calling CalendarApi->putCharactersCharacterIdCalendarEventId: ', $e->getMessage(), PHP_EOL;
 }

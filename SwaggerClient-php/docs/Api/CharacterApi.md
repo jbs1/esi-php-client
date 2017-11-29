@@ -34,14 +34,18 @@ Public information about a character  --- Alternate route: `/dev/characters/{cha
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\CharacterApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\CharacterApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCharactersCharacterId($character_id, $datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCharactersCharacterId($character_id, $datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CharacterApi->getCharactersCharacterId: ', $e->getMessage(), PHP_EOL;
@@ -86,9 +90,14 @@ Return a list of agents research information for a character. The formula for fi
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CharacterApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\CharacterApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -96,7 +105,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCharactersCharacterIdAgentsResearch($character_id, $datasource, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCharactersCharacterIdAgentsResearch($character_id, $datasource, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CharacterApi->getCharactersCharacterIdAgentsResearch: ', $e->getMessage(), PHP_EOL;
@@ -142,9 +151,14 @@ Return a list of blueprints the character owns  --- Alternate route: `/dev/chara
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CharacterApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\CharacterApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $page = 1; // int | Which page of results to return
@@ -153,7 +167,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCharactersCharacterIdBlueprints($character_id, $datasource, $page, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCharactersCharacterIdBlueprints($character_id, $datasource, $page, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CharacterApi->getCharactersCharacterIdBlueprints: ', $e->getMessage(), PHP_EOL;
@@ -200,9 +214,14 @@ Return chat channels that a character is the owner or operator of  --- Alternate
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CharacterApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\CharacterApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -210,7 +229,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCharactersCharacterIdChatChannels($character_id, $datasource, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCharactersCharacterIdChatChannels($character_id, $datasource, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CharacterApi->getCharactersCharacterIdChatChannels: ', $e->getMessage(), PHP_EOL;
@@ -255,14 +274,18 @@ Get a list of all the corporations a character has been a member of  --- Alterna
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\CharacterApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\CharacterApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCharactersCharacterIdCorporationhistory($character_id, $datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCharactersCharacterIdCorporationhistory($character_id, $datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CharacterApi->getCharactersCharacterIdCorporationhistory: ', $e->getMessage(), PHP_EOL;
@@ -307,9 +330,14 @@ Return a character's jump activation and fatigue information  --- Alternate rout
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CharacterApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\CharacterApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -317,7 +345,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCharactersCharacterIdFatigue($character_id, $datasource, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCharactersCharacterIdFatigue($character_id, $datasource, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CharacterApi->getCharactersCharacterIdFatigue: ', $e->getMessage(), PHP_EOL;
@@ -363,9 +391,14 @@ Return a list of medals the character has  --- Alternate route: `/dev/characters
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CharacterApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\CharacterApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -373,7 +406,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCharactersCharacterIdMedals($character_id, $datasource, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCharactersCharacterIdMedals($character_id, $datasource, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CharacterApi->getCharactersCharacterIdMedals: ', $e->getMessage(), PHP_EOL;
@@ -419,9 +452,14 @@ Return character notifications  --- Alternate route: `/dev/characters/{character
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CharacterApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\CharacterApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -429,7 +467,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCharactersCharacterIdNotifications($character_id, $datasource, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCharactersCharacterIdNotifications($character_id, $datasource, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CharacterApi->getCharactersCharacterIdNotifications: ', $e->getMessage(), PHP_EOL;
@@ -475,9 +513,14 @@ Return notifications about having been added to someone's contact list  --- Alte
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CharacterApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\CharacterApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -485,7 +528,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCharactersCharacterIdNotificationsContacts($character_id, $datasource, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCharactersCharacterIdNotificationsContacts($character_id, $datasource, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CharacterApi->getCharactersCharacterIdNotificationsContacts: ', $e->getMessage(), PHP_EOL;
@@ -530,14 +573,18 @@ Get portrait urls for a character  --- Alternate route: `/dev/characters/{charac
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\CharacterApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\CharacterApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCharactersCharacterIdPortrait($character_id, $datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCharactersCharacterIdPortrait($character_id, $datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CharacterApi->getCharactersCharacterIdPortrait: ', $e->getMessage(), PHP_EOL;
@@ -582,9 +629,14 @@ Returns a character's corporation roles  --- Alternate route: `/legacy/character
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CharacterApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\CharacterApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -592,7 +644,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCharactersCharacterIdRoles($character_id, $datasource, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCharactersCharacterIdRoles($character_id, $datasource, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CharacterApi->getCharactersCharacterIdRoles: ', $e->getMessage(), PHP_EOL;
@@ -638,9 +690,14 @@ Return character standings from agents, NPC corporations, and factions  --- Alte
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CharacterApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\CharacterApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -648,7 +705,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCharactersCharacterIdStandings($character_id, $datasource, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCharactersCharacterIdStandings($character_id, $datasource, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CharacterApi->getCharactersCharacterIdStandings: ', $e->getMessage(), PHP_EOL;
@@ -694,9 +751,14 @@ Returns a character's titles  --- Alternate route: `/dev/characters/{character_i
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CharacterApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\CharacterApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -704,7 +766,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCharactersCharacterIdTitles($character_id, $datasource, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCharactersCharacterIdTitles($character_id, $datasource, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CharacterApi->getCharactersCharacterIdTitles: ', $e->getMessage(), PHP_EOL;
@@ -749,14 +811,18 @@ Resolve a set of character IDs to character names  --- Alternate route: `/dev/ch
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\CharacterApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\CharacterApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $character_ids = array(56); // int[] | A comma separated list of character IDs
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCharactersNames($character_ids, $datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCharactersNames($character_ids, $datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CharacterApi->getCharactersNames: ', $e->getMessage(), PHP_EOL;
@@ -800,14 +866,18 @@ Bulk lookup of character IDs to corporation, alliance and faction  --- Alternate
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\CharacterApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\CharacterApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $characters = array(new \Swagger\Client\Model\int[]()); // int[] | The character IDs to fetch affiliations for. All characters must exist, or none will be returned.
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->postCharactersAffiliation($characters, $datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->postCharactersAffiliation($characters, $datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CharacterApi->postCharactersAffiliation: ', $e->getMessage(), PHP_EOL;
@@ -852,9 +922,14 @@ Takes a source character ID in the url and a set of target character ID's in the
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\CharacterApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\CharacterApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $character_id = 56; // int | An EVE character ID
 $characters = new \Swagger\Client\Model\PostCharactersCharacterIdCspaCharacters(); // \Swagger\Client\Model\PostCharactersCharacterIdCspaCharacters | The target characters to calculate the charge for
 $datasource = "tranquility"; // string | The server name you would like data from
@@ -863,7 +938,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->postCharactersCharacterIdCspa($character_id, $characters, $datasource, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->postCharactersCharacterIdCspa($character_id, $characters, $datasource, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CharacterApi->postCharactersCharacterIdCspa: ', $e->getMessage(), PHP_EOL;

@@ -21,13 +21,17 @@ Shows sovereignty data for campaigns.  --- Alternate route: `/dev/sovereignty/ca
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\SovereigntyApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\SovereigntyApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getSovereigntyCampaigns($datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getSovereigntyCampaigns($datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SovereigntyApi->getSovereigntyCampaigns: ', $e->getMessage(), PHP_EOL;
@@ -70,13 +74,17 @@ Shows sovereignty information for solar systems  --- Alternate route: `/dev/sove
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\SovereigntyApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\SovereigntyApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getSovereigntyMap($datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getSovereigntyMap($datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SovereigntyApi->getSovereigntyMap: ', $e->getMessage(), PHP_EOL;
@@ -119,13 +127,17 @@ Shows sovereignty data for structures.  --- Alternate route: `/dev/sovereignty/s
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\SovereigntyApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\SovereigntyApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getSovereigntyStructures($datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getSovereigntyStructures($datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SovereigntyApi->getSovereigntyStructures: ', $e->getMessage(), PHP_EOL;

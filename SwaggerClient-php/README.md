@@ -56,13 +56,17 @@ Please follow the [installation procedure](#installation--usage) and then run th
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\AllianceApi();
+$apiInstance = new Swagger\Client\Api\AllianceApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getAlliances($datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getAlliances($datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AllianceApi->getAlliances: ', $e->getMessage(), PHP_EOL;
@@ -140,6 +144,8 @@ Class | Method | HTTP request | Description
 *CorporationApi* | [**getCorporationsCorporationIdMembersLimit**](docs/Api/CorporationApi.md#getcorporationscorporationidmemberslimit) | **GET** /corporations/{corporation_id}/members/limit/ | Get corporation member limit
 *CorporationApi* | [**getCorporationsCorporationIdMembersTitles**](docs/Api/CorporationApi.md#getcorporationscorporationidmemberstitles) | **GET** /corporations/{corporation_id}/members/titles/ | Get corporation&#39;s members&#39; titles
 *CorporationApi* | [**getCorporationsCorporationIdMembertracking**](docs/Api/CorporationApi.md#getcorporationscorporationidmembertracking) | **GET** /corporations/{corporation_id}/membertracking/ | Track corporation members
+*CorporationApi* | [**getCorporationsCorporationIdOutposts**](docs/Api/CorporationApi.md#getcorporationscorporationidoutposts) | **GET** /corporations/{corporation_id}/outposts/ | Get corporation outposts
+*CorporationApi* | [**getCorporationsCorporationIdOutpostsOutpostId**](docs/Api/CorporationApi.md#getcorporationscorporationidoutpostsoutpostid) | **GET** /corporations/{corporation_id}/outposts/{outpost_id}/ | Get corporation outpost details
 *CorporationApi* | [**getCorporationsCorporationIdRoles**](docs/Api/CorporationApi.md#getcorporationscorporationidroles) | **GET** /corporations/{corporation_id}/roles/ | Get corporation member roles
 *CorporationApi* | [**getCorporationsCorporationIdRolesHistory**](docs/Api/CorporationApi.md#getcorporationscorporationidroleshistory) | **GET** /corporations/{corporation_id}/roles/history/ | Get corporation member roles history
 *CorporationApi* | [**getCorporationsCorporationIdShareholders**](docs/Api/CorporationApi.md#getcorporationscorporationidshareholders) | **GET** /corporations/{corporation_id}/shareholders/ | Get corporation members
@@ -403,6 +409,9 @@ Class | Method | HTTP request | Description
  - [GetCorporationsCorporationIdNotFound](docs/Model/GetCorporationsCorporationIdNotFound.md)
  - [GetCorporationsCorporationIdOk](docs/Model/GetCorporationsCorporationIdOk.md)
  - [GetCorporationsCorporationIdOrders200Ok](docs/Model/GetCorporationsCorporationIdOrders200Ok.md)
+ - [GetCorporationsCorporationIdOutpostsOutpostIdCoordinates](docs/Model/GetCorporationsCorporationIdOutpostsOutpostIdCoordinates.md)
+ - [GetCorporationsCorporationIdOutpostsOutpostIdOk](docs/Model/GetCorporationsCorporationIdOutpostsOutpostIdOk.md)
+ - [GetCorporationsCorporationIdOutpostsOutpostIdService](docs/Model/GetCorporationsCorporationIdOutpostsOutpostIdService.md)
  - [GetCorporationsCorporationIdRoles200Ok](docs/Model/GetCorporationsCorporationIdRoles200Ok.md)
  - [GetCorporationsCorporationIdRolesHistory200Ok](docs/Model/GetCorporationsCorporationIdRolesHistory200Ok.md)
  - [GetCorporationsCorporationIdShareholders200Ok](docs/Model/GetCorporationsCorporationIdShareholders200Ok.md)
@@ -631,6 +640,7 @@ Class | Method | HTTP request | Description
  - **esi-corporations.read_facilities.v1**: EVE SSO scope esi-corporations.read_facilities.v1
  - **esi-corporations.read_fw_stats.v1**: EVE SSO scope esi-corporations.read_fw_stats.v1
  - **esi-corporations.read_medals.v1**: EVE SSO scope esi-corporations.read_medals.v1
+ - **esi-corporations.read_outposts.v1**: EVE SSO scope esi-corporations.read_outposts.v1
  - **esi-corporations.read_standings.v1**: EVE SSO scope esi-corporations.read_standings.v1
  - **esi-corporations.read_starbases.v1**: EVE SSO scope esi-corporations.read_starbases.v1
  - **esi-corporations.read_structures.v1**: EVE SSO scope esi-corporations.read_structures.v1

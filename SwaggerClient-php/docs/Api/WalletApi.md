@@ -25,9 +25,14 @@ Returns a character's wallet balance  --- Alternate route: `/dev/characters/{cha
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\WalletApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\WalletApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -35,7 +40,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCharactersCharacterIdWallet($character_id, $datasource, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCharactersCharacterIdWallet($character_id, $datasource, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WalletApi->getCharactersCharacterIdWallet: ', $e->getMessage(), PHP_EOL;
@@ -81,9 +86,14 @@ Retrieve character wallet journal  --- Alternate route: `/v2/characters/{charact
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\WalletApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\WalletApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $from_id = 789; // int | Only show journal entries happened before the transaction referenced by this id
@@ -92,7 +102,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCharactersCharacterIdWalletJournal($character_id, $datasource, $from_id, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCharactersCharacterIdWalletJournal($character_id, $datasource, $from_id, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WalletApi->getCharactersCharacterIdWalletJournal: ', $e->getMessage(), PHP_EOL;
@@ -139,9 +149,14 @@ Get wallet transactions of a character  --- Alternate route: `/dev/characters/{c
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\WalletApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\WalletApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $from_id = 789; // int | Only show transactions happened before the one referenced by this id
@@ -150,7 +165,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCharactersCharacterIdWalletTransactions($character_id, $datasource, $from_id, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCharactersCharacterIdWalletTransactions($character_id, $datasource, $from_id, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WalletApi->getCharactersCharacterIdWalletTransactions: ', $e->getMessage(), PHP_EOL;
@@ -197,9 +212,14 @@ Get a corporation's wallets  --- Alternate route: `/dev/corporations/{corporatio
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\WalletApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\WalletApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $corporation_id = 56; // int | An EVE corporation ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -207,7 +227,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCorporationsCorporationIdWallets($corporation_id, $datasource, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCorporationsCorporationIdWallets($corporation_id, $datasource, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WalletApi->getCorporationsCorporationIdWallets: ', $e->getMessage(), PHP_EOL;
@@ -253,9 +273,14 @@ Retrieve corporation wallet journal  --- Alternate route: `/legacy/corporations/
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\WalletApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\WalletApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $corporation_id = 56; // int | An EVE corporation ID
 $division = 56; // int | Wallet key of the division to fetch journals from
 $datasource = "tranquility"; // string | The server name you would like data from
@@ -265,7 +290,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCorporationsCorporationIdWalletsDivisionJournal($corporation_id, $division, $datasource, $from_id, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCorporationsCorporationIdWalletsDivisionJournal($corporation_id, $division, $datasource, $from_id, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WalletApi->getCorporationsCorporationIdWalletsDivisionJournal: ', $e->getMessage(), PHP_EOL;
@@ -313,9 +338,14 @@ Get wallet transactions of a corporation  --- Alternate route: `/dev/corporation
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\WalletApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\WalletApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $corporation_id = 56; // int | An EVE corporation ID
 $division = 56; // int | Wallet key of the division to fetch journals from
 $datasource = "tranquility"; // string | The server name you would like data from
@@ -325,7 +355,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCorporationsCorporationIdWalletsDivisionTransactions($corporation_id, $division, $datasource, $from_id, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCorporationsCorporationIdWalletsDivisionTransactions($corporation_id, $division, $datasource, $from_id, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WalletApi->getCorporationsCorporationIdWalletsDivisionTransactions: ', $e->getMessage(), PHP_EOL;

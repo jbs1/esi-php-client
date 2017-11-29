@@ -32,6 +32,7 @@ use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
+use GuzzleHttp\RequestOptions;
 use Swagger\Client\ApiException;
 use Swagger\Client\Configuration;
 use Swagger\Client\HeaderSelector;
@@ -123,14 +124,15 @@ class FleetsApi
         $request = $this->deleteFleetsFleetIdMembersMemberIdRequest($fleet_id, $member_id, $datasource, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -228,7 +230,7 @@ class FleetsApi
         $request = $this->deleteFleetsFleetIdMembersMemberIdRequest($fleet_id, $member_id, $datasource, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     return [null, $response->getStatusCode(), $response->getHeaders()];
@@ -430,14 +432,15 @@ class FleetsApi
         $request = $this->deleteFleetsFleetIdSquadsSquadIdRequest($fleet_id, $squad_id, $datasource, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -535,7 +538,7 @@ class FleetsApi
         $request = $this->deleteFleetsFleetIdSquadsSquadIdRequest($fleet_id, $squad_id, $datasource, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     return [null, $response->getStatusCode(), $response->getHeaders()];
@@ -737,14 +740,15 @@ class FleetsApi
         $request = $this->deleteFleetsFleetIdWingsWingIdRequest($fleet_id, $wing_id, $datasource, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -842,7 +846,7 @@ class FleetsApi
         $request = $this->deleteFleetsFleetIdWingsWingIdRequest($fleet_id, $wing_id, $datasource, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     return [null, $response->getStatusCode(), $response->getHeaders()];
@@ -1043,14 +1047,15 @@ class FleetsApi
         $request = $this->getCharactersCharacterIdFleetRequest($character_id, $datasource, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -1168,7 +1173,7 @@ class FleetsApi
         $request = $this->getCharactersCharacterIdFleetRequest($character_id, $datasource, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -1368,14 +1373,15 @@ class FleetsApi
         $request = $this->getFleetsFleetIdRequest($fleet_id, $datasource, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -1493,7 +1499,7 @@ class FleetsApi
         $request = $this->getFleetsFleetIdRequest($fleet_id, $datasource, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -1695,14 +1701,15 @@ class FleetsApi
         $request = $this->getFleetsFleetIdMembersRequest($fleet_id, $datasource, $language, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -1822,7 +1829,7 @@ class FleetsApi
         $request = $this->getFleetsFleetIdMembersRequest($fleet_id, $datasource, $language, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -2029,14 +2036,15 @@ class FleetsApi
         $request = $this->getFleetsFleetIdWingsRequest($fleet_id, $datasource, $language, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -2156,7 +2164,7 @@ class FleetsApi
         $request = $this->getFleetsFleetIdWingsRequest($fleet_id, $datasource, $language, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -2362,14 +2370,15 @@ class FleetsApi
         $request = $this->postFleetsFleetIdMembersRequest($fleet_id, $invitation, $datasource, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -2475,7 +2484,7 @@ class FleetsApi
         $request = $this->postFleetsFleetIdMembersRequest($fleet_id, $invitation, $datasource, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     return [null, $response->getStatusCode(), $response->getHeaders()];
@@ -2671,14 +2680,15 @@ class FleetsApi
         $request = $this->postFleetsFleetIdWingsRequest($fleet_id, $datasource, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -2796,7 +2806,7 @@ class FleetsApi
         $request = $this->postFleetsFleetIdWingsRequest($fleet_id, $datasource, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -2998,14 +3008,15 @@ class FleetsApi
         $request = $this->postFleetsFleetIdWingsWingIdSquadsRequest($fleet_id, $wing_id, $datasource, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -3125,7 +3136,7 @@ class FleetsApi
         $request = $this->postFleetsFleetIdWingsWingIdSquadsRequest($fleet_id, $wing_id, $datasource, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -3341,14 +3352,15 @@ class FleetsApi
         $request = $this->putFleetsFleetIdRequest($fleet_id, $new_settings, $datasource, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -3454,7 +3466,7 @@ class FleetsApi
         $request = $this->putFleetsFleetIdRequest($fleet_id, $new_settings, $datasource, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     return [null, $response->getStatusCode(), $response->getHeaders()];
@@ -3653,14 +3665,15 @@ class FleetsApi
         $request = $this->putFleetsFleetIdMembersMemberIdRequest($fleet_id, $member_id, $movement, $datasource, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -3768,7 +3781,7 @@ class FleetsApi
         $request = $this->putFleetsFleetIdMembersMemberIdRequest($fleet_id, $member_id, $movement, $datasource, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     return [null, $response->getStatusCode(), $response->getHeaders()];
@@ -3982,14 +3995,15 @@ class FleetsApi
         $request = $this->putFleetsFleetIdSquadsSquadIdRequest($fleet_id, $naming, $squad_id, $datasource, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -4089,7 +4103,7 @@ class FleetsApi
         $request = $this->putFleetsFleetIdSquadsSquadIdRequest($fleet_id, $naming, $squad_id, $datasource, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     return [null, $response->getStatusCode(), $response->getHeaders()];
@@ -4303,14 +4317,15 @@ class FleetsApi
         $request = $this->putFleetsFleetIdWingsWingIdRequest($fleet_id, $naming, $wing_id, $datasource, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -4410,7 +4425,7 @@ class FleetsApi
         $request = $this->putFleetsFleetIdWingsWingIdRequest($fleet_id, $naming, $wing_id, $datasource, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     return [null, $response->getStatusCode(), $response->getHeaders()];
@@ -4579,4 +4594,22 @@ class FleetsApi
         );
     }
 
+    /**
+     * Create http client option
+     *
+     * @throws \RuntimeException on file opening failure
+     * @return array of http client options
+     */
+    protected function createHttpClientOption()
+    {
+        $options = [];
+        if ($this->config->getDebug()) {
+            $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'a');
+            if (!$options[RequestOptions::DEBUG]) {
+                throw new \RuntimeException('Failed to open the debug file: ' . $this->config->getDebugFile());
+            }
+        }
+
+        return $options;
+    }
 }

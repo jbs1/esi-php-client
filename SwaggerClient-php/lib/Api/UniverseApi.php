@@ -32,6 +32,7 @@ use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
+use GuzzleHttp\RequestOptions;
 use Swagger\Client\ApiException;
 use Swagger\Client\Configuration;
 use Swagger\Client\HeaderSelector;
@@ -120,14 +121,15 @@ class UniverseApi
         $request = $this->getUniverseBloodlinesRequest($datasource, $language, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -227,7 +229,7 @@ class UniverseApi
         $request = $this->getUniverseBloodlinesRequest($datasource, $language, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -404,14 +406,15 @@ class UniverseApi
         $request = $this->getUniverseCategoriesRequest($datasource, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -509,7 +512,7 @@ class UniverseApi
         $request = $this->getUniverseCategoriesRequest($datasource, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -685,14 +688,15 @@ class UniverseApi
         $request = $this->getUniverseCategoriesCategoryIdRequest($category_id, $datasource, $language, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -802,7 +806,7 @@ class UniverseApi
         $request = $this->getUniverseCategoriesCategoryIdRequest($category_id, $datasource, $language, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -994,14 +998,15 @@ class UniverseApi
         $request = $this->getUniverseConstellationsRequest($datasource, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -1099,7 +1104,7 @@ class UniverseApi
         $request = $this->getUniverseConstellationsRequest($datasource, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -1275,14 +1280,15 @@ class UniverseApi
         $request = $this->getUniverseConstellationsConstellationIdRequest($constellation_id, $datasource, $language, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -1392,7 +1398,7 @@ class UniverseApi
         $request = $this->getUniverseConstellationsConstellationIdRequest($constellation_id, $datasource, $language, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -1586,14 +1592,15 @@ class UniverseApi
         $request = $this->getUniverseFactionsRequest($datasource, $language, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -1693,7 +1700,7 @@ class UniverseApi
         $request = $this->getUniverseFactionsRequest($datasource, $language, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -1870,14 +1877,15 @@ class UniverseApi
         $request = $this->getUniverseGraphicsRequest($datasource, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -1975,7 +1983,7 @@ class UniverseApi
         $request = $this->getUniverseGraphicsRequest($datasource, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -2149,14 +2157,15 @@ class UniverseApi
         $request = $this->getUniverseGraphicsGraphicIdRequest($graphic_id, $datasource, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -2264,7 +2273,7 @@ class UniverseApi
         $request = $this->getUniverseGraphicsGraphicIdRequest($graphic_id, $datasource, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -2453,14 +2462,15 @@ class UniverseApi
         $request = $this->getUniverseGroupsRequest($datasource, $page, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -2560,7 +2570,7 @@ class UniverseApi
         $request = $this->getUniverseGroupsRequest($datasource, $page, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -2741,14 +2751,15 @@ class UniverseApi
         $request = $this->getUniverseGroupsGroupIdRequest($group_id, $datasource, $language, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -2858,7 +2869,7 @@ class UniverseApi
         $request = $this->getUniverseGroupsGroupIdRequest($group_id, $datasource, $language, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -3052,14 +3063,15 @@ class UniverseApi
         $request = $this->getUniverseMoonsMoonIdRequest($moon_id, $datasource, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -3167,7 +3179,7 @@ class UniverseApi
         $request = $this->getUniverseMoonsMoonIdRequest($moon_id, $datasource, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -3356,14 +3368,15 @@ class UniverseApi
         $request = $this->getUniversePlanetsPlanetIdRequest($planet_id, $datasource, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -3471,7 +3484,7 @@ class UniverseApi
         $request = $this->getUniversePlanetsPlanetIdRequest($planet_id, $datasource, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -3660,14 +3673,15 @@ class UniverseApi
         $request = $this->getUniverseRacesRequest($datasource, $language, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -3767,7 +3781,7 @@ class UniverseApi
         $request = $this->getUniverseRacesRequest($datasource, $language, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -3944,14 +3958,15 @@ class UniverseApi
         $request = $this->getUniverseRegionsRequest($datasource, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -4049,7 +4064,7 @@ class UniverseApi
         $request = $this->getUniverseRegionsRequest($datasource, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -4225,14 +4240,15 @@ class UniverseApi
         $request = $this->getUniverseRegionsRegionIdRequest($region_id, $datasource, $language, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -4342,7 +4358,7 @@ class UniverseApi
         $request = $this->getUniverseRegionsRegionIdRequest($region_id, $datasource, $language, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -4536,14 +4552,15 @@ class UniverseApi
         $request = $this->getUniverseStargatesStargateIdRequest($stargate_id, $datasource, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -4651,7 +4668,7 @@ class UniverseApi
         $request = $this->getUniverseStargatesStargateIdRequest($stargate_id, $datasource, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -4840,14 +4857,15 @@ class UniverseApi
         $request = $this->getUniverseStarsStarIdRequest($star_id, $datasource, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -4947,7 +4965,7 @@ class UniverseApi
         $request = $this->getUniverseStarsStarIdRequest($star_id, $datasource, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -5136,14 +5154,15 @@ class UniverseApi
         $request = $this->getUniverseStationsStationIdRequest($station_id, $datasource, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -5251,7 +5270,7 @@ class UniverseApi
         $request = $this->getUniverseStationsStationIdRequest($station_id, $datasource, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -5438,14 +5457,15 @@ class UniverseApi
         $request = $this->getUniverseStructuresRequest($datasource, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -5543,7 +5563,7 @@ class UniverseApi
         $request = $this->getUniverseStructuresRequest($datasource, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -5719,14 +5739,15 @@ class UniverseApi
         $request = $this->getUniverseStructuresStructureIdRequest($structure_id, $datasource, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -5844,7 +5865,7 @@ class UniverseApi
         $request = $this->getUniverseStructuresStructureIdRequest($structure_id, $datasource, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -6040,14 +6061,15 @@ class UniverseApi
         $request = $this->getUniverseSystemJumpsRequest($datasource, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -6145,7 +6167,7 @@ class UniverseApi
         $request = $this->getUniverseSystemJumpsRequest($datasource, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -6317,14 +6339,15 @@ class UniverseApi
         $request = $this->getUniverseSystemKillsRequest($datasource, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -6422,7 +6445,7 @@ class UniverseApi
         $request = $this->getUniverseSystemKillsRequest($datasource, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -6594,14 +6617,15 @@ class UniverseApi
         $request = $this->getUniverseSystemsRequest($datasource, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -6699,7 +6723,7 @@ class UniverseApi
         $request = $this->getUniverseSystemsRequest($datasource, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -6875,14 +6899,15 @@ class UniverseApi
         $request = $this->getUniverseSystemsSystemIdRequest($system_id, $datasource, $language, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -6992,7 +7017,7 @@ class UniverseApi
         $request = $this->getUniverseSystemsSystemIdRequest($system_id, $datasource, $language, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -7186,14 +7211,15 @@ class UniverseApi
         $request = $this->getUniverseTypesRequest($datasource, $page, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -7293,7 +7319,7 @@ class UniverseApi
         $request = $this->getUniverseTypesRequest($datasource, $page, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -7474,14 +7500,15 @@ class UniverseApi
         $request = $this->getUniverseTypesTypeIdRequest($type_id, $datasource, $language, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -7591,7 +7618,7 @@ class UniverseApi
         $request = $this->getUniverseTypesTypeIdRequest($type_id, $datasource, $language, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -7785,14 +7812,15 @@ class UniverseApi
         $request = $this->postUniverseNamesRequest($ids, $datasource, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -7900,7 +7928,7 @@ class UniverseApi
         $request = $this->postUniverseNamesRequest($ids, $datasource, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -8044,4 +8072,22 @@ class UniverseApi
         );
     }
 
+    /**
+     * Create http client option
+     *
+     * @throws \RuntimeException on file opening failure
+     * @return array of http client options
+     */
+    protected function createHttpClientOption()
+    {
+        $options = [];
+        if ($this->config->getDebug()) {
+            $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'a');
+            if (!$options[RequestOptions::DEBUG]) {
+                throw new \RuntimeException('Failed to open the debug file: ' . $this->config->getDebugFile());
+            }
+        }
+
+        return $options;
+    }
 }

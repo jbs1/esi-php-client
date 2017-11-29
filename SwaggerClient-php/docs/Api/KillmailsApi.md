@@ -22,9 +22,14 @@ Return a list of character's recent kills and losses  --- Alternate route: `/dev
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\KillmailsApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\KillmailsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $max_count = 50; // int | How many killmails to return at maximum
@@ -34,7 +39,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCharactersCharacterIdKillmailsRecent($character_id, $datasource, $max_count, $max_kill_id, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCharactersCharacterIdKillmailsRecent($character_id, $datasource, $max_count, $max_kill_id, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling KillmailsApi->getCharactersCharacterIdKillmailsRecent: ', $e->getMessage(), PHP_EOL;
@@ -74,7 +79,7 @@ Name | Type | Description  | Notes
 
 Get corporation kills and losses
 
-Get a list of corporation's recent kills and losses  --- Alternate route: `/dev/corporations/{corporation_id}/killmails/recent/`  Alternate route: `/legacy/corporations/{corporation_id}/killmails/recent/`  Alternate route: `/v1/corporations/{corporation_id}/killmails/recent/`  --- This route is cached for up to 3600 seconds
+Get a list of corporation's recent kills and losses  --- Alternate route: `/dev/corporations/{corporation_id}/killmails/recent/`  Alternate route: `/legacy/corporations/{corporation_id}/killmails/recent/`  Alternate route: `/v1/corporations/{corporation_id}/killmails/recent/`  --- This route is cached for up to 300 seconds
 
 ### Example
 ```php
@@ -82,9 +87,14 @@ Get a list of corporation's recent kills and losses  --- Alternate route: `/dev/
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\KillmailsApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\KillmailsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $corporation_id = 56; // int | An EVE corporation ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $max_kill_id = 56; // int | Only return killmails with ID smaller than this
@@ -93,7 +103,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCorporationsCorporationIdKillmailsRecent($corporation_id, $datasource, $max_kill_id, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCorporationsCorporationIdKillmailsRecent($corporation_id, $datasource, $max_kill_id, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling KillmailsApi->getCorporationsCorporationIdKillmailsRecent: ', $e->getMessage(), PHP_EOL;
@@ -139,7 +149,11 @@ Return a single killmail from its ID and hash  --- Alternate route: `/dev/killma
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\KillmailsApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\KillmailsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $killmail_hash = "killmail_hash_example"; // string | The killmail hash for verification
 $killmail_id = 56; // int | The killmail ID to be queried
 $datasource = "tranquility"; // string | The server name you would like data from
@@ -147,7 +161,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getKillmailsKillmailIdKillmailHash($killmail_hash, $killmail_id, $datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getKillmailsKillmailIdKillmailHash($killmail_hash, $killmail_id, $datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling KillmailsApi->getKillmailsKillmailIdKillmailHash: ', $e->getMessage(), PHP_EOL;

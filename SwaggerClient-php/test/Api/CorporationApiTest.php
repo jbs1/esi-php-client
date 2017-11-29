@@ -201,6 +201,26 @@ class CorporationApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getCorporationsCorporationIdOutposts
+     *
+     * Get corporation outposts.
+     *
+     */
+    public function testGetCorporationsCorporationIdOutposts()
+    {
+    }
+
+    /**
+     * Test case for getCorporationsCorporationIdOutpostsOutpostId
+     *
+     * Get corporation outpost details.
+     *
+     */
+    public function testGetCorporationsCorporationIdOutpostsOutpostId()
+    {
+    }
+
+    /**
      * Test case for getCorporationsCorporationIdRoles
      *
      * Get corporation member roles.

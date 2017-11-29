@@ -21,9 +21,14 @@ Return a list of loyalty points for all corporations the character has worked fo
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\LoyaltyApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\LoyaltyApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -31,7 +36,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCharactersCharacterIdLoyaltyPoints($character_id, $datasource, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCharactersCharacterIdLoyaltyPoints($character_id, $datasource, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling LoyaltyApi->getCharactersCharacterIdLoyaltyPoints: ', $e->getMessage(), PHP_EOL;
@@ -76,14 +81,18 @@ Return a list of offers from a specific corporation's loyalty store  --- Alterna
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\LoyaltyApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\LoyaltyApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $corporation_id = 56; // int | An EVE corporation ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getLoyaltyStoresCorporationIdOffers($corporation_id, $datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getLoyaltyStoresCorporationIdOffers($corporation_id, $datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling LoyaltyApi->getLoyaltyStoresCorporationIdOffers: ', $e->getMessage(), PHP_EOL;

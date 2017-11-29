@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 Get character assets
 
-Return a list of the characters assets  --- Alternate route: `/dev/characters/{character_id}/assets/`  Alternate route: `/legacy/characters/{character_id}/assets/`  Alternate route: `/v1/characters/{character_id}/assets/`  --- This route is cached for up to 3600 seconds
+Return a list of the characters assets  --- Alternate route: `/legacy/characters/{character_id}/assets/`  Alternate route: `/v1/characters/{character_id}/assets/`  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```php
@@ -25,9 +25,14 @@ Return a list of the characters assets  --- Alternate route: `/dev/characters/{c
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\AssetsApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\AssetsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $page = 1; // int | Which page of results to return
@@ -36,7 +41,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCharactersCharacterIdAssets($character_id, $datasource, $page, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCharactersCharacterIdAssets($character_id, $datasource, $page, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AssetsApi->getCharactersCharacterIdAssets: ', $e->getMessage(), PHP_EOL;
@@ -83,9 +88,14 @@ Return a list of the corporation assets  --- Alternate route: `/dev/corporations
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\AssetsApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\AssetsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $corporation_id = 56; // int | An EVE corporation ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $page = 1; // int | Which page of results to return
@@ -94,7 +104,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCorporationsCorporationIdAssets($corporation_id, $datasource, $page, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCorporationsCorporationIdAssets($corporation_id, $datasource, $page, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AssetsApi->getCorporationsCorporationIdAssets: ', $e->getMessage(), PHP_EOL;
@@ -141,9 +151,14 @@ Return locations for a set of item ids, which you can get from character assets 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\AssetsApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\AssetsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $character_id = 56; // int | An EVE character ID
 $item_ids = array(new \Swagger\Client\Model\int[]()); // int[] | A list of item ids
 $datasource = "tranquility"; // string | The server name you would like data from
@@ -152,7 +167,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->postCharactersCharacterIdAssetsLocations($character_id, $item_ids, $datasource, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->postCharactersCharacterIdAssetsLocations($character_id, $item_ids, $datasource, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AssetsApi->postCharactersCharacterIdAssetsLocations: ', $e->getMessage(), PHP_EOL;
@@ -199,9 +214,14 @@ Return names for a set of item ids, which you can get from character assets endp
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\AssetsApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\AssetsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $character_id = 56; // int | An EVE character ID
 $item_ids = array(new \Swagger\Client\Model\int[]()); // int[] | A list of item ids
 $datasource = "tranquility"; // string | The server name you would like data from
@@ -210,7 +230,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->postCharactersCharacterIdAssetsNames($character_id, $item_ids, $datasource, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->postCharactersCharacterIdAssetsNames($character_id, $item_ids, $datasource, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AssetsApi->postCharactersCharacterIdAssetsNames: ', $e->getMessage(), PHP_EOL;
@@ -257,9 +277,14 @@ Return locations for a set of item ids, which you can get from corporation asset
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\AssetsApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\AssetsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $corporation_id = 56; // int | An EVE corporation ID
 $item_ids = array(new \Swagger\Client\Model\int[]()); // int[] | A list of item ids
 $datasource = "tranquility"; // string | The server name you would like data from
@@ -268,7 +293,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->postCorporationsCorporationIdAssetsLocations($corporation_id, $item_ids, $datasource, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->postCorporationsCorporationIdAssetsLocations($corporation_id, $item_ids, $datasource, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AssetsApi->postCorporationsCorporationIdAssetsLocations: ', $e->getMessage(), PHP_EOL;
@@ -315,9 +340,14 @@ Return names for a set of item ids, which you can get from corporation assets en
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\AssetsApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\AssetsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $corporation_id = 56; // int | An EVE corporation ID
 $item_ids = array(new \Swagger\Client\Model\int[]()); // int[] | A list of item ids
 $datasource = "tranquility"; // string | The server name you would like data from
@@ -326,7 +356,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->postCorporationsCorporationIdAssetsNames($corporation_id, $item_ids, $datasource, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->postCorporationsCorporationIdAssetsNames($corporation_id, $item_ids, $datasource, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AssetsApi->postCorporationsCorporationIdAssetsNames: ', $e->getMessage(), PHP_EOL;

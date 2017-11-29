@@ -19,7 +19,11 @@ Get the systems between origin and destination  --- Alternate route: `/dev/route
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\RoutesApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\RoutesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $destination = 56; // int | destination solar system ID
 $origin = 56; // int | origin solar system ID
 $avoid = array(56); // int[] | avoid solar system ID(s)
@@ -30,7 +34,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getRouteOriginDestination($destination, $origin, $avoid, $connections, $datasource, $flag, $user_agent, $x_user_agent);
+    $result = $apiInstance->getRouteOriginDestination($destination, $origin, $avoid, $connections, $datasource, $flag, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RoutesApi->getRouteOriginDestination: ', $e->getMessage(), PHP_EOL;

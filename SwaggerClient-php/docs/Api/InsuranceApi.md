@@ -19,14 +19,18 @@ Return available insurance levels for all ship types  --- Alternate route: `/dev
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\InsuranceApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\InsuranceApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $datasource = "tranquility"; // string | The server name you would like data from
 $language = "en-us"; // string | Language to use in the response
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getInsurancePrices($datasource, $language, $user_agent, $x_user_agent);
+    $result = $apiInstance->getInsurancePrices($datasource, $language, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling InsuranceApi->getInsurancePrices: ', $e->getMessage(), PHP_EOL;

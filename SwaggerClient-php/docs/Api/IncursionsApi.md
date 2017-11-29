@@ -19,13 +19,17 @@ Return a list of current incursions  --- Alternate route: `/dev/incursions/`  Al
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\IncursionsApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\IncursionsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getIncursions($datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getIncursions($datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling IncursionsApi->getIncursions: ', $e->getMessage(), PHP_EOL;

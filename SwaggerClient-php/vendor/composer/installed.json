@@ -240,8 +240,8 @@
     },
     {
         "name": "symfony/yaml",
-        "version": "v3.3.12",
-        "version_normalized": "3.3.12.0",
+        "version": "v3.3.13",
+        "version_normalized": "3.3.13.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/yaml.git",
@@ -891,23 +891,23 @@
     },
     {
         "name": "phpunit/php-file-iterator",
-        "version": "1.4.2",
-        "version_normalized": "1.4.2.0",
+        "version": "1.4.5",
+        "version_normalized": "1.4.5.0",
         "source": {
             "type": "git",
             "url": "https://github.com/sebastianbergmann/php-file-iterator.git",
-            "reference": "3cc8f69b3028d0f96a9078e6295d86e9bf019be5"
+            "reference": "730b01bc3e867237eaac355e06a36b85dd93a8b4"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/sebastianbergmann/php-file-iterator/zipball/3cc8f69b3028d0f96a9078e6295d86e9bf019be5",
-            "reference": "3cc8f69b3028d0f96a9078e6295d86e9bf019be5",
+            "url": "https://api.github.com/repos/sebastianbergmann/php-file-iterator/zipball/730b01bc3e867237eaac355e06a36b85dd93a8b4",
+            "reference": "730b01bc3e867237eaac355e06a36b85dd93a8b4",
             "shasum": ""
         },
         "require": {
             "php": ">=5.3.3"
         },
-        "time": "2016-10-03 07:40:28",
+        "time": "2017-11-27 13:52:08",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1212,31 +1212,37 @@
     },
     {
         "name": "phpdocumentor/reflection-docblock",
-        "version": "4.1.1",
-        "version_normalized": "4.1.1.0",
+        "version": "4.2.0",
+        "version_normalized": "4.2.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-            "reference": "2d3d238c433cf69caeb4842e97a3223a116f94b2"
+            "reference": "66465776cfc249844bde6d117abff1d22e06c2da"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/2d3d238c433cf69caeb4842e97a3223a116f94b2",
-            "reference": "2d3d238c433cf69caeb4842e97a3223a116f94b2",
+            "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/66465776cfc249844bde6d117abff1d22e06c2da",
+            "reference": "66465776cfc249844bde6d117abff1d22e06c2da",
             "shasum": ""
         },
         "require": {
             "php": "^7.0",
-            "phpdocumentor/reflection-common": "^1.0@dev",
+            "phpdocumentor/reflection-common": "^1.0.0",
             "phpdocumentor/type-resolver": "^0.4.0",
             "webmozart/assert": "^1.0"
         },
         "require-dev": {
-            "mockery/mockery": "^0.9.4",
-            "phpunit/phpunit": "^4.4"
+            "doctrine/instantiator": "~1.0.5",
+            "mockery/mockery": "^1.0",
+            "phpunit/phpunit": "^6.4"
         },
-        "time": "2017-08-30 18:51:59",
+        "time": "2017-11-27 17:38:31",
         "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "4.x-dev"
+            }
+        },
         "installation-source": "source",
         "autoload": {
             "psr-4": {
@@ -1259,17 +1265,17 @@
     },
     {
         "name": "phpspec/prophecy",
-        "version": "v1.7.2",
-        "version_normalized": "1.7.2.0",
+        "version": "1.7.3",
+        "version_normalized": "1.7.3.0",
         "source": {
             "type": "git",
             "url": "https://github.com/phpspec/prophecy.git",
-            "reference": "c9b8c6088acd19d769d4cc0ffa60a9fe34344bd6"
+            "reference": "e4ed002c67da8eceb0eb8ddb8b3847bb53c5c2bf"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/phpspec/prophecy/zipball/c9b8c6088acd19d769d4cc0ffa60a9fe34344bd6",
-            "reference": "c9b8c6088acd19d769d4cc0ffa60a9fe34344bd6",
+            "url": "https://api.github.com/repos/phpspec/prophecy/zipball/e4ed002c67da8eceb0eb8ddb8b3847bb53c5c2bf",
+            "reference": "e4ed002c67da8eceb0eb8ddb8b3847bb53c5c2bf",
             "shasum": ""
         },
         "require": {
@@ -1281,9 +1287,9 @@
         },
         "require-dev": {
             "phpspec/phpspec": "^2.5|^3.2",
-            "phpunit/phpunit": "^4.8 || ^5.6.5"
+            "phpunit/phpunit": "^4.8.35 || ^5.7"
         },
-        "time": "2017-09-04 11:05:03",
+        "time": "2017-11-24 13:59:53",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1478,8 +1484,8 @@
     },
     {
         "name": "symfony/stopwatch",
-        "version": "v3.3.12",
-        "version_normalized": "3.3.12.0",
+        "version": "v3.3.13",
+        "version_normalized": "3.3.13.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/stopwatch.git",
@@ -1529,8 +1535,8 @@
     },
     {
         "name": "symfony/process",
-        "version": "v3.3.12",
-        "version_normalized": "3.3.12.0",
+        "version": "v3.3.13",
+        "version_normalized": "3.3.13.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/process.git",
@@ -1580,8 +1586,8 @@
     },
     {
         "name": "symfony/finder",
-        "version": "v3.3.12",
-        "version_normalized": "3.3.12.0",
+        "version": "v3.3.13",
+        "version_normalized": "3.3.13.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/finder.git",
@@ -1631,8 +1637,8 @@
     },
     {
         "name": "symfony/filesystem",
-        "version": "v3.3.12",
-        "version_normalized": "3.3.12.0",
+        "version": "v3.3.13",
+        "version_normalized": "3.3.13.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/filesystem.git",
@@ -1682,8 +1688,8 @@
     },
     {
         "name": "symfony/event-dispatcher",
-        "version": "v3.3.12",
-        "version_normalized": "3.3.12.0",
+        "version": "v3.3.13",
+        "version_normalized": "3.3.13.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/event-dispatcher.git",
@@ -1796,8 +1802,8 @@
     },
     {
         "name": "symfony/debug",
-        "version": "v3.3.12",
-        "version_normalized": "3.3.12.0",
+        "version": "v3.3.13",
+        "version_normalized": "3.3.13.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/debug.git",
@@ -1915,17 +1921,17 @@
     },
     {
         "name": "symfony/console",
-        "version": "v3.3.12",
-        "version_normalized": "3.3.12.0",
+        "version": "v3.3.13",
+        "version_normalized": "3.3.13.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/console.git",
-            "reference": "099302cc53e57cbb7414fd9f3ace40e5e2767c0b"
+            "reference": "63cd7960a0a522c3537f6326706d7f3b8de65805"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/console/zipball/099302cc53e57cbb7414fd9f3ace40e5e2767c0b",
-            "reference": "099302cc53e57cbb7414fd9f3ace40e5e2767c0b",
+            "url": "https://api.github.com/repos/symfony/console/zipball/63cd7960a0a522c3537f6326706d7f3b8de65805",
+            "reference": "63cd7960a0a522c3537f6326706d7f3b8de65805",
             "shasum": ""
         },
         "require": {
@@ -1950,7 +1956,7 @@
             "symfony/filesystem": "",
             "symfony/process": ""
         },
-        "time": "2017-11-12 16:53:41",
+        "time": "2017-11-16 15:24:32",
         "type": "library",
         "extra": {
             "branch-alias": {

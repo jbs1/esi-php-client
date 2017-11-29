@@ -32,6 +32,7 @@ use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
+use GuzzleHttp\RequestOptions;
 use Swagger\Client\ApiException;
 use Swagger\Client\Configuration;
 use Swagger\Client\HeaderSelector;
@@ -118,14 +119,15 @@ class SovereigntyApi
         $request = $this->getSovereigntyCampaignsRequest($datasource, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -223,7 +225,7 @@ class SovereigntyApi
         $request = $this->getSovereigntyCampaignsRequest($datasource, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -395,14 +397,15 @@ class SovereigntyApi
         $request = $this->getSovereigntyMapRequest($datasource, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -500,7 +503,7 @@ class SovereigntyApi
         $request = $this->getSovereigntyMapRequest($datasource, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -672,14 +675,15 @@ class SovereigntyApi
         $request = $this->getSovereigntyStructuresRequest($datasource, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -777,7 +781,7 @@ class SovereigntyApi
         $request = $this->getSovereigntyStructuresRequest($datasource, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -911,4 +915,22 @@ class SovereigntyApi
         );
     }
 
+    /**
+     * Create http client option
+     *
+     * @throws \RuntimeException on file opening failure
+     * @return array of http client options
+     */
+    protected function createHttpClientOption()
+    {
+        $options = [];
+        if ($this->config->getDebug()) {
+            $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'a');
+            if (!$options[RequestOptions::DEBUG]) {
+                throw new \RuntimeException('Failed to open the debug file: ' . $this->config->getDebugFile());
+            }
+        }
+
+        return $options;
+    }
 }

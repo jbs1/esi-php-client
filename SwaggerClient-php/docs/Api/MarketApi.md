@@ -28,9 +28,14 @@ List market orders placed by a character  --- Alternate route: `/dev/characters/
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\MarketApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\MarketApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -38,7 +43,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCharactersCharacterIdOrders($character_id, $datasource, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCharactersCharacterIdOrders($character_id, $datasource, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MarketApi->getCharactersCharacterIdOrders: ', $e->getMessage(), PHP_EOL;
@@ -84,9 +89,14 @@ List market orders placed on behalf of a corporation  --- Alternate route: `/dev
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\MarketApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\MarketApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $corporation_id = 56; // int | An EVE corporation ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $page = 1; // int | Which page of results to return
@@ -95,7 +105,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCorporationsCorporationIdOrders($corporation_id, $datasource, $page, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCorporationsCorporationIdOrders($corporation_id, $datasource, $page, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MarketApi->getCorporationsCorporationIdOrders: ', $e->getMessage(), PHP_EOL;
@@ -141,13 +151,17 @@ Get a list of item groups  --- Alternate route: `/dev/markets/groups/`  Alternat
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\MarketApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\MarketApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getMarketsGroups($datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getMarketsGroups($datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MarketApi->getMarketsGroups: ', $e->getMessage(), PHP_EOL;
@@ -190,7 +204,11 @@ Get information on an item group  --- Alternate route: `/dev/markets/groups/{mar
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\MarketApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\MarketApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $market_group_id = 56; // int | An Eve item group ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $language = "en-us"; // string | Language to use in the response
@@ -198,7 +216,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getMarketsGroupsMarketGroupId($market_group_id, $datasource, $language, $user_agent, $x_user_agent);
+    $result = $apiInstance->getMarketsGroupsMarketGroupId($market_group_id, $datasource, $language, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MarketApi->getMarketsGroupsMarketGroupId: ', $e->getMessage(), PHP_EOL;
@@ -243,13 +261,17 @@ Return a list of prices  --- Alternate route: `/dev/markets/prices/`  Alternate 
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\MarketApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\MarketApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getMarketsPrices($datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getMarketsPrices($datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MarketApi->getMarketsPrices: ', $e->getMessage(), PHP_EOL;
@@ -292,7 +314,11 @@ Return a list of historical market statistics for the specified type in a region
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\MarketApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\MarketApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $region_id = 56; // int | Return statistics in this region
 $type_id = 56; // int | Return statistics for this type
 $datasource = "tranquility"; // string | The server name you would like data from
@@ -300,7 +326,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getMarketsRegionIdHistory($region_id, $type_id, $datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getMarketsRegionIdHistory($region_id, $type_id, $datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MarketApi->getMarketsRegionIdHistory: ', $e->getMessage(), PHP_EOL;
@@ -345,7 +371,11 @@ Return a list of orders in a region  --- Alternate route: `/dev/markets/{region_
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\MarketApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\MarketApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $order_type = "all"; // string | Filter buy/sell orders, return all orders by default. If you query without type_id, we always return both buy and sell orders.
 $region_id = 56; // int | Return orders in this region
 $datasource = "tranquility"; // string | The server name you would like data from
@@ -355,7 +385,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getMarketsRegionIdOrders($order_type, $region_id, $datasource, $page, $type_id, $user_agent, $x_user_agent);
+    $result = $apiInstance->getMarketsRegionIdOrders($order_type, $region_id, $datasource, $page, $type_id, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MarketApi->getMarketsRegionIdOrders: ', $e->getMessage(), PHP_EOL;
@@ -402,7 +432,11 @@ Return a list of type IDs that have active orders in the region, for efficient m
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\MarketApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\MarketApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $region_id = 56; // int | Return statistics in this region
 $datasource = "tranquility"; // string | The server name you would like data from
 $page = 1; // int | Which page of results to return
@@ -410,7 +444,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getMarketsRegionIdTypes($region_id, $datasource, $page, $user_agent, $x_user_agent);
+    $result = $apiInstance->getMarketsRegionIdTypes($region_id, $datasource, $page, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MarketApi->getMarketsRegionIdTypes: ', $e->getMessage(), PHP_EOL;
@@ -456,9 +490,14 @@ Return all orders in a structure  --- Alternate route: `/dev/markets/structures/
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\MarketApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\MarketApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $structure_id = 789; // int | Return orders in this structure
 $datasource = "tranquility"; // string | The server name you would like data from
 $page = 1; // int | Which page of results to return
@@ -467,7 +506,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getMarketsStructuresStructureId($structure_id, $datasource, $page, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getMarketsStructuresStructureId($structure_id, $datasource, $page, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MarketApi->getMarketsStructuresStructureId: ', $e->getMessage(), PHP_EOL;

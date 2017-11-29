@@ -27,9 +27,14 @@ List industry jobs placed by a character  --- Alternate route: `/dev/characters/
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\IndustryApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\IndustryApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $include_completed = true; // bool | Whether retrieve completed character industry jobs as well
@@ -38,7 +43,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCharactersCharacterIdIndustryJobs($character_id, $datasource, $include_completed, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCharactersCharacterIdIndustryJobs($character_id, $datasource, $include_completed, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling IndustryApi->getCharactersCharacterIdIndustryJobs: ', $e->getMessage(), PHP_EOL;
@@ -85,9 +90,14 @@ Paginated record of all mining done by a character for the past 30 days   --- Al
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\IndustryApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\IndustryApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $page = 1; // int | Which page of results to return
@@ -96,7 +106,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCharactersCharacterIdMining($character_id, $datasource, $page, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCharactersCharacterIdMining($character_id, $datasource, $page, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling IndustryApi->getCharactersCharacterIdMining: ', $e->getMessage(), PHP_EOL;
@@ -143,9 +153,14 @@ Extraction timers for all moon chunks being extracted by refineries belonging to
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\IndustryApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\IndustryApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $corporation_id = 56; // int | An EVE corporation ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -153,7 +168,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCorporationCorporationIdMiningExtractions($corporation_id, $datasource, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCorporationCorporationIdMiningExtractions($corporation_id, $datasource, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling IndustryApi->getCorporationCorporationIdMiningExtractions: ', $e->getMessage(), PHP_EOL;
@@ -199,9 +214,14 @@ Paginated list of all entities capable of observing and recording mining for a c
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\IndustryApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\IndustryApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $corporation_id = 56; // int | An EVE corporation ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $page = 1; // int | Which page of results to return
@@ -210,7 +230,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCorporationCorporationIdMiningObservers($corporation_id, $datasource, $page, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCorporationCorporationIdMiningObservers($corporation_id, $datasource, $page, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling IndustryApi->getCorporationCorporationIdMiningObservers: ', $e->getMessage(), PHP_EOL;
@@ -257,9 +277,14 @@ Paginated record of all mining seen by an observer   --- Alternate route: `/dev/
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\IndustryApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\IndustryApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $corporation_id = 56; // int | An EVE corporation ID
 $observer_id = 789; // int | A mining observer id
 $datasource = "tranquility"; // string | The server name you would like data from
@@ -269,7 +294,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCorporationCorporationIdMiningObserversObserverId($corporation_id, $observer_id, $datasource, $page, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCorporationCorporationIdMiningObserversObserverId($corporation_id, $observer_id, $datasource, $page, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling IndustryApi->getCorporationCorporationIdMiningObserversObserverId: ', $e->getMessage(), PHP_EOL;
@@ -317,9 +342,14 @@ List industry jobs run by a corporation  --- Alternate route: `/dev/corporations
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\IndustryApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\IndustryApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $corporation_id = 56; // int | An EVE corporation ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $include_completed = false; // bool | Whether retrieve completed industry jobs as well
@@ -329,7 +359,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCorporationsCorporationIdIndustryJobs($corporation_id, $datasource, $include_completed, $page, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCorporationsCorporationIdIndustryJobs($corporation_id, $datasource, $include_completed, $page, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling IndustryApi->getCorporationsCorporationIdIndustryJobs: ', $e->getMessage(), PHP_EOL;
@@ -376,13 +406,17 @@ Return a list of industry facilities  --- Alternate route: `/dev/industry/facili
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\IndustryApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\IndustryApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getIndustryFacilities($datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getIndustryFacilities($datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling IndustryApi->getIndustryFacilities: ', $e->getMessage(), PHP_EOL;
@@ -425,13 +459,17 @@ Return cost indices for solar systems  --- Alternate route: `/dev/industry/syste
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\IndustryApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\IndustryApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getIndustrySystems($datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getIndustrySystems($datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling IndustryApi->getIndustrySystems: ', $e->getMessage(), PHP_EOL;

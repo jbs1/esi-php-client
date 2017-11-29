@@ -45,14 +45,18 @@ Get a list of bloodlines  --- Alternate route: `/dev/universe/bloodlines/`  Alte
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\UniverseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $datasource = "tranquility"; // string | The server name you would like data from
 $language = "en-us"; // string | Language to use in the response
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getUniverseBloodlines($datasource, $language, $user_agent, $x_user_agent);
+    $result = $apiInstance->getUniverseBloodlines($datasource, $language, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UniverseApi->getUniverseBloodlines: ', $e->getMessage(), PHP_EOL;
@@ -96,13 +100,17 @@ Get a list of item categories  --- Alternate route: `/dev/universe/categories/` 
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\UniverseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getUniverseCategories($datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getUniverseCategories($datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UniverseApi->getUniverseCategories: ', $e->getMessage(), PHP_EOL;
@@ -145,7 +153,11 @@ Get information of an item category  --- Alternate route: `/dev/universe/categor
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\UniverseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $category_id = 56; // int | An Eve item category ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $language = "en-us"; // string | Language to use in the response
@@ -153,7 +165,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getUniverseCategoriesCategoryId($category_id, $datasource, $language, $user_agent, $x_user_agent);
+    $result = $apiInstance->getUniverseCategoriesCategoryId($category_id, $datasource, $language, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UniverseApi->getUniverseCategoriesCategoryId: ', $e->getMessage(), PHP_EOL;
@@ -198,13 +210,17 @@ Get a list of constellations  --- Alternate route: `/dev/universe/constellations
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\UniverseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getUniverseConstellations($datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getUniverseConstellations($datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UniverseApi->getUniverseConstellations: ', $e->getMessage(), PHP_EOL;
@@ -247,7 +263,11 @@ Get information on a constellation  --- Alternate route: `/dev/universe/constell
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\UniverseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $constellation_id = 56; // int | constellation_id integer
 $datasource = "tranquility"; // string | The server name you would like data from
 $language = "en-us"; // string | Language to use in the response
@@ -255,7 +275,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getUniverseConstellationsConstellationId($constellation_id, $datasource, $language, $user_agent, $x_user_agent);
+    $result = $apiInstance->getUniverseConstellationsConstellationId($constellation_id, $datasource, $language, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UniverseApi->getUniverseConstellationsConstellationId: ', $e->getMessage(), PHP_EOL;
@@ -300,14 +320,18 @@ Get a list of factions  --- Alternate route: `/dev/universe/factions/`  Alternat
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\UniverseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $datasource = "tranquility"; // string | The server name you would like data from
 $language = "en-us"; // string | Language to use in the response
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getUniverseFactions($datasource, $language, $user_agent, $x_user_agent);
+    $result = $apiInstance->getUniverseFactions($datasource, $language, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UniverseApi->getUniverseFactions: ', $e->getMessage(), PHP_EOL;
@@ -351,13 +375,17 @@ Get a list of graphics  --- Alternate route: `/dev/universe/graphics/`  Alternat
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\UniverseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getUniverseGraphics($datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getUniverseGraphics($datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UniverseApi->getUniverseGraphics: ', $e->getMessage(), PHP_EOL;
@@ -400,14 +428,18 @@ Get information on a graphic  --- Alternate route: `/dev/universe/graphics/{grap
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\UniverseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $graphic_id = 56; // int | graphic_id integer
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getUniverseGraphicsGraphicId($graphic_id, $datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getUniverseGraphicsGraphicId($graphic_id, $datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UniverseApi->getUniverseGraphicsGraphicId: ', $e->getMessage(), PHP_EOL;
@@ -451,14 +483,18 @@ Get a list of item groups  --- Alternate route: `/dev/universe/groups/`  Alterna
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\UniverseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $datasource = "tranquility"; // string | The server name you would like data from
 $page = 1; // int | Which page of results to return
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getUniverseGroups($datasource, $page, $user_agent, $x_user_agent);
+    $result = $apiInstance->getUniverseGroups($datasource, $page, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UniverseApi->getUniverseGroups: ', $e->getMessage(), PHP_EOL;
@@ -502,7 +538,11 @@ Get information on an item group  --- Alternate route: `/dev/universe/groups/{gr
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\UniverseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $group_id = 56; // int | An Eve item group ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $language = "en-us"; // string | Language to use in the response
@@ -510,7 +550,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getUniverseGroupsGroupId($group_id, $datasource, $language, $user_agent, $x_user_agent);
+    $result = $apiInstance->getUniverseGroupsGroupId($group_id, $datasource, $language, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UniverseApi->getUniverseGroupsGroupId: ', $e->getMessage(), PHP_EOL;
@@ -555,14 +595,18 @@ Get information on a moon  --- Alternate route: `/dev/universe/moons/{moon_id}/`
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\UniverseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $moon_id = 56; // int | moon_id integer
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getUniverseMoonsMoonId($moon_id, $datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getUniverseMoonsMoonId($moon_id, $datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UniverseApi->getUniverseMoonsMoonId: ', $e->getMessage(), PHP_EOL;
@@ -606,14 +650,18 @@ Get information on a planet  --- Alternate route: `/dev/universe/planets/{planet
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\UniverseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $planet_id = 56; // int | planet_id integer
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getUniversePlanetsPlanetId($planet_id, $datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getUniversePlanetsPlanetId($planet_id, $datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UniverseApi->getUniversePlanetsPlanetId: ', $e->getMessage(), PHP_EOL;
@@ -657,14 +705,18 @@ Get a list of character races  --- Alternate route: `/dev/universe/races/`  Alte
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\UniverseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $datasource = "tranquility"; // string | The server name you would like data from
 $language = "en-us"; // string | Language to use in the response
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getUniverseRaces($datasource, $language, $user_agent, $x_user_agent);
+    $result = $apiInstance->getUniverseRaces($datasource, $language, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UniverseApi->getUniverseRaces: ', $e->getMessage(), PHP_EOL;
@@ -708,13 +760,17 @@ Get a list of regions  --- Alternate route: `/dev/universe/regions/`  Alternate 
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\UniverseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getUniverseRegions($datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getUniverseRegions($datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UniverseApi->getUniverseRegions: ', $e->getMessage(), PHP_EOL;
@@ -757,7 +813,11 @@ Get information on a region  --- Alternate route: `/dev/universe/regions/{region
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\UniverseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $region_id = 56; // int | region_id integer
 $datasource = "tranquility"; // string | The server name you would like data from
 $language = "en-us"; // string | Language to use in the response
@@ -765,7 +825,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getUniverseRegionsRegionId($region_id, $datasource, $language, $user_agent, $x_user_agent);
+    $result = $apiInstance->getUniverseRegionsRegionId($region_id, $datasource, $language, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UniverseApi->getUniverseRegionsRegionId: ', $e->getMessage(), PHP_EOL;
@@ -810,14 +870,18 @@ Get information on a stargate  --- Alternate route: `/dev/universe/stargates/{st
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\UniverseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $stargate_id = 56; // int | stargate_id integer
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getUniverseStargatesStargateId($stargate_id, $datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getUniverseStargatesStargateId($stargate_id, $datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UniverseApi->getUniverseStargatesStargateId: ', $e->getMessage(), PHP_EOL;
@@ -861,14 +925,18 @@ Get information on a star  --- Alternate route: `/dev/universe/stars/{star_id}/`
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\UniverseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $star_id = 56; // int | star_id integer
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getUniverseStarsStarId($star_id, $datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getUniverseStarsStarId($star_id, $datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UniverseApi->getUniverseStarsStarId: ', $e->getMessage(), PHP_EOL;
@@ -912,14 +980,18 @@ Get information on a station  --- Alternate route: `/dev/universe/stations/{stat
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\UniverseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $station_id = 56; // int | station_id integer
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getUniverseStationsStationId($station_id, $datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getUniverseStationsStationId($station_id, $datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UniverseApi->getUniverseStationsStationId: ', $e->getMessage(), PHP_EOL;
@@ -963,13 +1035,17 @@ List all public structures  --- Alternate route: `/dev/universe/structures/`  Al
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\UniverseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getUniverseStructures($datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getUniverseStructures($datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UniverseApi->getUniverseStructures: ', $e->getMessage(), PHP_EOL;
@@ -1013,9 +1089,14 @@ Returns information on requested structure, if you are on the ACL. Otherwise, re
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\UniverseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $structure_id = 789; // int | An Eve structure ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -1023,7 +1104,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getUniverseStructuresStructureId($structure_id, $datasource, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getUniverseStructuresStructureId($structure_id, $datasource, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UniverseApi->getUniverseStructuresStructureId: ', $e->getMessage(), PHP_EOL;
@@ -1068,13 +1149,17 @@ Get the number of jumps in solar systems within the last hour ending at the time
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\UniverseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getUniverseSystemJumps($datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getUniverseSystemJumps($datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UniverseApi->getUniverseSystemJumps: ', $e->getMessage(), PHP_EOL;
@@ -1117,13 +1202,17 @@ Get the number of ship, pod and NPC kills per solar system within the last hour 
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\UniverseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getUniverseSystemKills($datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getUniverseSystemKills($datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UniverseApi->getUniverseSystemKills: ', $e->getMessage(), PHP_EOL;
@@ -1166,13 +1255,17 @@ Get a list of solar systems  --- Alternate route: `/dev/universe/systems/`  Alte
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\UniverseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getUniverseSystems($datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->getUniverseSystems($datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UniverseApi->getUniverseSystems: ', $e->getMessage(), PHP_EOL;
@@ -1215,7 +1308,11 @@ Get information on a solar system  --- Alternate route: `/dev/universe/systems/{
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\UniverseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $system_id = 56; // int | system_id integer
 $datasource = "tranquility"; // string | The server name you would like data from
 $language = "en-us"; // string | Language to use in the response
@@ -1223,7 +1320,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getUniverseSystemsSystemId($system_id, $datasource, $language, $user_agent, $x_user_agent);
+    $result = $apiInstance->getUniverseSystemsSystemId($system_id, $datasource, $language, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UniverseApi->getUniverseSystemsSystemId: ', $e->getMessage(), PHP_EOL;
@@ -1268,14 +1365,18 @@ Get a list of type ids  --- Alternate route: `/dev/universe/types/`  Alternate r
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\UniverseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $datasource = "tranquility"; // string | The server name you would like data from
 $page = 1; // int | Which page of results to return
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getUniverseTypes($datasource, $page, $user_agent, $x_user_agent);
+    $result = $apiInstance->getUniverseTypes($datasource, $page, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UniverseApi->getUniverseTypes: ', $e->getMessage(), PHP_EOL;
@@ -1319,7 +1420,11 @@ Get information on a type  --- Alternate route: `/dev/universe/types/{type_id}/`
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\UniverseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $type_id = 56; // int | An Eve item type ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $language = "en-us"; // string | Language to use in the response
@@ -1327,7 +1432,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getUniverseTypesTypeId($type_id, $datasource, $language, $user_agent, $x_user_agent);
+    $result = $apiInstance->getUniverseTypesTypeId($type_id, $datasource, $language, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UniverseApi->getUniverseTypesTypeId: ', $e->getMessage(), PHP_EOL;
@@ -1372,14 +1477,18 @@ Resolve a set of IDs to names and categories. Supported ID's for resolving are: 
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UniverseApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\UniverseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $ids = array(new \Swagger\Client\Model\int[]()); // int[] | The ids to resolve
 $datasource = "tranquility"; // string | The server name you would like data from
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->postUniverseNames($ids, $datasource, $user_agent, $x_user_agent);
+    $result = $apiInstance->postUniverseNames($ids, $datasource, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UniverseApi->postUniverseNames: ', $e->getMessage(), PHP_EOL;

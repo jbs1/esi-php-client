@@ -32,6 +32,7 @@ use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
+use GuzzleHttp\RequestOptions;
 use Swagger\Client\ApiException;
 use Swagger\Client\Configuration;
 use Swagger\Client\HeaderSelector;
@@ -120,14 +121,15 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdRequest($corporation_id, $datasource, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -235,7 +237,7 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdRequest($corporation_id, $datasource, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -424,14 +426,15 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdAlliancehistoryRequest($corporation_id, $datasource, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -531,7 +534,7 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdAlliancehistoryRequest($corporation_id, $datasource, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -724,14 +727,15 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdBlueprintsRequest($corporation_id, $datasource, $page, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -843,7 +847,7 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdBlueprintsRequest($corporation_id, $datasource, $page, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -1050,14 +1054,15 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdContainersLogsRequest($corporation_id, $datasource, $page, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -1169,7 +1174,7 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdContainersLogsRequest($corporation_id, $datasource, $page, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -1374,14 +1379,15 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdDivisionsRequest($corporation_id, $datasource, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -1491,7 +1497,7 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdDivisionsRequest($corporation_id, $datasource, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -1691,14 +1697,15 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdFacilitiesRequest($corporation_id, $datasource, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -1808,7 +1815,7 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdFacilitiesRequest($corporation_id, $datasource, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -2006,14 +2013,15 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdIconsRequest($corporation_id, $datasource, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -2121,7 +2129,7 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdIconsRequest($corporation_id, $datasource, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -2314,14 +2322,15 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdMedalsRequest($corporation_id, $datasource, $page, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -2433,7 +2442,7 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdMedalsRequest($corporation_id, $datasource, $page, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -2640,14 +2649,15 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdMedalsIssuedRequest($corporation_id, $datasource, $page, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -2759,7 +2769,7 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdMedalsIssuedRequest($corporation_id, $datasource, $page, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -2964,14 +2974,15 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdMembersRequest($corporation_id, $datasource, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -3081,7 +3092,7 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdMembersRequest($corporation_id, $datasource, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -3281,14 +3292,15 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdMembersLimitRequest($corporation_id, $datasource, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -3398,7 +3410,7 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdMembersLimitRequest($corporation_id, $datasource, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -3598,14 +3610,15 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdMembersTitlesRequest($corporation_id, $datasource, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -3715,7 +3728,7 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdMembersTitlesRequest($corporation_id, $datasource, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -3915,14 +3928,15 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdMembertrackingRequest($corporation_id, $datasource, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -4032,7 +4046,7 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdMembertrackingRequest($corporation_id, $datasource, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -4191,6 +4205,670 @@ class CorporationApi
     }
 
     /**
+     * Operation getCorporationsCorporationIdOutposts
+     *
+     * Get corporation outposts
+     *
+     * @param  int $corporation_id An EVE corporation ID (required)
+     * @param  string $datasource The server name you would like data from (optional, default to tranquility)
+     * @param  int $page Which page of results to return (optional, default to 1)
+     * @param  string $token Access token to use if unable to set a header (optional)
+     * @param  string $user_agent Client identifier, takes precedence over headers (optional)
+     * @param  string $x_user_agent Client identifier, takes precedence over User-Agent (optional)
+     *
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return int[]
+     */
+    public function getCorporationsCorporationIdOutposts($corporation_id, $datasource = 'tranquility', $page = '1', $token = null, $user_agent = null, $x_user_agent = null)
+    {
+        list($response) = $this->getCorporationsCorporationIdOutpostsWithHttpInfo($corporation_id, $datasource, $page, $token, $user_agent, $x_user_agent);
+        return $response;
+    }
+
+    /**
+     * Operation getCorporationsCorporationIdOutpostsWithHttpInfo
+     *
+     * Get corporation outposts
+     *
+     * @param  int $corporation_id An EVE corporation ID (required)
+     * @param  string $datasource The server name you would like data from (optional, default to tranquility)
+     * @param  int $page Which page of results to return (optional, default to 1)
+     * @param  string $token Access token to use if unable to set a header (optional)
+     * @param  string $user_agent Client identifier, takes precedence over headers (optional)
+     * @param  string $x_user_agent Client identifier, takes precedence over User-Agent (optional)
+     *
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of int[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getCorporationsCorporationIdOutpostsWithHttpInfo($corporation_id, $datasource = 'tranquility', $page = '1', $token = null, $user_agent = null, $x_user_agent = null)
+    {
+        $returnType = 'int[]';
+        $request = $this->getCorporationsCorporationIdOutpostsRequest($corporation_id, $datasource, $page, $token, $user_agent, $x_user_agent);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        'int[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Swagger\Client\Model\Forbidden',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Swagger\Client\Model\InternalServerError',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getCorporationsCorporationIdOutpostsAsync
+     *
+     * Get corporation outposts
+     *
+     * @param  int $corporation_id An EVE corporation ID (required)
+     * @param  string $datasource The server name you would like data from (optional, default to tranquility)
+     * @param  int $page Which page of results to return (optional, default to 1)
+     * @param  string $token Access token to use if unable to set a header (optional)
+     * @param  string $user_agent Client identifier, takes precedence over headers (optional)
+     * @param  string $x_user_agent Client identifier, takes precedence over User-Agent (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getCorporationsCorporationIdOutpostsAsync($corporation_id, $datasource = 'tranquility', $page = '1', $token = null, $user_agent = null, $x_user_agent = null)
+    {
+        return $this->getCorporationsCorporationIdOutpostsAsyncWithHttpInfo($corporation_id, $datasource, $page, $token, $user_agent, $x_user_agent)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getCorporationsCorporationIdOutpostsAsyncWithHttpInfo
+     *
+     * Get corporation outposts
+     *
+     * @param  int $corporation_id An EVE corporation ID (required)
+     * @param  string $datasource The server name you would like data from (optional, default to tranquility)
+     * @param  int $page Which page of results to return (optional, default to 1)
+     * @param  string $token Access token to use if unable to set a header (optional)
+     * @param  string $user_agent Client identifier, takes precedence over headers (optional)
+     * @param  string $x_user_agent Client identifier, takes precedence over User-Agent (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getCorporationsCorporationIdOutpostsAsyncWithHttpInfo($corporation_id, $datasource = 'tranquility', $page = '1', $token = null, $user_agent = null, $x_user_agent = null)
+    {
+        $returnType = 'int[]';
+        $request = $this->getCorporationsCorporationIdOutpostsRequest($corporation_id, $datasource, $page, $token, $user_agent, $x_user_agent);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getCorporationsCorporationIdOutposts'
+     *
+     * @param  int $corporation_id An EVE corporation ID (required)
+     * @param  string $datasource The server name you would like data from (optional, default to tranquility)
+     * @param  int $page Which page of results to return (optional, default to 1)
+     * @param  string $token Access token to use if unable to set a header (optional)
+     * @param  string $user_agent Client identifier, takes precedence over headers (optional)
+     * @param  string $x_user_agent Client identifier, takes precedence over User-Agent (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getCorporationsCorporationIdOutpostsRequest($corporation_id, $datasource = 'tranquility', $page = '1', $token = null, $user_agent = null, $x_user_agent = null)
+    {
+        // verify the required parameter 'corporation_id' is set
+        if ($corporation_id === null) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $corporation_id when calling getCorporationsCorporationIdOutposts'
+            );
+        }
+
+        $resourcePath = '/corporations/{corporation_id}/outposts/';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($datasource !== null) {
+            $queryParams['datasource'] = ObjectSerializer::toQueryValue($datasource);
+        }
+        // query params
+        if ($page !== null) {
+            $queryParams['page'] = ObjectSerializer::toQueryValue($page);
+        }
+        // query params
+        if ($token !== null) {
+            $queryParams['token'] = ObjectSerializer::toQueryValue($token);
+        }
+        // query params
+        if ($user_agent !== null) {
+            $queryParams['user_agent'] = ObjectSerializer::toQueryValue($user_agent);
+        }
+        // header params
+        if ($x_user_agent !== null) {
+            $headerParams['X-User-Agent'] = ObjectSerializer::toHeaderValue($x_user_agent);
+        }
+
+        // path params
+        if ($corporation_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'corporation_id' . '}',
+                ObjectSerializer::toPathValue($corporation_id),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers= $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation getCorporationsCorporationIdOutpostsOutpostId
+     *
+     * Get corporation outpost details
+     *
+     * @param  int $corporation_id An EVE corporation ID (required)
+     * @param  int $outpost_id A station (outpost) ID (required)
+     * @param  string $datasource The server name you would like data from (optional, default to tranquility)
+     * @param  string $token Access token to use if unable to set a header (optional)
+     * @param  string $user_agent Client identifier, takes precedence over headers (optional)
+     * @param  string $x_user_agent Client identifier, takes precedence over User-Agent (optional)
+     *
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Swagger\Client\Model\GetCorporationsCorporationIdOutpostsOutpostIdOk
+     */
+    public function getCorporationsCorporationIdOutpostsOutpostId($corporation_id, $outpost_id, $datasource = 'tranquility', $token = null, $user_agent = null, $x_user_agent = null)
+    {
+        list($response) = $this->getCorporationsCorporationIdOutpostsOutpostIdWithHttpInfo($corporation_id, $outpost_id, $datasource, $token, $user_agent, $x_user_agent);
+        return $response;
+    }
+
+    /**
+     * Operation getCorporationsCorporationIdOutpostsOutpostIdWithHttpInfo
+     *
+     * Get corporation outpost details
+     *
+     * @param  int $corporation_id An EVE corporation ID (required)
+     * @param  int $outpost_id A station (outpost) ID (required)
+     * @param  string $datasource The server name you would like data from (optional, default to tranquility)
+     * @param  string $token Access token to use if unable to set a header (optional)
+     * @param  string $user_agent Client identifier, takes precedence over headers (optional)
+     * @param  string $x_user_agent Client identifier, takes precedence over User-Agent (optional)
+     *
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Swagger\Client\Model\GetCorporationsCorporationIdOutpostsOutpostIdOk, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getCorporationsCorporationIdOutpostsOutpostIdWithHttpInfo($corporation_id, $outpost_id, $datasource = 'tranquility', $token = null, $user_agent = null, $x_user_agent = null)
+    {
+        $returnType = '\Swagger\Client\Model\GetCorporationsCorporationIdOutpostsOutpostIdOk';
+        $request = $this->getCorporationsCorporationIdOutpostsOutpostIdRequest($corporation_id, $outpost_id, $datasource, $token, $user_agent, $x_user_agent);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Swagger\Client\Model\GetCorporationsCorporationIdOutpostsOutpostIdOk',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 403:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Swagger\Client\Model\Forbidden',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Swagger\Client\Model\InternalServerError',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getCorporationsCorporationIdOutpostsOutpostIdAsync
+     *
+     * Get corporation outpost details
+     *
+     * @param  int $corporation_id An EVE corporation ID (required)
+     * @param  int $outpost_id A station (outpost) ID (required)
+     * @param  string $datasource The server name you would like data from (optional, default to tranquility)
+     * @param  string $token Access token to use if unable to set a header (optional)
+     * @param  string $user_agent Client identifier, takes precedence over headers (optional)
+     * @param  string $x_user_agent Client identifier, takes precedence over User-Agent (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getCorporationsCorporationIdOutpostsOutpostIdAsync($corporation_id, $outpost_id, $datasource = 'tranquility', $token = null, $user_agent = null, $x_user_agent = null)
+    {
+        return $this->getCorporationsCorporationIdOutpostsOutpostIdAsyncWithHttpInfo($corporation_id, $outpost_id, $datasource, $token, $user_agent, $x_user_agent)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getCorporationsCorporationIdOutpostsOutpostIdAsyncWithHttpInfo
+     *
+     * Get corporation outpost details
+     *
+     * @param  int $corporation_id An EVE corporation ID (required)
+     * @param  int $outpost_id A station (outpost) ID (required)
+     * @param  string $datasource The server name you would like data from (optional, default to tranquility)
+     * @param  string $token Access token to use if unable to set a header (optional)
+     * @param  string $user_agent Client identifier, takes precedence over headers (optional)
+     * @param  string $x_user_agent Client identifier, takes precedence over User-Agent (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getCorporationsCorporationIdOutpostsOutpostIdAsyncWithHttpInfo($corporation_id, $outpost_id, $datasource = 'tranquility', $token = null, $user_agent = null, $x_user_agent = null)
+    {
+        $returnType = '\Swagger\Client\Model\GetCorporationsCorporationIdOutpostsOutpostIdOk';
+        $request = $this->getCorporationsCorporationIdOutpostsOutpostIdRequest($corporation_id, $outpost_id, $datasource, $token, $user_agent, $x_user_agent);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getCorporationsCorporationIdOutpostsOutpostId'
+     *
+     * @param  int $corporation_id An EVE corporation ID (required)
+     * @param  int $outpost_id A station (outpost) ID (required)
+     * @param  string $datasource The server name you would like data from (optional, default to tranquility)
+     * @param  string $token Access token to use if unable to set a header (optional)
+     * @param  string $user_agent Client identifier, takes precedence over headers (optional)
+     * @param  string $x_user_agent Client identifier, takes precedence over User-Agent (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getCorporationsCorporationIdOutpostsOutpostIdRequest($corporation_id, $outpost_id, $datasource = 'tranquility', $token = null, $user_agent = null, $x_user_agent = null)
+    {
+        // verify the required parameter 'corporation_id' is set
+        if ($corporation_id === null) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $corporation_id when calling getCorporationsCorporationIdOutpostsOutpostId'
+            );
+        }
+        // verify the required parameter 'outpost_id' is set
+        if ($outpost_id === null) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $outpost_id when calling getCorporationsCorporationIdOutpostsOutpostId'
+            );
+        }
+
+        $resourcePath = '/corporations/{corporation_id}/outposts/{outpost_id}/';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($datasource !== null) {
+            $queryParams['datasource'] = ObjectSerializer::toQueryValue($datasource);
+        }
+        // query params
+        if ($token !== null) {
+            $queryParams['token'] = ObjectSerializer::toQueryValue($token);
+        }
+        // query params
+        if ($user_agent !== null) {
+            $queryParams['user_agent'] = ObjectSerializer::toQueryValue($user_agent);
+        }
+        // header params
+        if ($x_user_agent !== null) {
+            $headerParams['X-User-Agent'] = ObjectSerializer::toHeaderValue($x_user_agent);
+        }
+
+        // path params
+        if ($corporation_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'corporation_id' . '}',
+                ObjectSerializer::toPathValue($corporation_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($outpost_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'outpost_id' . '}',
+                ObjectSerializer::toPathValue($outpost_id),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers= $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation getCorporationsCorporationIdRoles
      *
      * Get corporation member roles
@@ -4232,14 +4910,15 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdRolesRequest($corporation_id, $datasource, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -4349,7 +5028,7 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdRolesRequest($corporation_id, $datasource, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -4551,14 +5230,15 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdRolesHistoryRequest($corporation_id, $datasource, $page, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -4670,7 +5350,7 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdRolesHistoryRequest($corporation_id, $datasource, $page, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -4877,14 +5557,15 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdShareholdersRequest($corporation_id, $datasource, $page, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -4996,7 +5677,7 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdShareholdersRequest($corporation_id, $datasource, $page, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -5203,14 +5884,15 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdStandingsRequest($corporation_id, $datasource, $page, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -5322,7 +6004,7 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdStandingsRequest($corporation_id, $datasource, $page, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -5529,14 +6211,15 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdStarbasesRequest($corporation_id, $datasource, $page, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -5648,7 +6331,7 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdStarbasesRequest($corporation_id, $datasource, $page, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -5859,14 +6542,15 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdStarbasesStarbaseIdRequest($corporation_id, $starbase_id, $system_id, $datasource, $page, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -5982,7 +6666,7 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdStarbasesStarbaseIdRequest($corporation_id, $starbase_id, $system_id, $datasource, $page, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -6217,14 +6901,15 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdStructuresRequest($corporation_id, $datasource, $language, $page, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -6338,7 +7023,7 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdStructuresRequest($corporation_id, $datasource, $language, $page, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -6548,14 +7233,15 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdTitlesRequest($corporation_id, $datasource, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -6665,7 +7351,7 @@ class CorporationApi
         $request = $this->getCorporationsCorporationIdTitlesRequest($corporation_id, $datasource, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -6863,14 +7549,15 @@ class CorporationApi
         $request = $this->getCorporationsNamesRequest($corporation_ids, $datasource, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -6970,7 +7657,7 @@ class CorporationApi
         $request = $this->getCorporationsNamesRequest($corporation_ids, $datasource, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -7163,14 +7850,15 @@ class CorporationApi
         $request = $this->getCorporationsNpccorpsRequest($datasource, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -7268,7 +7956,7 @@ class CorporationApi
         $request = $this->getCorporationsNpccorpsRequest($datasource, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     $responseBody = $response->getBody();
@@ -7447,14 +8135,15 @@ class CorporationApi
         $request = $this->putCorporationsCorporationIdStructuresStructureIdRequest($corporation_id, $new_schedule, $structure_id, $datasource, $token, $user_agent, $x_user_agent);
 
         try {
-
+            $options = $this->createHttpClientOption();
             try {
-                $response = $this->client->send($request);
+                $response = $this->client->send($request, $options);
             } catch (RequestException $e) {
                 throw new ApiException(
                     "[{$e->getCode()}] {$e->getMessage()}",
                     $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse()->getBody()->getContents()
                 );
             }
 
@@ -7546,7 +8235,7 @@ class CorporationApi
         $request = $this->putCorporationsCorporationIdStructuresStructureIdRequest($corporation_id, $new_schedule, $structure_id, $datasource, $token, $user_agent, $x_user_agent);
 
         return $this->client
-            ->sendAsync($request)
+            ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
                     return [null, $response->getStatusCode(), $response->getHeaders()];
@@ -7715,4 +8404,22 @@ class CorporationApi
         );
     }
 
+    /**
+     * Create http client option
+     *
+     * @throws \RuntimeException on file opening failure
+     * @return array of http client options
+     */
+    protected function createHttpClientOption()
+    {
+        $options = [];
+        if ($this->config->getDebug()) {
+            $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'a');
+            if (!$options[RequestOptions::DEBUG]) {
+                throw new \RuntimeException('Failed to open the debug file: ' . $this->config->getDebugFile());
+            }
+        }
+
+        return $options;
+    }
 }

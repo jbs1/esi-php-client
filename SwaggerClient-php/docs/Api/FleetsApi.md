@@ -33,9 +33,14 @@ Kick a fleet member  --- Alternate route: `/dev/fleets/{fleet_id}/members/{membe
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\FleetsApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\FleetsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $fleet_id = 789; // int | ID for a fleet
 $member_id = 56; // int | The character ID of a member in this fleet
 $datasource = "tranquility"; // string | The server name you would like data from
@@ -44,7 +49,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $api_instance->deleteFleetsFleetIdMembersMemberId($fleet_id, $member_id, $datasource, $token, $user_agent, $x_user_agent);
+    $apiInstance->deleteFleetsFleetIdMembersMemberId($fleet_id, $member_id, $datasource, $token, $user_agent, $x_user_agent);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->deleteFleetsFleetIdMembersMemberId: ', $e->getMessage(), PHP_EOL;
 }
@@ -90,9 +95,14 @@ Delete a fleet squad, only empty squads can be deleted  --- Alternate route: `/d
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\FleetsApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\FleetsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $fleet_id = 789; // int | ID for a fleet
 $squad_id = 789; // int | The squad to delete
 $datasource = "tranquility"; // string | The server name you would like data from
@@ -101,7 +111,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $api_instance->deleteFleetsFleetIdSquadsSquadId($fleet_id, $squad_id, $datasource, $token, $user_agent, $x_user_agent);
+    $apiInstance->deleteFleetsFleetIdSquadsSquadId($fleet_id, $squad_id, $datasource, $token, $user_agent, $x_user_agent);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->deleteFleetsFleetIdSquadsSquadId: ', $e->getMessage(), PHP_EOL;
 }
@@ -147,9 +157,14 @@ Delete a fleet wing, only empty wings can be deleted. The wing may contain squad
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\FleetsApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\FleetsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $fleet_id = 789; // int | ID for a fleet
 $wing_id = 789; // int | The wing to delete
 $datasource = "tranquility"; // string | The server name you would like data from
@@ -158,7 +173,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $api_instance->deleteFleetsFleetIdWingsWingId($fleet_id, $wing_id, $datasource, $token, $user_agent, $x_user_agent);
+    $apiInstance->deleteFleetsFleetIdWingsWingId($fleet_id, $wing_id, $datasource, $token, $user_agent, $x_user_agent);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->deleteFleetsFleetIdWingsWingId: ', $e->getMessage(), PHP_EOL;
 }
@@ -204,9 +219,14 @@ Return the fleet ID the character is in, if any.  --- Alternate route: `/dev/cha
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\FleetsApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\FleetsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -214,7 +234,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCharactersCharacterIdFleet($character_id, $datasource, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCharactersCharacterIdFleet($character_id, $datasource, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->getCharactersCharacterIdFleet: ', $e->getMessage(), PHP_EOL;
@@ -260,9 +280,14 @@ Return details about a fleet  --- Alternate route: `/dev/fleets/{fleet_id}/`  Al
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\FleetsApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\FleetsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $fleet_id = 789; // int | ID for a fleet
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -270,7 +295,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getFleetsFleetId($fleet_id, $datasource, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getFleetsFleetId($fleet_id, $datasource, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->getFleetsFleetId: ', $e->getMessage(), PHP_EOL;
@@ -316,9 +341,14 @@ Return information about fleet members  --- Alternate route: `/dev/fleets/{fleet
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\FleetsApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\FleetsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $fleet_id = 789; // int | ID for a fleet
 $datasource = "tranquility"; // string | The server name you would like data from
 $language = "en-us"; // string | Language to use in the response
@@ -327,7 +357,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getFleetsFleetIdMembers($fleet_id, $datasource, $language, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getFleetsFleetIdMembers($fleet_id, $datasource, $language, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->getFleetsFleetIdMembers: ', $e->getMessage(), PHP_EOL;
@@ -374,9 +404,14 @@ Return information about wings in a fleet  --- Alternate route: `/dev/fleets/{fl
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\FleetsApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\FleetsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $fleet_id = 789; // int | ID for a fleet
 $datasource = "tranquility"; // string | The server name you would like data from
 $language = "en-us"; // string | Language to use in the response
@@ -385,7 +420,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getFleetsFleetIdWings($fleet_id, $datasource, $language, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getFleetsFleetIdWings($fleet_id, $datasource, $language, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->getFleetsFleetIdWings: ', $e->getMessage(), PHP_EOL;
@@ -432,9 +467,14 @@ Invite a character into the fleet. If a character has a CSPA charge set it is no
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\FleetsApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\FleetsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $fleet_id = 789; // int | ID for a fleet
 $invitation = new \Swagger\Client\Model\PostFleetsFleetIdMembersInvitation(); // \Swagger\Client\Model\PostFleetsFleetIdMembersInvitation | Details of the invitation
 $datasource = "tranquility"; // string | The server name you would like data from
@@ -443,7 +483,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $api_instance->postFleetsFleetIdMembers($fleet_id, $invitation, $datasource, $token, $user_agent, $x_user_agent);
+    $apiInstance->postFleetsFleetIdMembers($fleet_id, $invitation, $datasource, $token, $user_agent, $x_user_agent);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->postFleetsFleetIdMembers: ', $e->getMessage(), PHP_EOL;
 }
@@ -489,9 +529,14 @@ Create a new wing in a fleet  --- Alternate route: `/dev/fleets/{fleet_id}/wings
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\FleetsApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\FleetsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $fleet_id = 789; // int | ID for a fleet
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -499,7 +544,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->postFleetsFleetIdWings($fleet_id, $datasource, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->postFleetsFleetIdWings($fleet_id, $datasource, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->postFleetsFleetIdWings: ', $e->getMessage(), PHP_EOL;
@@ -545,9 +590,14 @@ Create a new squad in a fleet  --- Alternate route: `/dev/fleets/{fleet_id}/wing
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\FleetsApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\FleetsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $fleet_id = 789; // int | ID for a fleet
 $wing_id = 789; // int | The wing_id to create squad in
 $datasource = "tranquility"; // string | The server name you would like data from
@@ -556,7 +606,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->postFleetsFleetIdWingsWingIdSquads($fleet_id, $wing_id, $datasource, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->postFleetsFleetIdWingsWingIdSquads($fleet_id, $wing_id, $datasource, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->postFleetsFleetIdWingsWingIdSquads: ', $e->getMessage(), PHP_EOL;
@@ -603,9 +653,14 @@ Update settings about a fleet  --- Alternate route: `/dev/fleets/{fleet_id}/`  A
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\FleetsApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\FleetsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $fleet_id = 789; // int | ID for a fleet
 $new_settings = new \Swagger\Client\Model\PutFleetsFleetIdNewSettings(); // \Swagger\Client\Model\PutFleetsFleetIdNewSettings | What to update for this fleet
 $datasource = "tranquility"; // string | The server name you would like data from
@@ -614,7 +669,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $api_instance->putFleetsFleetId($fleet_id, $new_settings, $datasource, $token, $user_agent, $x_user_agent);
+    $apiInstance->putFleetsFleetId($fleet_id, $new_settings, $datasource, $token, $user_agent, $x_user_agent);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->putFleetsFleetId: ', $e->getMessage(), PHP_EOL;
 }
@@ -660,9 +715,14 @@ Move a fleet member around  --- Alternate route: `/dev/fleets/{fleet_id}/members
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\FleetsApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\FleetsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $fleet_id = 789; // int | ID for a fleet
 $member_id = 56; // int | The character ID of a member in this fleet
 $movement = new \Swagger\Client\Model\PutFleetsFleetIdMembersMemberIdMovement(); // \Swagger\Client\Model\PutFleetsFleetIdMembersMemberIdMovement | Details of the invitation
@@ -672,7 +732,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $api_instance->putFleetsFleetIdMembersMemberId($fleet_id, $member_id, $movement, $datasource, $token, $user_agent, $x_user_agent);
+    $apiInstance->putFleetsFleetIdMembersMemberId($fleet_id, $member_id, $movement, $datasource, $token, $user_agent, $x_user_agent);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->putFleetsFleetIdMembersMemberId: ', $e->getMessage(), PHP_EOL;
 }
@@ -719,9 +779,14 @@ Rename a fleet squad  --- Alternate route: `/dev/fleets/{fleet_id}/squads/{squad
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\FleetsApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\FleetsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $fleet_id = 789; // int | ID for a fleet
 $naming = new \Swagger\Client\Model\PutFleetsFleetIdSquadsSquadIdNaming(); // \Swagger\Client\Model\PutFleetsFleetIdSquadsSquadIdNaming | New name of the squad
 $squad_id = 789; // int | The squad to rename
@@ -731,7 +796,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $api_instance->putFleetsFleetIdSquadsSquadId($fleet_id, $naming, $squad_id, $datasource, $token, $user_agent, $x_user_agent);
+    $apiInstance->putFleetsFleetIdSquadsSquadId($fleet_id, $naming, $squad_id, $datasource, $token, $user_agent, $x_user_agent);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->putFleetsFleetIdSquadsSquadId: ', $e->getMessage(), PHP_EOL;
 }
@@ -778,9 +843,14 @@ Rename a fleet wing  --- Alternate route: `/dev/fleets/{fleet_id}/wings/{wing_id
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\FleetsApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\FleetsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $fleet_id = 789; // int | ID for a fleet
 $naming = new \Swagger\Client\Model\PutFleetsFleetIdWingsWingIdNaming(); // \Swagger\Client\Model\PutFleetsFleetIdWingsWingIdNaming | New name of the wing
 $wing_id = 789; // int | The wing to rename
@@ -790,7 +860,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $api_instance->putFleetsFleetIdWingsWingId($fleet_id, $naming, $wing_id, $datasource, $token, $user_agent, $x_user_agent);
+    $apiInstance->putFleetsFleetIdWingsWingId($fleet_id, $naming, $wing_id, $datasource, $token, $user_agent, $x_user_agent);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->putFleetsFleetIdWingsWingId: ', $e->getMessage(), PHP_EOL;
 }

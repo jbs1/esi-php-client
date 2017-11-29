@@ -28,9 +28,14 @@ Delete a mail label  --- Alternate route: `/dev/characters/{character_id}/mail/l
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\MailApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\MailApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $character_id = 56; // int | An EVE character ID
 $label_id = 56; // int | An EVE label id
 $datasource = "tranquility"; // string | The server name you would like data from
@@ -39,7 +44,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $api_instance->deleteCharactersCharacterIdMailLabelsLabelId($character_id, $label_id, $datasource, $token, $user_agent, $x_user_agent);
+    $apiInstance->deleteCharactersCharacterIdMailLabelsLabelId($character_id, $label_id, $datasource, $token, $user_agent, $x_user_agent);
 } catch (Exception $e) {
     echo 'Exception when calling MailApi->deleteCharactersCharacterIdMailLabelsLabelId: ', $e->getMessage(), PHP_EOL;
 }
@@ -85,9 +90,14 @@ Delete a mail  --- Alternate route: `/dev/characters/{character_id}/mail/{mail_i
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\MailApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\MailApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $character_id = 56; // int | An EVE character ID
 $mail_id = 56; // int | An EVE mail ID
 $datasource = "tranquility"; // string | The server name you would like data from
@@ -96,7 +106,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $api_instance->deleteCharactersCharacterIdMailMailId($character_id, $mail_id, $datasource, $token, $user_agent, $x_user_agent);
+    $apiInstance->deleteCharactersCharacterIdMailMailId($character_id, $mail_id, $datasource, $token, $user_agent, $x_user_agent);
 } catch (Exception $e) {
     echo 'Exception when calling MailApi->deleteCharactersCharacterIdMailMailId: ', $e->getMessage(), PHP_EOL;
 }
@@ -142,9 +152,14 @@ Return the 50 most recent mail headers belonging to the character that match the
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\MailApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\MailApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $labels = array(56); // int[] | Fetch only mails that match one or more of the given labels
@@ -154,7 +169,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCharactersCharacterIdMail($character_id, $datasource, $labels, $last_mail_id, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCharactersCharacterIdMail($character_id, $datasource, $labels, $last_mail_id, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MailApi->getCharactersCharacterIdMail: ', $e->getMessage(), PHP_EOL;
@@ -202,9 +217,14 @@ Return a list of the users mail labels, unread counts for each label and a total
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\MailApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\MailApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -212,7 +232,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCharactersCharacterIdMailLabels($character_id, $datasource, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCharactersCharacterIdMailLabels($character_id, $datasource, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MailApi->getCharactersCharacterIdMailLabels: ', $e->getMessage(), PHP_EOL;
@@ -258,9 +278,14 @@ Return all mailing lists that the character is subscribed to  --- Alternate rout
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\MailApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\MailApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
@@ -268,7 +293,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCharactersCharacterIdMailLists($character_id, $datasource, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCharactersCharacterIdMailLists($character_id, $datasource, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MailApi->getCharactersCharacterIdMailLists: ', $e->getMessage(), PHP_EOL;
@@ -314,9 +339,14 @@ Return the contents of an EVE mail  --- Alternate route: `/dev/characters/{chara
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\MailApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\MailApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $character_id = 56; // int | An EVE character ID
 $mail_id = 56; // int | An EVE mail ID
 $datasource = "tranquility"; // string | The server name you would like data from
@@ -325,7 +355,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->getCharactersCharacterIdMailMailId($character_id, $mail_id, $datasource, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->getCharactersCharacterIdMailMailId($character_id, $mail_id, $datasource, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MailApi->getCharactersCharacterIdMailMailId: ', $e->getMessage(), PHP_EOL;
@@ -372,9 +402,14 @@ Create and send a new mail  --- Alternate route: `/dev/characters/{character_id}
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\MailApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\MailApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $character_id = 56; // int | An EVE character ID
 $mail = new \Swagger\Client\Model\PostCharactersCharacterIdMailMail(); // \Swagger\Client\Model\PostCharactersCharacterIdMailMail | The mail to send
 $datasource = "tranquility"; // string | The server name you would like data from
@@ -383,7 +418,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->postCharactersCharacterIdMail($character_id, $mail, $datasource, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->postCharactersCharacterIdMail($character_id, $mail, $datasource, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MailApi->postCharactersCharacterIdMail: ', $e->getMessage(), PHP_EOL;
@@ -430,9 +465,14 @@ Create a mail label  --- Alternate route: `/dev/characters/{character_id}/mail/l
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\MailApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\MailApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $character_id = 56; // int | An EVE character ID
 $datasource = "tranquility"; // string | The server name you would like data from
 $label = new \Swagger\Client\Model\PostCharactersCharacterIdMailLabelsLabel(); // \Swagger\Client\Model\PostCharactersCharacterIdMailLabelsLabel | Label to create
@@ -441,7 +481,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $result = $api_instance->postCharactersCharacterIdMailLabels($character_id, $datasource, $label, $token, $user_agent, $x_user_agent);
+    $result = $apiInstance->postCharactersCharacterIdMailLabels($character_id, $datasource, $label, $token, $user_agent, $x_user_agent);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MailApi->postCharactersCharacterIdMailLabels: ', $e->getMessage(), PHP_EOL;
@@ -488,9 +528,14 @@ Update metadata about a mail  --- Alternate route: `/dev/characters/{character_i
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: evesso
-Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$api_instance = new Swagger\Client\Api\MailApi(new \Http\Adapter\Guzzle6\Client());
+$apiInstance = new Swagger\Client\Api\MailApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
 $character_id = 56; // int | An EVE character ID
 $contents = new \Swagger\Client\Model\PutCharactersCharacterIdMailMailIdContents(); // \Swagger\Client\Model\PutCharactersCharacterIdMailMailIdContents | Data used to update the mail
 $mail_id = 56; // int | An EVE mail ID
@@ -500,7 +545,7 @@ $user_agent = "user_agent_example"; // string | Client identifier, takes precede
 $x_user_agent = "x_user_agent_example"; // string | Client identifier, takes precedence over User-Agent
 
 try {
-    $api_instance->putCharactersCharacterIdMailMailId($character_id, $contents, $mail_id, $datasource, $token, $user_agent, $x_user_agent);
+    $apiInstance->putCharactersCharacterIdMailMailId($character_id, $contents, $mail_id, $datasource, $token, $user_agent, $x_user_agent);
 } catch (Exception $e) {
     echo 'Exception when calling MailApi->putCharactersCharacterIdMailMailId: ', $e->getMessage(), PHP_EOL;
 }
