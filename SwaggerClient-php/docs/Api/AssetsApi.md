@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 Get character assets
 
-Return a list of the characters assets  --- Alternate route: `/legacy/characters/{character_id}/assets/`  Alternate route: `/v1/characters/{character_id}/assets/`  --- This route is cached for up to 3600 seconds
+Return a list of the characters assets  --- Alternate route: `/v2/characters/{character_id}/assets/`  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```php
@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 
 Get corporation assets
 
-Return a list of the corporation assets  --- Alternate route: `/dev/corporations/{corporation_id}/assets/`  Alternate route: `/legacy/corporations/{corporation_id}/assets/`  Alternate route: `/v1/corporations/{corporation_id}/assets/`  --- This route is cached for up to 3600 seconds
+Return a list of the corporation assets  --- Alternate route: `/legacy/corporations/{corporation_id}/assets/`  Alternate route: `/v1/corporations/{corporation_id}/assets/`  --- This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director
 
 ### Example
 ```php
@@ -143,7 +143,7 @@ Name | Type | Description  | Notes
 
 Get character asset locations
 
-Return locations for a set of item ids, which you can get from character assets endpoint. Coordinates for items in hangars or stations are set to (0,0,0)  --- Alternate route: `/dev/characters/{character_id}/assets/locations/`  Alternate route: `/legacy/characters/{character_id}/assets/locations/`  Alternate route: `/v1/characters/{character_id}/assets/locations/`
+Return locations for a set of item ids, which you can get from character assets endpoint. Coordinates for items in hangars or stations are set to (0,0,0)  --- Alternate route: `/legacy/characters/{character_id}/assets/locations/`  Alternate route: `/v1/characters/{character_id}/assets/locations/`
 
 ### Example
 ```php
@@ -269,7 +269,7 @@ Name | Type | Description  | Notes
 
 Get corporation asset locations
 
-Return locations for a set of item ids, which you can get from corporation assets endpoint. Coordinates for items in hangars or stations are set to (0,0,0)  --- Alternate route: `/dev/corporations/{corporation_id}/assets/locations/`  Alternate route: `/legacy/corporations/{corporation_id}/assets/locations/`  Alternate route: `/v1/corporations/{corporation_id}/assets/locations/`
+Return locations for a set of item ids, which you can get from corporation assets endpoint. Coordinates for items in hangars or stations are set to (0,0,0)  --- Alternate route: `/legacy/corporations/{corporation_id}/assets/locations/`  Alternate route: `/v1/corporations/{corporation_id}/assets/locations/`   --- Requires one of the following EVE corporation role(s): Director
 
 ### Example
 ```php
@@ -332,7 +332,7 @@ Name | Type | Description  | Notes
 
 Get coporation asset names
 
-Return names for a set of item ids, which you can get from corporation assets endpoint. Only valid for items that can customize names, like containers or ships.  --- Alternate route: `/dev/corporations/{corporation_id}/assets/names/`  Alternate route: `/legacy/corporations/{corporation_id}/assets/names/`  Alternate route: `/v1/corporations/{corporation_id}/assets/names/`
+Return names for a set of item ids, which you can get from corporation assets endpoint. Only valid for items that can customize names, like containers or ships.  --- Alternate route: `/dev/corporations/{corporation_id}/assets/names/`  Alternate route: `/legacy/corporations/{corporation_id}/assets/names/`  Alternate route: `/v1/corporations/{corporation_id}/assets/names/`   --- Requires one of the following EVE corporation role(s): Director
 
 ### Example
 ```php
