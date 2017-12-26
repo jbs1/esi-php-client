@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
 
 Get character skills
 
-List all trained skills for the given character  --- Alternate route: `/v3/characters/{character_id}/skills/`  --- This route is cached for up to 120 seconds
+List all trained skills for the given character  --- Alternate route: `/dev/characters/{character_id}/skills/`  Alternate route: `/v4/characters/{character_id}/skills/`  --- This route is cached for up to 120 seconds
 
 ### Example
 ```php

@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **getCharactersCharacterIdWallet**
-> float getCharactersCharacterIdWallet($character_id, $datasource, $token, $user_agent, $x_user_agent)
+> double getCharactersCharacterIdWallet($character_id, $datasource, $token, $user_agent, $x_user_agent)
 
 Get a character's wallet balance
 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**float**
+**double**
 
 ### Authorization
 
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 
 Get character wallet journal
 
-Retrieve character wallet journal  --- Alternate route: `/v2/characters/{character_id}/wallet/journal/`  --- This route is cached for up to 3600 seconds
+Retrieve character wallet journal  --- Alternate route: `/dev/characters/{character_id}/wallet/journal/`  Alternate route: `/v3/characters/{character_id}/wallet/journal/`  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```php
@@ -265,7 +265,7 @@ Name | Type | Description  | Notes
 
 Get corporation wallet journal
 
-Retrieve corporation wallet journal  --- Alternate route: `/legacy/corporations/{corporation_id}/wallets/{division}/journal/`  Alternate route: `/v1/corporations/{corporation_id}/wallets/{division}/journal/`  --- This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Accountant, Junior_Accountant
+Retrieve corporation wallet journal  --- Alternate route: `/dev/corporations/{corporation_id}/wallets/{division}/journal/`  Alternate route: `/v2/corporations/{corporation_id}/wallets/{division}/journal/`  --- This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Accountant, Junior_Accountant
 
 ### Example
 ```php

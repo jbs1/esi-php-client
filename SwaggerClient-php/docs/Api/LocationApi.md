@@ -71,11 +71,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCharactersCharacterIdOnline**
-> bool getCharactersCharacterIdOnline($character_id, $datasource, $token, $user_agent, $x_user_agent)
+> \Swagger\Client\Model\GetCharactersCharacterIdOnlineOk getCharactersCharacterIdOnline($character_id, $datasource, $token, $user_agent, $x_user_agent)
 
 Get character online
 
-Checks if the character is currently online  --- Alternate route: `/legacy/characters/{character_id}/online/`  Alternate route: `/v1/characters/{character_id}/online/`  --- This route is cached for up to 60 seconds
+Checks if the character is currently online  --- Alternate route: `/dev/characters/{character_id}/online/`  Alternate route: `/v2/characters/{character_id}/online/`  --- This route is cached for up to 60 seconds
 
 ### Example
 ```php
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**bool**
+[**\Swagger\Client\Model\GetCharactersCharacterIdOnlineOk**](../Model/GetCharactersCharacterIdOnlineOk.md)
 
 ### Authorization
 

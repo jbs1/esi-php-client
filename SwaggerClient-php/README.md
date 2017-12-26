@@ -112,6 +112,7 @@ Class | Method | HTTP request | Description
 *CharacterApi* | [**getCharactersCharacterIdPortrait**](docs/Api/CharacterApi.md#getcharacterscharacteridportrait) | **GET** /characters/{character_id}/portrait/ | Get character portraits
 *CharacterApi* | [**getCharactersCharacterIdRoles**](docs/Api/CharacterApi.md#getcharacterscharacteridroles) | **GET** /characters/{character_id}/roles/ | Get character corporation roles
 *CharacterApi* | [**getCharactersCharacterIdStandings**](docs/Api/CharacterApi.md#getcharacterscharacteridstandings) | **GET** /characters/{character_id}/standings/ | Get standings
+*CharacterApi* | [**getCharactersCharacterIdStats**](docs/Api/CharacterApi.md#getcharacterscharacteridstats) | **GET** /characters/{character_id}/stats/ | Yearly aggregate stats
 *CharacterApi* | [**getCharactersCharacterIdTitles**](docs/Api/CharacterApi.md#getcharacterscharacteridtitles) | **GET** /characters/{character_id}/titles/ | Get character corporation titles
 *CharacterApi* | [**getCharactersNames**](docs/Api/CharacterApi.md#getcharactersnames) | **GET** /characters/names/ | Get character names
 *CharacterApi* | [**postCharactersAffiliation**](docs/Api/CharacterApi.md#postcharactersaffiliation) | **POST** /characters/affiliation/ | Character affiliation
@@ -267,6 +268,7 @@ Class | Method | HTTP request | Description
 *UniverseApi* | [**getUniverseSystemsSystemId**](docs/Api/UniverseApi.md#getuniversesystemssystemid) | **GET** /universe/systems/{system_id}/ | Get solar system information
 *UniverseApi* | [**getUniverseTypes**](docs/Api/UniverseApi.md#getuniversetypes) | **GET** /universe/types/ | Get types
 *UniverseApi* | [**getUniverseTypesTypeId**](docs/Api/UniverseApi.md#getuniversetypestypeid) | **GET** /universe/types/{type_id}/ | Get type information
+*UniverseApi* | [**postUniverseIds**](docs/Api/UniverseApi.md#postuniverseids) | **POST** /universe/ids/ | Bulk names to IDs
 *UniverseApi* | [**postUniverseNames**](docs/Api/UniverseApi.md#postuniversenames) | **POST** /universe/names/ | Get names and categories for a set of ID&#39;s
 *UserInterfaceApi* | [**postUiAutopilotWaypoint**](docs/Api/UserInterfaceApi.md#postuiautopilotwaypoint) | **POST** /ui/autopilot/waypoint/ | Set Autopilot Waypoint
 *UserInterfaceApi* | [**postUiOpenwindowContract**](docs/Api/UserInterfaceApi.md#postuiopenwindowcontract) | **POST** /ui/openwindow/contract/ | Open Contract Window
@@ -349,6 +351,7 @@ Class | Method | HTTP request | Description
  - [GetCharactersCharacterIdNotifications200Ok](docs/Model/GetCharactersCharacterIdNotifications200Ok.md)
  - [GetCharactersCharacterIdNotificationsContacts200Ok](docs/Model/GetCharactersCharacterIdNotificationsContacts200Ok.md)
  - [GetCharactersCharacterIdOk](docs/Model/GetCharactersCharacterIdOk.md)
+ - [GetCharactersCharacterIdOnlineOk](docs/Model/GetCharactersCharacterIdOnlineOk.md)
  - [GetCharactersCharacterIdOpportunities200Ok](docs/Model/GetCharactersCharacterIdOpportunities200Ok.md)
  - [GetCharactersCharacterIdOrders200Ok](docs/Model/GetCharactersCharacterIdOrders200Ok.md)
  - [GetCharactersCharacterIdPlanets200Ok](docs/Model/GetCharactersCharacterIdPlanets200Ok.md)
@@ -363,12 +366,14 @@ Class | Method | HTTP request | Description
  - [GetCharactersCharacterIdPlanetsPlanetIdRoute](docs/Model/GetCharactersCharacterIdPlanetsPlanetIdRoute.md)
  - [GetCharactersCharacterIdPortraitNotFound](docs/Model/GetCharactersCharacterIdPortraitNotFound.md)
  - [GetCharactersCharacterIdPortraitOk](docs/Model/GetCharactersCharacterIdPortraitOk.md)
+ - [GetCharactersCharacterIdRolesOk](docs/Model/GetCharactersCharacterIdRolesOk.md)
  - [GetCharactersCharacterIdSearchOk](docs/Model/GetCharactersCharacterIdSearchOk.md)
  - [GetCharactersCharacterIdShipOk](docs/Model/GetCharactersCharacterIdShipOk.md)
  - [GetCharactersCharacterIdSkillqueue200Ok](docs/Model/GetCharactersCharacterIdSkillqueue200Ok.md)
  - [GetCharactersCharacterIdSkillsOk](docs/Model/GetCharactersCharacterIdSkillsOk.md)
  - [GetCharactersCharacterIdSkillsSkill](docs/Model/GetCharactersCharacterIdSkillsSkill.md)
  - [GetCharactersCharacterIdStandings200Ok](docs/Model/GetCharactersCharacterIdStandings200Ok.md)
+ - [GetCharactersCharacterIdStats200Ok](docs/Model/GetCharactersCharacterIdStats200Ok.md)
  - [GetCharactersCharacterIdTitles200Ok](docs/Model/GetCharactersCharacterIdTitles200Ok.md)
  - [GetCharactersCharacterIdWalletJournal200Ok](docs/Model/GetCharactersCharacterIdWalletJournal200Ok.md)
  - [GetCharactersCharacterIdWalletJournalExtraInfo](docs/Model/GetCharactersCharacterIdWalletJournalExtraInfo.md)
@@ -403,7 +408,6 @@ Class | Method | HTTP request | Description
  - [GetCorporationsCorporationIdKillmailsRecent200Ok](docs/Model/GetCorporationsCorporationIdKillmailsRecent200Ok.md)
  - [GetCorporationsCorporationIdMedals200Ok](docs/Model/GetCorporationsCorporationIdMedals200Ok.md)
  - [GetCorporationsCorporationIdMedalsIssued200Ok](docs/Model/GetCorporationsCorporationIdMedalsIssued200Ok.md)
- - [GetCorporationsCorporationIdMembers200Ok](docs/Model/GetCorporationsCorporationIdMembers200Ok.md)
  - [GetCorporationsCorporationIdMembersTitles200Ok](docs/Model/GetCorporationsCorporationIdMembersTitles200Ok.md)
  - [GetCorporationsCorporationIdMembertracking200Ok](docs/Model/GetCorporationsCorporationIdMembertracking200Ok.md)
  - [GetCorporationsCorporationIdNotFound](docs/Model/GetCorporationsCorporationIdNotFound.md)
@@ -559,9 +563,8 @@ Class | Method | HTTP request | Description
  - [PostCharactersAffiliation200Ok](docs/Model/PostCharactersAffiliation200Ok.md)
  - [PostCharactersAffiliationNotFound](docs/Model/PostCharactersAffiliationNotFound.md)
  - [PostCharactersCharacterIdAssetsLocations200Ok](docs/Model/PostCharactersCharacterIdAssetsLocations200Ok.md)
+ - [PostCharactersCharacterIdAssetsLocationsPosition](docs/Model/PostCharactersCharacterIdAssetsLocationsPosition.md)
  - [PostCharactersCharacterIdAssetsNames200Ok](docs/Model/PostCharactersCharacterIdAssetsNames200Ok.md)
- - [PostCharactersCharacterIdCspaCharacters](docs/Model/PostCharactersCharacterIdCspaCharacters.md)
- - [PostCharactersCharacterIdCspaCreated](docs/Model/PostCharactersCharacterIdCspaCreated.md)
  - [PostCharactersCharacterIdFittingsCreated](docs/Model/PostCharactersCharacterIdFittingsCreated.md)
  - [PostCharactersCharacterIdFittingsFitting](docs/Model/PostCharactersCharacterIdFittingsFitting.md)
  - [PostCharactersCharacterIdFittingsItem](docs/Model/PostCharactersCharacterIdFittingsItem.md)
@@ -570,6 +573,7 @@ Class | Method | HTTP request | Description
  - [PostCharactersCharacterIdMailMail](docs/Model/PostCharactersCharacterIdMailMail.md)
  - [PostCharactersCharacterIdMailRecipient](docs/Model/PostCharactersCharacterIdMailRecipient.md)
  - [PostCorporationsCorporationIdAssetsLocations200Ok](docs/Model/PostCorporationsCorporationIdAssetsLocations200Ok.md)
+ - [PostCorporationsCorporationIdAssetsLocationsPosition](docs/Model/PostCorporationsCorporationIdAssetsLocationsPosition.md)
  - [PostCorporationsCorporationIdAssetsNames200Ok](docs/Model/PostCorporationsCorporationIdAssetsNames200Ok.md)
  - [PostFleetsFleetIdMembersInvitation](docs/Model/PostFleetsFleetIdMembersInvitation.md)
  - [PostFleetsFleetIdMembersNotFound](docs/Model/PostFleetsFleetIdMembersNotFound.md)
@@ -580,6 +584,18 @@ Class | Method | HTTP request | Description
  - [PostFleetsFleetIdWingsWingIdSquadsNotFound](docs/Model/PostFleetsFleetIdWingsWingIdSquadsNotFound.md)
  - [PostUiOpenwindowNewmailNewMail](docs/Model/PostUiOpenwindowNewmailNewMail.md)
  - [PostUiOpenwindowNewmailUnprocessableEntity](docs/Model/PostUiOpenwindowNewmailUnprocessableEntity.md)
+ - [PostUniverseIdsAgent](docs/Model/PostUniverseIdsAgent.md)
+ - [PostUniverseIdsAlliance](docs/Model/PostUniverseIdsAlliance.md)
+ - [PostUniverseIdsCharacter](docs/Model/PostUniverseIdsCharacter.md)
+ - [PostUniverseIdsConstellation](docs/Model/PostUniverseIdsConstellation.md)
+ - [PostUniverseIdsCorporation](docs/Model/PostUniverseIdsCorporation.md)
+ - [PostUniverseIdsFaction](docs/Model/PostUniverseIdsFaction.md)
+ - [PostUniverseIdsInventoryType](docs/Model/PostUniverseIdsInventoryType.md)
+ - [PostUniverseIdsOk](docs/Model/PostUniverseIdsOk.md)
+ - [PostUniverseIdsRegion](docs/Model/PostUniverseIdsRegion.md)
+ - [PostUniverseIdsServiceUnavailable](docs/Model/PostUniverseIdsServiceUnavailable.md)
+ - [PostUniverseIdsStation](docs/Model/PostUniverseIdsStation.md)
+ - [PostUniverseIdsSystem](docs/Model/PostUniverseIdsSystem.md)
  - [PostUniverseNames200Ok](docs/Model/PostUniverseNames200Ok.md)
  - [PostUniverseNamesNotFound](docs/Model/PostUniverseNamesNotFound.md)
  - [PutCharactersCharacterIdCalendarEventIdResponse](docs/Model/PutCharactersCharacterIdCalendarEventIdResponse.md)
@@ -628,6 +644,7 @@ Class | Method | HTTP request | Description
  - **esi-characters.read_standings.v1**: EVE SSO scope esi-characters.read_standings.v1
  - **esi-characters.read_titles.v1**: EVE SSO scope esi-characters.read_titles.v1
  - **esi-characters.write_contacts.v1**: EVE SSO scope esi-characters.write_contacts.v1
+ - **esi-characterstats.read.v1**: EVE SSO scope esi-characterstats.read.v1
  - **esi-clones.read_clones.v1**: EVE SSO scope esi-clones.read_clones.v1
  - **esi-clones.read_implants.v1**: EVE SSO scope esi-clones.read_implants.v1
  - **esi-contracts.read_character_contracts.v1**: EVE SSO scope esi-contracts.read_character_contracts.v1

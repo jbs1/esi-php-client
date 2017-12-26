@@ -10,11 +10,11 @@ Name | Type | Description | Notes
 **first_party_type** | **string** | first_party_type string | [optional] 
 **second_party_id** | **int** | second_party_id integer | [optional] 
 **second_party_type** | **string** | second_party_type string | [optional] 
-**amount** | **float** | Transaction amount. Positive when value transferred to the first party. Negative otherwise | [optional] 
-**balance** | **float** | Wallet balance after transaction occurred | [optional] 
+**amount** | **double** | Transaction amount. Positive when value transferred to the first party. Negative otherwise | [optional] 
+**balance** | **double** | Wallet balance after transaction occurred | [optional] 
 **reason** | **string** | reason string | [optional] 
-**tax_reciever_id** | **int** | the corporation ID receiving any tax paid | [optional] 
-**tax** | **float** | Tax amount received for tax related transactions | [optional] 
+**tax_receiver_id** | **int** | the corporation ID receiving any tax paid | [optional] 
+**tax** | **double** | Tax amount received for tax related transactions | [optional] 
 **extra_info** | [**\Swagger\Client\Model\GetCharactersCharacterIdWalletJournalExtraInfo**](GetCharactersCharacterIdWalletJournalExtraInfo.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

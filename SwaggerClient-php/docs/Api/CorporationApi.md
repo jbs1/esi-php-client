@@ -37,7 +37,7 @@ Method | HTTP request | Description
 
 Get corporation information
 
-Public information about a corporation  --- Alternate route: `/v3/corporations/{corporation_id}/`  --- This route is cached for up to 3600 seconds
+Public information about a corporation  --- Alternate route: `/dev/corporations/{corporation_id}/`  Alternate route: `/v4/corporations/{corporation_id}/`  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```php
@@ -572,11 +572,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCorporationsCorporationIdMembers**
-> \Swagger\Client\Model\GetCorporationsCorporationIdMembers200Ok[] getCorporationsCorporationIdMembers($corporation_id, $datasource, $token, $user_agent, $x_user_agent)
+> int[] getCorporationsCorporationIdMembers($corporation_id, $datasource, $token, $user_agent, $x_user_agent)
 
 Get corporation members
 
-Read the current list of members if the calling character is a member.  --- Alternate route: `/legacy/corporations/{corporation_id}/members/`  Alternate route: `/v2/corporations/{corporation_id}/members/`  --- This route is cached for up to 3600 seconds
+Return the current member list of a corporation, the token's character need to be a member of the corporation.  --- Alternate route: `/dev/corporations/{corporation_id}/members/`  Alternate route: `/v3/corporations/{corporation_id}/members/`  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```php
@@ -619,7 +619,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\GetCorporationsCorporationIdMembers200Ok[]**](../Model/GetCorporationsCorporationIdMembers200Ok.md)
+**int[]**
 
 ### Authorization
 
@@ -1452,7 +1452,7 @@ Name | Type | Description  | Notes
 
 Get corporation names
 
-Resolve a set of corporation IDs to corporation names  --- Alternate route: `/legacy/corporations/names/`  Alternate route: `/v1/corporations/names/`  --- This route is cached for up to 3600 seconds
+Resolve a set of corporation IDs to corporation names  --- Alternate route: `/dev/corporations/names/`  Alternate route: `/v2/corporations/names/`  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```php

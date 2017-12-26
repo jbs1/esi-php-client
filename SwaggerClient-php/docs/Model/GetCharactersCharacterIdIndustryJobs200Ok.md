@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **blueprint_location_id** | **int** | Location ID of the location from which the blueprint was installed. Normally a station ID, but can also be an asset (e.g. container) or corporation facility | 
 **output_location_id** | **int** | Location ID of the location to which the output of the job will be delivered. Normally a station ID, but can also be a corporation facility | 
 **runs** | **int** | Number of runs for a manufacturing job, or number of copies to make for a blueprint copy | 
-**cost** | **float** | The sume of job installation fee and industry facility tax | [optional] 
+**cost** | **double** | The sume of job installation fee and industry facility tax | [optional] 
 **licensed_runs** | **int** | Number of runs blueprint is licensed for | [optional] 
 **probability** | **float** | Chance of success for invention | [optional] 
 **product_type_id** | **int** | Type ID of product (manufactured, copied or invented) | [optional] 

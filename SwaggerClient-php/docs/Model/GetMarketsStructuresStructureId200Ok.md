@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **volume_total** | **int** | volume_total integer | 
 **volume_remain** | **int** | volume_remain integer | 
 **min_volume** | **int** | min_volume integer | 
-**price** | **float** | price number | 
+**price** | **double** | price number | 
 **is_buy_order** | **bool** | is_buy_order boolean | 
 **duration** | **int** | duration integer | 
 **issued** | [**\DateTime**](\DateTime.md) | issued string | 

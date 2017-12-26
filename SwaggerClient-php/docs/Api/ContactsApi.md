@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 Delete contacts
 
-Bulk delete contacts  --- Alternate route: `/legacy/characters/{character_id}/contacts/`  Alternate route: `/v1/characters/{character_id}/contacts/`
+Bulk delete contacts  --- Alternate route: `/dev/characters/{character_id}/contacts/`  Alternate route: `/v2/characters/{character_id}/contacts/`
 
 ### Example
 ```php
@@ -35,7 +35,7 @@ $apiInstance = new Swagger\Client\Api\ContactsApi(
     $config
 );
 $character_id = 56; // int | An EVE character ID
-$contact_ids = array(new \Swagger\Client\Model\int[]()); // int[] | A list of contacts to delete
+$contact_ids = array(56); // int[] | A list of contacts to delete
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
 $user_agent = "user_agent_example"; // string | Client identifier, takes precedence over headers
@@ -54,7 +54,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **character_id** | **int**| An EVE character ID |
- **contact_ids** | **int[]**| A list of contacts to delete |
+ **contact_ids** | [**int[]**](../Model/int.md)| A list of contacts to delete |
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **token** | **string**| Access token to use if unable to set a header | [optional]
  **user_agent** | **string**| Client identifier, takes precedence over headers | [optional]

@@ -69,7 +69,7 @@ No authorization required
 
 Get alliance information
 
-Public information about an alliance  --- Alternate route: `/v2/alliances/{alliance_id}/`  --- This route is cached for up to 3600 seconds
+Public information about an alliance  --- Alternate route: `/dev/alliances/{alliance_id}/`  Alternate route: `/v3/alliances/{alliance_id}/`  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```php
@@ -234,7 +234,7 @@ No authorization required
 
 Get alliance names
 
-Resolve a set of alliance IDs to alliance names  --- Alternate route: `/legacy/alliances/names/`  Alternate route: `/v1/alliances/names/`  --- This route is cached for up to 3600 seconds
+Resolve a set of alliance IDs to alliance names  --- Alternate route: `/dev/alliances/names/`  Alternate route: `/v2/alliances/names/`  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```php

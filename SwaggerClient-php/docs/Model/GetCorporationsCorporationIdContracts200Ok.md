@@ -20,10 +20,10 @@ Name | Type | Description | Notes
 **date_accepted** | [**\DateTime**](\DateTime.md) | Date of confirmation of contract | [optional] 
 **days_to_complete** | **int** | Number of days to perform the contract | [optional] 
 **date_completed** | [**\DateTime**](\DateTime.md) | Date of completed of contract | [optional] 
-**price** | **float** | Price of contract (for ItemsExchange and Auctions) | [optional] 
-**reward** | **float** | Remuneration for contract (for Couriers only) | [optional] 
-**collateral** | **float** | Collateral price (for Couriers only) | [optional] 
-**buyout** | **float** | Buyout price (for Auctions only) | [optional] 
+**price** | **double** | Price of contract (for ItemsExchange and Auctions) | [optional] 
+**reward** | **double** | Remuneration for contract (for Couriers only) | [optional] 
+**collateral** | **double** | Collateral price (for Couriers only) | [optional] 
+**buyout** | **double** | Buyout price (for Auctions only) | [optional] 
 **volume** | **float** | Volume of items in the contract | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

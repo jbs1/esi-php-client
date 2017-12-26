@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type_id** | **int** | type_id integer | 
-**quantity** | **int** | quantity integer | [optional] 
+**quantity** | **int** | quantity integer | 
 **location_id** | **int** | location_id integer | 
 **location_type** | **string** | location_type string | 
 **item_id** | **int** | item_id integer | 
