@@ -6,5 +6,6 @@ java -jar $swagger generate -i https://esi.evetech.net/latest/swagger.json?datas
 mv SwaggerClient-php/.[!.]* .
 mv SwaggerClient-php/* .
 rm -rfv SwaggerClient-php
-sudo chmod +x git_push.sh
-sudo ./git_push.sh
+git add -A
+git commit -a -m "$msg"
+echo "Everything done... Execute 'git push' to push the api updates"
