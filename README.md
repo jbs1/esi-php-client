@@ -10,6 +10,6 @@ Download the proper [swagger-codegen](https://github.com/swagger-api/swagger-cod
 ```bash
 # inside git repo
 rm -rfv SwaggerClient-php .swagger-codegen
-java -jar <path to jar>/<swagger jar> generate -i https://esi.tech.ccp.is/latest/swagger.json?datasource=tranquility -l php
+java -jar <path to jar>/<swagger jar> generate -i https://esi.evetech.is/latest/swagger.json?datasource=tranquility -l php
 composer install -d SwaggerClient-php
 ```
