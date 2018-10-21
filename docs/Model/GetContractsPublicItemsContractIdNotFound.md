@@ -1,10 +1,9 @@
-# GetAlliancesNames200Ok
+# GetContractsPublicItemsContractIdNotFound
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**alliance_id** | **int** | alliance_id integer | 
-**alliance_name** | **string** | alliance_name string | 
+**error** | **string** | Not found message | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

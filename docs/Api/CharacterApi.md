@@ -370,7 +370,7 @@ Name | Type | Description  | Notes
 
 Get character notifications
 
-Return character notifications  --- Alternate route: `/dev/characters/{character_id}/notifications/`  Alternate route: `/v2/characters/{character_id}/notifications/`  --- This route is cached for up to 600 seconds
+Return character notifications  --- Alternate route: `/dev/characters/{character_id}/notifications/`  Alternate route: `/v3/characters/{character_id}/notifications/`  --- This route is cached for up to 600 seconds
 
 ### Example
 ```php
@@ -789,7 +789,7 @@ $apiInstance = new Swagger\Client\Api\CharacterApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$characters = array(new \Swagger\Client\Model\int[]()); // int[] | The character IDs to fetch affiliations for. All characters must exist, or none will be returned.
+$characters = array(new \Swagger\Client\Model\int[]()); // int[] | The character IDs to fetch affiliations for. All characters must exist, or none will be returned
 $datasource = "tranquility"; // string | The server name you would like data from
 
 try {
@@ -805,7 +805,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **characters** | **int[]**| The character IDs to fetch affiliations for. All characters must exist, or none will be returned. |
+ **characters** | **int[]**| The character IDs to fetch affiliations for. All characters must exist, or none will be returned |
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
 
 ### Return type

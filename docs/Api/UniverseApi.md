@@ -1168,7 +1168,7 @@ No authorization required
 
 Get structure information
 
-Returns information on requested structure, if you are on the ACL. Otherwise, returns \"Forbidden\" for all inputs.  --- Alternate route: `/legacy/universe/structures/{structure_id}/`  Alternate route: `/v1/universe/structures/{structure_id}/`  --- This route is cached for up to 3600 seconds  --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/universe/structures/{structure_id}/)
+Returns information on requested structure if you are on the ACL. Otherwise, returns \"Forbidden\" for all inputs.  --- Alternate route: `/dev/universe/structures/{structure_id}/`  Alternate route: `/v2/universe/structures/{structure_id}/`  --- This route is cached for up to 3600 seconds
 
 ### Example
 ```php
@@ -1380,7 +1380,7 @@ No authorization required
 
 Get solar system information
 
-Get information on a solar system. NOTE: This route does not work with abyssal systems.  --- Alternate route: `/v3/universe/systems/{system_id}/`  --- This route expires daily at 11:05  --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/universe/systems/{system_id}/)
+Get information on a solar system.  --- Alternate route: `/dev/universe/systems/{system_id}/`  Alternate route: `/v4/universe/systems/{system_id}/`  --- This route expires daily at 11:05
 
 ### Example
 ```php
@@ -1547,7 +1547,7 @@ No authorization required
 
 Bulk names to IDs
 
-Resolve a set of names to IDs in the following categories: agents, alliances, characters, constellations, corporations factions, inventory_types, regions, stations, and systems. Only exact matches will be returned. All names searched for are cached for 12 hours.  --- Alternate route: `/dev/universe/ids/`  Alternate route: `/legacy/universe/ids/`  Alternate route: `/v1/universe/ids/`
+Resolve a set of names to IDs in the following categories: agents, alliances, characters, constellations, corporations factions, inventory_types, regions, stations, and systems. Only exact matches will be returned. All names searched for are cached for 12 hours  --- Alternate route: `/dev/universe/ids/`  Alternate route: `/legacy/universe/ids/`  Alternate route: `/v1/universe/ids/`
 
 ### Example
 ```php
@@ -1602,7 +1602,7 @@ No authorization required
 
 Get names and categories for a set of ID's
 
-Resolve a set of IDs to names and categories. Supported ID's for resolving are: Characters, Corporations, Alliances, Stations, Solar Systems, Constellations, Regions, Types.  --- Alternate route: `/dev/universe/names/`  Alternate route: `/v2/universe/names/`
+Resolve a set of IDs to names and categories. Supported ID's for resolving are: Characters, Corporations, Alliances, Stations, Solar Systems, Constellations, Regions, Types  --- Alternate route: `/dev/universe/names/`  Alternate route: `/v2/universe/names/`
 
 ### Example
 ```php
