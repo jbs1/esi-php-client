@@ -33,11 +33,11 @@ Method | HTTP request | Description
 [**getUniverseTypes**](UniverseApi.md#getUniverseTypes) | **GET** /universe/types/ | Get types
 [**getUniverseTypesTypeId**](UniverseApi.md#getUniverseTypesTypeId) | **GET** /universe/types/{type_id}/ | Get type information
 [**postUniverseIds**](UniverseApi.md#postUniverseIds) | **POST** /universe/ids/ | Bulk names to IDs
-[**postUniverseNames**](UniverseApi.md#postUniverseNames) | **POST** /universe/names/ | Get names and categories for a set of ID&#39;s
+[**postUniverseNames**](UniverseApi.md#postUniverseNames) | **POST** /universe/names/ | Get names and categories for a set of IDs
 
 
 # **getUniverseAncestries**
-> \Swagger\Client\Model\GetUniverseAncestries200Ok[] getUniverseAncestries($accept_language, $datasource, $if_none_match, $language)
+> object[] getUniverseAncestries($accept_language, $datasource, $if_none_match, $language)
 
 Get ancestries
 
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\GetUniverseAncestries200Ok[]**](../Model/GetUniverseAncestries200Ok.md)
+**object[]**
 
 ### Authorization
 
@@ -145,7 +145,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUniverseBloodlines**
-> \Swagger\Client\Model\GetUniverseBloodlines200Ok[] getUniverseBloodlines($accept_language, $datasource, $if_none_match, $language)
+> object[] getUniverseBloodlines($accept_language, $datasource, $if_none_match, $language)
 
 Get bloodlines
 
@@ -186,7 +186,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\GetUniverseBloodlines200Ok[]**](../Model/GetUniverseBloodlines200Ok.md)
+**object[]**
 
 ### Authorization
 
@@ -416,7 +416,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUniverseFactions**
-> \Swagger\Client\Model\GetUniverseFactions200Ok[] getUniverseFactions($accept_language, $datasource, $if_none_match, $language)
+> object[] getUniverseFactions($accept_language, $datasource, $if_none_match, $language)
 
 Get factions
 
@@ -457,7 +457,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\GetUniverseFactions200Ok[]**](../Model/GetUniverseFactions200Ok.md)
+**object[]**
 
 ### Authorization
 
@@ -791,7 +791,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUniverseRaces**
-> \Swagger\Client\Model\GetUniverseRaces200Ok[] getUniverseRaces($accept_language, $datasource, $if_none_match, $language)
+> object[] getUniverseRaces($accept_language, $datasource, $if_none_match, $language)
 
 Get character races
 
@@ -832,7 +832,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\GetUniverseRaces200Ok[]**](../Model/GetUniverseRaces200Ok.md)
+**object[]**
 
 ### Authorization
 
@@ -1113,7 +1113,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUniverseStructures**
-> int[] getUniverseStructures($datasource, $if_none_match)
+> int[] getUniverseStructures($datasource, $filter, $if_none_match)
 
 List all public structures
 
@@ -1130,10 +1130,11 @@ $apiInstance = new Swagger\Client\Api\UniverseApi(
     new GuzzleHttp\Client()
 );
 $datasource = "tranquility"; // string | The server name you would like data from
+$filter = "filter_example"; // string | Only list public structures that have this service online
 $if_none_match = "if_none_match_example"; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
 
 try {
-    $result = $apiInstance->getUniverseStructures($datasource, $if_none_match);
+    $result = $apiInstance->getUniverseStructures($datasource, $filter, $if_none_match);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UniverseApi->getUniverseStructures: ', $e->getMessage(), PHP_EOL;
@@ -1146,6 +1147,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **filter** | **string**| Only list public structures that have this service online | [optional]
  **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
 
 ### Return type
@@ -1223,7 +1225,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUniverseSystemJumps**
-> \Swagger\Client\Model\GetUniverseSystemJumps200Ok[] getUniverseSystemJumps($datasource, $if_none_match)
+> object[] getUniverseSystemJumps($datasource, $if_none_match)
 
 Get system jumps
 
@@ -1260,7 +1262,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\GetUniverseSystemJumps200Ok[]**](../Model/GetUniverseSystemJumps200Ok.md)
+**object[]**
 
 ### Authorization
 
@@ -1274,7 +1276,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUniverseSystemKills**
-> \Swagger\Client\Model\GetUniverseSystemKills200Ok[] getUniverseSystemKills($datasource, $if_none_match)
+> object[] getUniverseSystemKills($datasource, $if_none_match)
 
 Get system kills
 
@@ -1311,7 +1313,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\GetUniverseSystemKills200Ok[]**](../Model/GetUniverseSystemKills200Ok.md)
+**object[]**
 
 ### Authorization
 
@@ -1598,11 +1600,11 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postUniverseNames**
-> \Swagger\Client\Model\PostUniverseNames200Ok[] postUniverseNames($ids, $datasource)
+> object[] postUniverseNames($ids, $datasource)
 
-Get names and categories for a set of ID's
+Get names and categories for a set of IDs
 
-Resolve a set of IDs to names and categories. Supported ID's for resolving are: Characters, Corporations, Alliances, Stations, Solar Systems, Constellations, Regions, Types  --- Alternate route: `/dev/universe/names/`  Alternate route: `/v2/universe/names/`
+Resolve a set of IDs to names and categories. Supported ID's for resolving are: Characters, Corporations, Alliances, Stations, Solar Systems, Constellations, Regions, Types  --- Alternate route: `/v2/universe/names/`   --- Warning: This route has an upgrade available  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#POST-/universe/names/)
 
 ### Example
 ```php
@@ -1635,7 +1637,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PostUniverseNames200Ok[]**](../Model/PostUniverseNames200Ok.md)
+**object[]**
 
 ### Authorization
 

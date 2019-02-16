@@ -18,7 +18,7 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="v0.8.6 swagger-2.3.1"
+    release_note="v0.8.6 swagger-2.4.1"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
