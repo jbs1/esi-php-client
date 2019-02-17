@@ -14,6 +14,7 @@ Method | HTTP request | Description
 [**postCharactersCharacterIdContacts**](ContactsApi.md#postCharactersCharacterIdContacts) | **POST** /characters/{character_id}/contacts/ | Add contacts
 [**putCharactersCharacterIdContacts**](ContactsApi.md#putCharactersCharacterIdContacts) | **PUT** /characters/{character_id}/contacts/ | Edit contacts
 
+
 # **deleteCharactersCharacterIdContacts**
 > deleteCharactersCharacterIdContacts($character_id, $contact_ids, $datasource, $token)
 
@@ -37,7 +38,7 @@ $apiInstance = new Swagger\Client\Api\ContactsApi(
 );
 $character_id = 56; // int | An EVE character ID
 $contact_ids = array(56); // int[] | A list of contacts to delete
-$datasource = "datasource_example"; // string | The server name you would like data from
+$datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
 
 try {
@@ -52,10 +53,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **character_id** | [**int**](../Model/.md)| An EVE character ID |
+ **character_id** | **int**| An EVE character ID |
  **contact_ids** | [**int[]**](../Model/int.md)| A list of contacts to delete |
- **datasource** | [**string**](../Model/.md)| The server name you would like data from | [optional]
- **token** | [**string**](../Model/.md)| Access token to use if unable to set a header | [optional]
+ **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **token** | **string**| Access token to use if unable to set a header | [optional]
 
 ### Return type
 
@@ -67,7 +68,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -94,9 +95,9 @@ $apiInstance = new Swagger\Client\Api\ContactsApi(
     $config
 );
 $alliance_id = 56; // int | An EVE alliance ID
-$datasource = "datasource_example"; // string | The server name you would like data from
+$datasource = "tranquility"; // string | The server name you would like data from
 $if_none_match = "if_none_match_example"; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$page = 56; // int | Which page of results to return
+$page = 1; // int | Which page of results to return
 $token = "token_example"; // string | Access token to use if unable to set a header
 
 try {
@@ -112,11 +113,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **alliance_id** | [**int**](../Model/.md)| An EVE alliance ID |
- **datasource** | [**string**](../Model/.md)| The server name you would like data from | [optional]
- **if_none_match** | [**string**](../Model/.md)| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **page** | [**int**](../Model/.md)| Which page of results to return | [optional]
- **token** | [**string**](../Model/.md)| Access token to use if unable to set a header | [optional]
+ **alliance_id** | **int**| An EVE alliance ID |
+ **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
+ **page** | **int**| Which page of results to return | [optional] [default to 1]
+ **token** | **string**| Access token to use if unable to set a header | [optional]
 
 ### Return type
 
@@ -128,7 +129,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -155,7 +156,7 @@ $apiInstance = new Swagger\Client\Api\ContactsApi(
     $config
 );
 $alliance_id = 56; // int | An EVE alliance ID
-$datasource = "datasource_example"; // string | The server name you would like data from
+$datasource = "tranquility"; // string | The server name you would like data from
 $if_none_match = "if_none_match_example"; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
 $token = "token_example"; // string | Access token to use if unable to set a header
 
@@ -172,10 +173,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **alliance_id** | [**int**](../Model/.md)| An EVE alliance ID |
- **datasource** | [**string**](../Model/.md)| The server name you would like data from | [optional]
- **if_none_match** | [**string**](../Model/.md)| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **token** | [**string**](../Model/.md)| Access token to use if unable to set a header | [optional]
+ **alliance_id** | **int**| An EVE alliance ID |
+ **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
+ **token** | **string**| Access token to use if unable to set a header | [optional]
 
 ### Return type
 
@@ -187,7 +188,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -214,9 +215,9 @@ $apiInstance = new Swagger\Client\Api\ContactsApi(
     $config
 );
 $character_id = 56; // int | An EVE character ID
-$datasource = "datasource_example"; // string | The server name you would like data from
+$datasource = "tranquility"; // string | The server name you would like data from
 $if_none_match = "if_none_match_example"; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$page = 56; // int | Which page of results to return
+$page = 1; // int | Which page of results to return
 $token = "token_example"; // string | Access token to use if unable to set a header
 
 try {
@@ -232,11 +233,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **character_id** | [**int**](../Model/.md)| An EVE character ID |
- **datasource** | [**string**](../Model/.md)| The server name you would like data from | [optional]
- **if_none_match** | [**string**](../Model/.md)| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **page** | [**int**](../Model/.md)| Which page of results to return | [optional]
- **token** | [**string**](../Model/.md)| Access token to use if unable to set a header | [optional]
+ **character_id** | **int**| An EVE character ID |
+ **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
+ **page** | **int**| Which page of results to return | [optional] [default to 1]
+ **token** | **string**| Access token to use if unable to set a header | [optional]
 
 ### Return type
 
@@ -248,7 +249,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -275,7 +276,7 @@ $apiInstance = new Swagger\Client\Api\ContactsApi(
     $config
 );
 $character_id = 56; // int | An EVE character ID
-$datasource = "datasource_example"; // string | The server name you would like data from
+$datasource = "tranquility"; // string | The server name you would like data from
 $if_none_match = "if_none_match_example"; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
 $token = "token_example"; // string | Access token to use if unable to set a header
 
@@ -292,10 +293,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **character_id** | [**int**](../Model/.md)| An EVE character ID |
- **datasource** | [**string**](../Model/.md)| The server name you would like data from | [optional]
- **if_none_match** | [**string**](../Model/.md)| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **token** | [**string**](../Model/.md)| Access token to use if unable to set a header | [optional]
+ **character_id** | **int**| An EVE character ID |
+ **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
+ **token** | **string**| Access token to use if unable to set a header | [optional]
 
 ### Return type
 
@@ -307,7 +308,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -334,9 +335,9 @@ $apiInstance = new Swagger\Client\Api\ContactsApi(
     $config
 );
 $corporation_id = 56; // int | An EVE corporation ID
-$datasource = "datasource_example"; // string | The server name you would like data from
+$datasource = "tranquility"; // string | The server name you would like data from
 $if_none_match = "if_none_match_example"; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$page = 56; // int | Which page of results to return
+$page = 1; // int | Which page of results to return
 $token = "token_example"; // string | Access token to use if unable to set a header
 
 try {
@@ -352,11 +353,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **corporation_id** | [**int**](../Model/.md)| An EVE corporation ID |
- **datasource** | [**string**](../Model/.md)| The server name you would like data from | [optional]
- **if_none_match** | [**string**](../Model/.md)| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **page** | [**int**](../Model/.md)| Which page of results to return | [optional]
- **token** | [**string**](../Model/.md)| Access token to use if unable to set a header | [optional]
+ **corporation_id** | **int**| An EVE corporation ID |
+ **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
+ **page** | **int**| Which page of results to return | [optional] [default to 1]
+ **token** | **string**| Access token to use if unable to set a header | [optional]
 
 ### Return type
 
@@ -368,7 +369,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -395,7 +396,7 @@ $apiInstance = new Swagger\Client\Api\ContactsApi(
     $config
 );
 $corporation_id = 56; // int | An EVE corporation ID
-$datasource = "datasource_example"; // string | The server name you would like data from
+$datasource = "tranquility"; // string | The server name you would like data from
 $if_none_match = "if_none_match_example"; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
 $token = "token_example"; // string | Access token to use if unable to set a header
 
@@ -412,10 +413,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **corporation_id** | [**int**](../Model/.md)| An EVE corporation ID |
- **datasource** | [**string**](../Model/.md)| The server name you would like data from | [optional]
- **if_none_match** | [**string**](../Model/.md)| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **token** | [**string**](../Model/.md)| Access token to use if unable to set a header | [optional]
+ **corporation_id** | **int**| An EVE corporation ID |
+ **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
+ **token** | **string**| Access token to use if unable to set a header | [optional]
 
 ### Return type
 
@@ -427,13 +428,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCharactersCharacterIdContacts**
-> int[] postCharactersCharacterIdContacts($body$character_id, $standing, $datasource, $label_ids, $token, $watched)
+> int[] postCharactersCharacterIdContacts($character_id, $contact_ids, $standing, $datasource, $label_ids, $token, $watched)
 
 Add contacts
 
@@ -453,16 +454,16 @@ $apiInstance = new Swagger\Client\Api\ContactsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = array(56); // int[] | A list of contacts
 $character_id = 56; // int | An EVE character ID
+$contact_ids = array(new \Swagger\Client\Model\int[]()); // int[] | A list of contacts
 $standing = 3.4; // float | Standing for the contact
-$datasource = "datasource_example"; // string | The server name you would like data from
+$datasource = "tranquility"; // string | The server name you would like data from
 $label_ids = array(56); // int[] | Add custom labels to the new contact
 $token = "token_example"; // string | Access token to use if unable to set a header
-$watched = True; // bool | Whether the contact should be watched, note this is only effective on characters
+$watched = false; // bool | Whether the contact should be watched, note this is only effective on characters
 
 try {
-    $result = $apiInstance->postCharactersCharacterIdContacts($body$character_id, $standing, $datasource, $label_ids, $token, $watched);
+    $result = $apiInstance->postCharactersCharacterIdContacts($character_id, $contact_ids, $standing, $datasource, $label_ids, $token, $watched);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContactsApi->postCharactersCharacterIdContacts: ', $e->getMessage(), PHP_EOL;
@@ -474,13 +475,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**int[]**](../Model/int.md)| A list of contacts |
- **character_id** | [**int**](../Model/.md)| An EVE character ID |
- **standing** | [**float**](../Model/.md)| Standing for the contact |
- **datasource** | [**string**](../Model/.md)| The server name you would like data from | [optional]
+ **character_id** | **int**| An EVE character ID |
+ **contact_ids** | **int[]**| A list of contacts |
+ **standing** | **float**| Standing for the contact |
+ **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **label_ids** | [**int[]**](../Model/int.md)| Add custom labels to the new contact | [optional]
- **token** | [**string**](../Model/.md)| Access token to use if unable to set a header | [optional]
- **watched** | [**bool**](../Model/.md)| Whether the contact should be watched, note this is only effective on characters | [optional]
+ **token** | **string**| Access token to use if unable to set a header | [optional]
+ **watched** | **bool**| Whether the contact should be watched, note this is only effective on characters | [optional] [default to false]
 
 ### Return type
 
@@ -498,7 +499,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **putCharactersCharacterIdContacts**
-> putCharactersCharacterIdContacts($body$character_id, $standing, $datasource, $label_ids, $token, $watched)
+> putCharactersCharacterIdContacts($character_id, $contact_ids, $standing, $datasource, $label_ids, $token, $watched)
 
 Edit contacts
 
@@ -518,16 +519,16 @@ $apiInstance = new Swagger\Client\Api\ContactsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = array(56); // int[] | A list of contacts
 $character_id = 56; // int | An EVE character ID
+$contact_ids = array(new \Swagger\Client\Model\int[]()); // int[] | A list of contacts
 $standing = 3.4; // float | Standing for the contact
-$datasource = "datasource_example"; // string | The server name you would like data from
+$datasource = "tranquility"; // string | The server name you would like data from
 $label_ids = array(56); // int[] | Add custom labels to the contact
 $token = "token_example"; // string | Access token to use if unable to set a header
-$watched = True; // bool | Whether the contact should be watched, note this is only effective on characters
+$watched = false; // bool | Whether the contact should be watched, note this is only effective on characters
 
 try {
-    $apiInstance->putCharactersCharacterIdContacts($body$character_id, $standing, $datasource, $label_ids, $token, $watched);
+    $apiInstance->putCharactersCharacterIdContacts($character_id, $contact_ids, $standing, $datasource, $label_ids, $token, $watched);
 } catch (Exception $e) {
     echo 'Exception when calling ContactsApi->putCharactersCharacterIdContacts: ', $e->getMessage(), PHP_EOL;
 }
@@ -538,13 +539,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**int[]**](../Model/int.md)| A list of contacts |
- **character_id** | [**int**](../Model/.md)| An EVE character ID |
- **standing** | [**float**](../Model/.md)| Standing for the contact |
- **datasource** | [**string**](../Model/.md)| The server name you would like data from | [optional]
+ **character_id** | **int**| An EVE character ID |
+ **contact_ids** | **int[]**| A list of contacts |
+ **standing** | **float**| Standing for the contact |
+ **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **label_ids** | [**int[]**](../Model/int.md)| Add custom labels to the contact | [optional]
- **token** | [**string**](../Model/.md)| Access token to use if unable to set a header | [optional]
- **watched** | [**bool**](../Model/.md)| Whether the contact should be watched, note this is only effective on characters | [optional]
+ **token** | **string**| Access token to use if unable to set a header | [optional]
+ **watched** | **bool**| Whether the contact should be watched, note this is only effective on characters | [optional] [default to false]
 
 ### Return type
 

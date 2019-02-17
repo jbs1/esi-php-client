@@ -6,8 +6,9 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getAlliances**](AllianceApi.md#getAlliances) | **GET** /alliances/ | List all alliances
 [**getAlliancesAllianceId**](AllianceApi.md#getAlliancesAllianceId) | **GET** /alliances/{alliance_id}/ | Get alliance information
-[**getAlliancesAllianceIdCorporations**](AllianceApi.md#getAlliancesAllianceIdCorporations) | **GET** /alliances/{alliance_id}/corporations/ | List alliance&#x27;s corporations
+[**getAlliancesAllianceIdCorporations**](AllianceApi.md#getAlliancesAllianceIdCorporations) | **GET** /alliances/{alliance_id}/corporations/ | List alliance&#39;s corporations
 [**getAlliancesAllianceIdIcons**](AllianceApi.md#getAlliancesAllianceIdIcons) | **GET** /alliances/{alliance_id}/icons/ | Get alliance icon
+
 
 # **getAlliances**
 > int[] getAlliances($datasource, $if_none_match)
@@ -26,7 +27,7 @@ $apiInstance = new Swagger\Client\Api\AllianceApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$datasource = "datasource_example"; // string | The server name you would like data from
+$datasource = "tranquility"; // string | The server name you would like data from
 $if_none_match = "if_none_match_example"; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
 
 try {
@@ -42,8 +43,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **datasource** | [**string**](../Model/.md)| The server name you would like data from | [optional]
- **if_none_match** | [**string**](../Model/.md)| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
+ **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
 
 ### Return type
 
@@ -55,13 +56,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAlliancesAllianceId**
-> object getAlliancesAllianceId($alliance_id, $datasource, $if_none_match)
+> \Swagger\Client\Model\GetAlliancesAllianceIdOk getAlliancesAllianceId($alliance_id, $datasource, $if_none_match)
 
 Get alliance information
 
@@ -78,7 +79,7 @@ $apiInstance = new Swagger\Client\Api\AllianceApi(
     new GuzzleHttp\Client()
 );
 $alliance_id = 56; // int | An EVE alliance ID
-$datasource = "datasource_example"; // string | The server name you would like data from
+$datasource = "tranquility"; // string | The server name you would like data from
 $if_none_match = "if_none_match_example"; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
 
 try {
@@ -94,13 +95,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **alliance_id** | [**int**](../Model/.md)| An EVE alliance ID |
- **datasource** | [**string**](../Model/.md)| The server name you would like data from | [optional]
- **if_none_match** | [**string**](../Model/.md)| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
+ **alliance_id** | **int**| An EVE alliance ID |
+ **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
 
 ### Return type
 
-**object**
+[**\Swagger\Client\Model\GetAlliancesAllianceIdOk**](../Model/GetAlliancesAllianceIdOk.md)
 
 ### Authorization
 
@@ -108,7 +109,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -131,7 +132,7 @@ $apiInstance = new Swagger\Client\Api\AllianceApi(
     new GuzzleHttp\Client()
 );
 $alliance_id = 56; // int | An EVE alliance ID
-$datasource = "datasource_example"; // string | The server name you would like data from
+$datasource = "tranquility"; // string | The server name you would like data from
 $if_none_match = "if_none_match_example"; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
 
 try {
@@ -147,9 +148,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **alliance_id** | [**int**](../Model/.md)| An EVE alliance ID |
- **datasource** | [**string**](../Model/.md)| The server name you would like data from | [optional]
- **if_none_match** | [**string**](../Model/.md)| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
+ **alliance_id** | **int**| An EVE alliance ID |
+ **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
 
 ### Return type
 
@@ -161,13 +162,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAlliancesAllianceIdIcons**
-> object getAlliancesAllianceIdIcons($alliance_id, $datasource, $if_none_match)
+> \Swagger\Client\Model\GetAlliancesAllianceIdIconsOk getAlliancesAllianceIdIcons($alliance_id, $datasource, $if_none_match)
 
 Get alliance icon
 
@@ -184,7 +185,7 @@ $apiInstance = new Swagger\Client\Api\AllianceApi(
     new GuzzleHttp\Client()
 );
 $alliance_id = 56; // int | An EVE alliance ID
-$datasource = "datasource_example"; // string | The server name you would like data from
+$datasource = "tranquility"; // string | The server name you would like data from
 $if_none_match = "if_none_match_example"; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
 
 try {
@@ -200,13 +201,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **alliance_id** | [**int**](../Model/.md)| An EVE alliance ID |
- **datasource** | [**string**](../Model/.md)| The server name you would like data from | [optional]
- **if_none_match** | [**string**](../Model/.md)| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
+ **alliance_id** | **int**| An EVE alliance ID |
+ **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
 
 ### Return type
 
-**object**
+[**\Swagger\Client\Model\GetAlliancesAllianceIdIconsOk**](../Model/GetAlliancesAllianceIdIconsOk.md)
 
 ### Authorization
 
@@ -214,7 +215,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

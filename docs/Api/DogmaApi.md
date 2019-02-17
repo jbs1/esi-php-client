@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**getDogmaEffects**](DogmaApi.md#getDogmaEffects) | **GET** /dogma/effects/ | Get effects
 [**getDogmaEffectsEffectId**](DogmaApi.md#getDogmaEffectsEffectId) | **GET** /dogma/effects/{effect_id}/ | Get effect information
 
+
 # **getDogmaAttributes**
 > int[] getDogmaAttributes($datasource, $if_none_match)
 
@@ -27,7 +28,7 @@ $apiInstance = new Swagger\Client\Api\DogmaApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$datasource = "datasource_example"; // string | The server name you would like data from
+$datasource = "tranquility"; // string | The server name you would like data from
 $if_none_match = "if_none_match_example"; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
 
 try {
@@ -43,8 +44,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **datasource** | [**string**](../Model/.md)| The server name you would like data from | [optional]
- **if_none_match** | [**string**](../Model/.md)| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
+ **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
 
 ### Return type
 
@@ -56,13 +57,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getDogmaAttributesAttributeId**
-> object getDogmaAttributesAttributeId($attribute_id, $datasource, $if_none_match)
+> \Swagger\Client\Model\GetDogmaAttributesAttributeIdOk getDogmaAttributesAttributeId($attribute_id, $datasource, $if_none_match)
 
 Get attribute information
 
@@ -79,7 +80,7 @@ $apiInstance = new Swagger\Client\Api\DogmaApi(
     new GuzzleHttp\Client()
 );
 $attribute_id = 56; // int | A dogma attribute ID
-$datasource = "datasource_example"; // string | The server name you would like data from
+$datasource = "tranquility"; // string | The server name you would like data from
 $if_none_match = "if_none_match_example"; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
 
 try {
@@ -95,13 +96,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **attribute_id** | [**int**](../Model/.md)| A dogma attribute ID |
- **datasource** | [**string**](../Model/.md)| The server name you would like data from | [optional]
- **if_none_match** | [**string**](../Model/.md)| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
+ **attribute_id** | **int**| A dogma attribute ID |
+ **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
 
 ### Return type
 
-**object**
+[**\Swagger\Client\Model\GetDogmaAttributesAttributeIdOk**](../Model/GetDogmaAttributesAttributeIdOk.md)
 
 ### Authorization
 
@@ -109,13 +110,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getDogmaDynamicItemsTypeIdItemId**
-> object getDogmaDynamicItemsTypeIdItemId($item_id, $type_id, $datasource, $if_none_match)
+> \Swagger\Client\Model\GetDogmaDynamicItemsTypeIdItemIdOk getDogmaDynamicItemsTypeIdItemId($item_id, $type_id, $datasource, $if_none_match)
 
 Get dynamic item information
 
@@ -131,9 +132,9 @@ $apiInstance = new Swagger\Client\Api\DogmaApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$item_id = 56; // int | item_id integer
+$item_id = 789; // int | item_id integer
 $type_id = 56; // int | type_id integer
-$datasource = "datasource_example"; // string | The server name you would like data from
+$datasource = "tranquility"; // string | The server name you would like data from
 $if_none_match = "if_none_match_example"; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
 
 try {
@@ -149,14 +150,14 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **item_id** | [**int**](../Model/.md)| item_id integer |
- **type_id** | [**int**](../Model/.md)| type_id integer |
- **datasource** | [**string**](../Model/.md)| The server name you would like data from | [optional]
- **if_none_match** | [**string**](../Model/.md)| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
+ **item_id** | **int**| item_id integer |
+ **type_id** | **int**| type_id integer |
+ **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
 
 ### Return type
 
-**object**
+[**\Swagger\Client\Model\GetDogmaDynamicItemsTypeIdItemIdOk**](../Model/GetDogmaDynamicItemsTypeIdItemIdOk.md)
 
 ### Authorization
 
@@ -164,7 +165,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -186,7 +187,7 @@ $apiInstance = new Swagger\Client\Api\DogmaApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$datasource = "datasource_example"; // string | The server name you would like data from
+$datasource = "tranquility"; // string | The server name you would like data from
 $if_none_match = "if_none_match_example"; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
 
 try {
@@ -202,8 +203,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **datasource** | [**string**](../Model/.md)| The server name you would like data from | [optional]
- **if_none_match** | [**string**](../Model/.md)| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
+ **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
 
 ### Return type
 
@@ -215,13 +216,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getDogmaEffectsEffectId**
-> object getDogmaEffectsEffectId($effect_id, $datasource, $if_none_match)
+> \Swagger\Client\Model\GetDogmaEffectsEffectIdOk getDogmaEffectsEffectId($effect_id, $datasource, $if_none_match)
 
 Get effect information
 
@@ -238,7 +239,7 @@ $apiInstance = new Swagger\Client\Api\DogmaApi(
     new GuzzleHttp\Client()
 );
 $effect_id = 56; // int | A dogma effect ID
-$datasource = "datasource_example"; // string | The server name you would like data from
+$datasource = "tranquility"; // string | The server name you would like data from
 $if_none_match = "if_none_match_example"; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
 
 try {
@@ -254,13 +255,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **effect_id** | [**int**](../Model/.md)| A dogma effect ID |
- **datasource** | [**string**](../Model/.md)| The server name you would like data from | [optional]
- **if_none_match** | [**string**](../Model/.md)| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
+ **effect_id** | **int**| A dogma effect ID |
+ **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
 
 ### Return type
 
-**object**
+[**\Swagger\Client\Model\GetDogmaEffectsEffectIdOk**](../Model/GetDogmaEffectsEffectIdOk.md)
 
 ### Authorization
 
@@ -268,7 +269,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

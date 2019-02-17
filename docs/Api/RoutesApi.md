@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getRouteOriginDestination**](RoutesApi.md#getRouteOriginDestination) | **GET** /route/{origin}/{destination}/ | Get route
 
+
 # **getRouteOriginDestination**
 > int[] getRouteOriginDestination($destination, $origin, $avoid, $connections, $datasource, $flag, $if_none_match)
 
@@ -27,8 +28,8 @@ $destination = 56; // int | destination solar system ID
 $origin = 56; // int | origin solar system ID
 $avoid = array(56); // int[] | avoid solar system ID(s)
 $connections = array(new \Swagger\Client\Model\int[]()); // int[][] | connected solar system pairs
-$datasource = "datasource_example"; // string | The server name you would like data from
-$flag = "flag_example"; // string | route security preference
+$datasource = "tranquility"; // string | The server name you would like data from
+$flag = "shortest"; // string | route security preference
 $if_none_match = "if_none_match_example"; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
 
 try {
@@ -44,13 +45,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **destination** | [**int**](../Model/.md)| destination solar system ID |
- **origin** | [**int**](../Model/.md)| origin solar system ID |
+ **destination** | **int**| destination solar system ID |
+ **origin** | **int**| origin solar system ID |
  **avoid** | [**int[]**](../Model/int.md)| avoid solar system ID(s) | [optional]
  **connections** | [**int[][]**](../Model/int[].md)| connected solar system pairs | [optional]
- **datasource** | [**string**](../Model/.md)| The server name you would like data from | [optional]
- **flag** | [**string**](../Model/.md)| route security preference | [optional]
- **if_none_match** | [**string**](../Model/.md)| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
+ **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
+ **flag** | **string**| route security preference | [optional] [default to shortest]
+ **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
 
 ### Return type
 
@@ -62,7 +63,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
