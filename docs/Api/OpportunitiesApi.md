@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **getCharactersCharacterIdOpportunities**
-> object[] getCharactersCharacterIdOpportunities($character_id, $datasource, $if_none_match, $token)
+> \Swagger\Client\Model\GetCharactersCharacterIdOpportunities200Ok[] getCharactersCharacterIdOpportunities($character_id, $datasource, $if_none_match, $token)
 
 Get a character's completed tasks
 
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\GetCharactersCharacterIdOpportunities200Ok[]**](../Model/GetCharactersCharacterIdOpportunities200Ok.md)
 
 ### Authorization
 

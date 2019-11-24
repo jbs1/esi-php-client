@@ -26,7 +26,7 @@ Method | HTTP request | Description
 
 Get character's public information
 
-Public information about a character  --- Alternate route: `/dev/characters/{character_id}/`  Alternate route: `/v4/characters/{character_id}/`  --- This route is cached for up to 3600 seconds
+Public information about a character  --- Alternate route: `/dev/characters/{character_id}/`  Alternate route: `/v4/characters/{character_id}/`  --- This route is cached for up to 86400 seconds
 
 ### Example
 ```php
@@ -75,7 +75,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCharactersCharacterIdAgentsResearch**
-> object[] getCharactersCharacterIdAgentsResearch($character_id, $datasource, $if_none_match, $token)
+> \Swagger\Client\Model\GetCharactersCharacterIdAgentsResearch200Ok[] getCharactersCharacterIdAgentsResearch($character_id, $datasource, $if_none_match, $token)
 
 Get agents research
 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\GetCharactersCharacterIdAgentsResearch200Ok[]**](../Model/GetCharactersCharacterIdAgentsResearch200Ok.md)
 
 ### Authorization
 
@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCharactersCharacterIdBlueprints**
-> object[] getCharactersCharacterIdBlueprints($character_id, $datasource, $if_none_match, $page, $token)
+> \Swagger\Client\Model\GetCharactersCharacterIdBlueprints200Ok[] getCharactersCharacterIdBlueprints($character_id, $datasource, $if_none_match, $page, $token)
 
 Get blueprints
 
@@ -181,7 +181,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\GetCharactersCharacterIdBlueprints200Ok[]**](../Model/GetCharactersCharacterIdBlueprints200Ok.md)
 
 ### Authorization
 
@@ -195,11 +195,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCharactersCharacterIdCorporationhistory**
-> object[] getCharactersCharacterIdCorporationhistory($character_id, $datasource, $if_none_match)
+> \Swagger\Client\Model\GetCharactersCharacterIdCorporationhistory200Ok[] getCharactersCharacterIdCorporationhistory($character_id, $datasource, $if_none_match)
 
 Get corporation history
 
-Get a list of all the corporations a character has been a member of  --- Alternate route: `/dev/characters/{character_id}/corporationhistory/`  Alternate route: `/legacy/characters/{character_id}/corporationhistory/`  Alternate route: `/v1/characters/{character_id}/corporationhistory/`  --- This route is cached for up to 3600 seconds
+Get a list of all the corporations a character has been a member of  --- Alternate route: `/dev/characters/{character_id}/corporationhistory/`  Alternate route: `/legacy/characters/{character_id}/corporationhistory/`  Alternate route: `/v1/characters/{character_id}/corporationhistory/`  --- This route is cached for up to 86400 seconds
 
 ### Example
 ```php
@@ -234,7 +234,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\GetCharactersCharacterIdCorporationhistory200Ok[]**](../Model/GetCharactersCharacterIdCorporationhistory200Ok.md)
 
 ### Authorization
 
@@ -307,7 +307,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCharactersCharacterIdMedals**
-> object[] getCharactersCharacterIdMedals($character_id, $datasource, $if_none_match, $token)
+> \Swagger\Client\Model\GetCharactersCharacterIdMedals200Ok[] getCharactersCharacterIdMedals($character_id, $datasource, $if_none_match, $token)
 
 Get medals
 
@@ -352,7 +352,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\GetCharactersCharacterIdMedals200Ok[]**](../Model/GetCharactersCharacterIdMedals200Ok.md)
 
 ### Authorization
 
@@ -366,11 +366,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCharactersCharacterIdNotifications**
-> object[] getCharactersCharacterIdNotifications($character_id, $datasource, $if_none_match, $token)
+> \Swagger\Client\Model\GetCharactersCharacterIdNotifications200Ok[] getCharactersCharacterIdNotifications($character_id, $datasource, $if_none_match, $token)
 
 Get character notifications
 
-Return character notifications  --- Alternate route: `/dev/characters/{character_id}/notifications/`  Alternate route: `/v4/characters/{character_id}/notifications/`  --- This route is cached for up to 600 seconds
+Return character notifications  --- Alternate route: `/dev/characters/{character_id}/notifications/`  Alternate route: `/v5/characters/{character_id}/notifications/`  --- This route is cached for up to 600 seconds
 
 ### Example
 ```php
@@ -411,7 +411,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\GetCharactersCharacterIdNotifications200Ok[]**](../Model/GetCharactersCharacterIdNotifications200Ok.md)
 
 ### Authorization
 
@@ -425,7 +425,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCharactersCharacterIdNotificationsContacts**
-> object[] getCharactersCharacterIdNotificationsContacts($character_id, $datasource, $if_none_match, $token)
+> \Swagger\Client\Model\GetCharactersCharacterIdNotificationsContacts200Ok[] getCharactersCharacterIdNotificationsContacts($character_id, $datasource, $if_none_match, $token)
 
 Get new contact notifications
 
@@ -470,7 +470,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\GetCharactersCharacterIdNotificationsContacts200Ok[]**](../Model/GetCharactersCharacterIdNotificationsContacts200Ok.md)
 
 ### Authorization
 
@@ -596,7 +596,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCharactersCharacterIdStandings**
-> object[] getCharactersCharacterIdStandings($character_id, $datasource, $if_none_match, $token)
+> \Swagger\Client\Model\GetCharactersCharacterIdStandings200Ok[] getCharactersCharacterIdStandings($character_id, $datasource, $if_none_match, $token)
 
 Get standings
 
@@ -641,7 +641,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\GetCharactersCharacterIdStandings200Ok[]**](../Model/GetCharactersCharacterIdStandings200Ok.md)
 
 ### Authorization
 
@@ -655,7 +655,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCharactersCharacterIdStats**
-> object[] getCharactersCharacterIdStats($character_id, $datasource, $if_none_match, $token)
+> \Swagger\Client\Model\GetCharactersCharacterIdStats200Ok[] getCharactersCharacterIdStats($character_id, $datasource, $if_none_match, $token)
 
 Yearly aggregate stats
 
@@ -700,7 +700,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\GetCharactersCharacterIdStats200Ok[]**](../Model/GetCharactersCharacterIdStats200Ok.md)
 
 ### Authorization
 
@@ -714,7 +714,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCharactersCharacterIdTitles**
-> object[] getCharactersCharacterIdTitles($character_id, $datasource, $if_none_match, $token)
+> \Swagger\Client\Model\GetCharactersCharacterIdTitles200Ok[] getCharactersCharacterIdTitles($character_id, $datasource, $if_none_match, $token)
 
 Get character corporation titles
 
@@ -759,7 +759,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\GetCharactersCharacterIdTitles200Ok[]**](../Model/GetCharactersCharacterIdTitles200Ok.md)
 
 ### Authorization
 
@@ -773,7 +773,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCharactersAffiliation**
-> object[] postCharactersAffiliation($characters, $datasource)
+> \Swagger\Client\Model\PostCharactersAffiliation200Ok[] postCharactersAffiliation($characters, $datasource)
 
 Character affiliation
 
@@ -810,7 +810,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\PostCharactersAffiliation200Ok[]**](../Model/PostCharactersAffiliation200Ok.md)
 
 ### Authorization
 
@@ -828,7 +828,7 @@ No authorization required
 
 Calculate a CSPA charge cost
 
-Takes a source character ID in the url and a set of target character ID's in the body, returns a CSPA charge cost  --- Alternate route: `/dev/characters/{character_id}/cspa/`  Alternate route: `/v4/characters/{character_id}/cspa/`
+Takes a source character ID in the url and a set of target character ID's in the body, returns a CSPA charge cost  --- Alternate route: `/v4/characters/{character_id}/cspa/`   --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#POST-/characters/{character_id}/cspa/)
 
 ### Example
 ```php

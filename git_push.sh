@@ -18,7 +18,7 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="v0.8.6 swagger-2.4.1 [revert due to broken phpGen in swagger3]"
+    release_note="v1.2.9 swagger-2.4.10"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 

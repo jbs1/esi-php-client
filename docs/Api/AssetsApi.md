@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **getCharactersCharacterIdAssets**
-> object[] getCharactersCharacterIdAssets($character_id, $datasource, $if_none_match, $page, $token)
+> \Swagger\Client\Model\GetCharactersCharacterIdAssets200Ok[] getCharactersCharacterIdAssets($character_id, $datasource, $if_none_match, $page, $token)
 
 Get character assets
 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\GetCharactersCharacterIdAssets200Ok[]**](../Model/GetCharactersCharacterIdAssets200Ok.md)
 
 ### Authorization
 
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCorporationsCorporationIdAssets**
-> object[] getCorporationsCorporationIdAssets($corporation_id, $datasource, $if_none_match, $page, $token)
+> \Swagger\Client\Model\GetCorporationsCorporationIdAssets200Ok[] getCorporationsCorporationIdAssets($corporation_id, $datasource, $if_none_match, $page, $token)
 
 Get corporation assets
 
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\GetCorporationsCorporationIdAssets200Ok[]**](../Model/GetCorporationsCorporationIdAssets200Ok.md)
 
 ### Authorization
 
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCharactersCharacterIdAssetsLocations**
-> object[] postCharactersCharacterIdAssetsLocations($character_id, $item_ids, $datasource, $token)
+> \Swagger\Client\Model\PostCharactersCharacterIdAssetsLocations200Ok[] postCharactersCharacterIdAssetsLocations($character_id, $item_ids, $datasource, $token)
 
 Get character asset locations
 
@@ -180,7 +180,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\PostCharactersCharacterIdAssetsLocations200Ok[]**](../Model/PostCharactersCharacterIdAssetsLocations200Ok.md)
 
 ### Authorization
 
@@ -194,7 +194,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCharactersCharacterIdAssetsNames**
-> object[] postCharactersCharacterIdAssetsNames($character_id, $item_ids, $datasource, $token)
+> \Swagger\Client\Model\PostCharactersCharacterIdAssetsNames200Ok[] postCharactersCharacterIdAssetsNames($character_id, $item_ids, $datasource, $token)
 
 Get character asset names
 
@@ -239,7 +239,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\PostCharactersCharacterIdAssetsNames200Ok[]**](../Model/PostCharactersCharacterIdAssetsNames200Ok.md)
 
 ### Authorization
 
@@ -253,7 +253,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCorporationsCorporationIdAssetsLocations**
-> object[] postCorporationsCorporationIdAssetsLocations($corporation_id, $item_ids, $datasource, $token)
+> \Swagger\Client\Model\PostCorporationsCorporationIdAssetsLocations200Ok[] postCorporationsCorporationIdAssetsLocations($corporation_id, $item_ids, $datasource, $token)
 
 Get corporation asset locations
 
@@ -298,7 +298,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\PostCorporationsCorporationIdAssetsLocations200Ok[]**](../Model/PostCorporationsCorporationIdAssetsLocations200Ok.md)
 
 ### Authorization
 
@@ -312,7 +312,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postCorporationsCorporationIdAssetsNames**
-> object[] postCorporationsCorporationIdAssetsNames($corporation_id, $item_ids, $datasource, $token)
+> \Swagger\Client\Model\PostCorporationsCorporationIdAssetsNames200Ok[] postCorporationsCorporationIdAssetsNames($corporation_id, $item_ids, $datasource, $token)
 
 Get corporation asset names
 
@@ -357,7 +357,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\PostCorporationsCorporationIdAssetsNames200Ok[]**](../Model/PostCorporationsCorporationIdAssetsNames200Ok.md)
 
 ### Authorization
 

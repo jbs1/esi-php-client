@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **getCharactersCharacterIdLoyaltyPoints**
-> object[] getCharactersCharacterIdLoyaltyPoints($character_id, $datasource, $if_none_match, $token)
+> \Swagger\Client\Model\GetCharactersCharacterIdLoyaltyPoints200Ok[] getCharactersCharacterIdLoyaltyPoints($character_id, $datasource, $if_none_match, $token)
 
 Get loyalty points
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\GetCharactersCharacterIdLoyaltyPoints200Ok[]**](../Model/GetCharactersCharacterIdLoyaltyPoints200Ok.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getLoyaltyStoresCorporationIdOffers**
-> object[] getLoyaltyStoresCorporationIdOffers($corporation_id, $datasource, $if_none_match)
+> \Swagger\Client\Model\GetLoyaltyStoresCorporationIdOffers200Ok[] getLoyaltyStoresCorporationIdOffers($corporation_id, $datasource, $if_none_match)
 
 List loyalty store offers
 
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\GetLoyaltyStoresCorporationIdOffers200Ok[]**](../Model/GetLoyaltyStoresCorporationIdOffers200Ok.md)
 
 ### Authorization
 

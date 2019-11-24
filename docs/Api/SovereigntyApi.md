@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **getSovereigntyCampaigns**
-> object[] getSovereigntyCampaigns($datasource, $if_none_match)
+> \Swagger\Client\Model\GetSovereigntyCampaigns200Ok[] getSovereigntyCampaigns($datasource, $if_none_match)
 
 List sovereignty campaigns
 
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\GetSovereigntyCampaigns200Ok[]**](../Model/GetSovereigntyCampaigns200Ok.md)
 
 ### Authorization
 
@@ -61,7 +61,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSovereigntyMap**
-> object[] getSovereigntyMap($datasource, $if_none_match)
+> \Swagger\Client\Model\GetSovereigntyMap200Ok[] getSovereigntyMap($datasource, $if_none_match)
 
 List sovereignty of systems
 
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\GetSovereigntyMap200Ok[]**](../Model/GetSovereigntyMap200Ok.md)
 
 ### Authorization
 
@@ -112,7 +112,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSovereigntyStructures**
-> object[] getSovereigntyStructures($datasource, $if_none_match)
+> \Swagger\Client\Model\GetSovereigntyStructures200Ok[] getSovereigntyStructures($datasource, $if_none_match)
 
 List sovereignty structures
 
@@ -149,7 +149,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\GetSovereigntyStructures200Ok[]**](../Model/GetSovereigntyStructures200Ok.md)
 
 ### Authorization
 

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **getCharactersCharacterIdBookmarks**
-> object[] getCharactersCharacterIdBookmarks($character_id, $datasource, $if_none_match, $page, $token)
+> \Swagger\Client\Model\GetCharactersCharacterIdBookmarks200Ok[] getCharactersCharacterIdBookmarks($character_id, $datasource, $if_none_match, $page, $token)
 
 List bookmarks
 
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\GetCharactersCharacterIdBookmarks200Ok[]**](../Model/GetCharactersCharacterIdBookmarks200Ok.md)
 
 ### Authorization
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCharactersCharacterIdBookmarksFolders**
-> object[] getCharactersCharacterIdBookmarksFolders($character_id, $datasource, $if_none_match, $page, $token)
+> \Swagger\Client\Model\GetCharactersCharacterIdBookmarksFolders200Ok[] getCharactersCharacterIdBookmarksFolders($character_id, $datasource, $if_none_match, $page, $token)
 
 List bookmark folders
 
@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\GetCharactersCharacterIdBookmarksFolders200Ok[]**](../Model/GetCharactersCharacterIdBookmarksFolders200Ok.md)
 
 ### Authorization
 
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCorporationsCorporationIdBookmarks**
-> object[] getCorporationsCorporationIdBookmarks($corporation_id, $datasource, $if_none_match, $page, $token)
+> \Swagger\Client\Model\GetCorporationsCorporationIdBookmarks200Ok[] getCorporationsCorporationIdBookmarks($corporation_id, $datasource, $if_none_match, $page, $token)
 
 List corporation bookmarks
 
@@ -180,7 +180,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\GetCorporationsCorporationIdBookmarks200Ok[]**](../Model/GetCorporationsCorporationIdBookmarks200Ok.md)
 
 ### Authorization
 
@@ -194,7 +194,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCorporationsCorporationIdBookmarksFolders**
-> object[] getCorporationsCorporationIdBookmarksFolders($corporation_id, $datasource, $if_none_match, $page, $token)
+> \Swagger\Client\Model\GetCorporationsCorporationIdBookmarksFolders200Ok[] getCorporationsCorporationIdBookmarksFolders($corporation_id, $datasource, $if_none_match, $page, $token)
 
 List corporation bookmark folders
 
@@ -241,7 +241,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\GetCorporationsCorporationIdBookmarksFolders200Ok[]**](../Model/GetCorporationsCorporationIdBookmarksFolders200Ok.md)
 
 ### Authorization
 

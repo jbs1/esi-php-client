@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **getCharactersCharacterIdPlanets**
-> object[] getCharactersCharacterIdPlanets($character_id, $datasource, $if_none_match, $token)
+> \Swagger\Client\Model\GetCharactersCharacterIdPlanets200Ok[] getCharactersCharacterIdPlanets($character_id, $datasource, $if_none_match, $token)
 
 Get colonies
 
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\GetCharactersCharacterIdPlanets200Ok[]**](../Model/GetCharactersCharacterIdPlanets200Ok.md)
 
 ### Authorization
 
@@ -131,7 +131,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCorporationsCorporationIdCustomsOffices**
-> object[] getCorporationsCorporationIdCustomsOffices($corporation_id, $datasource, $if_none_match, $page, $token)
+> \Swagger\Client\Model\GetCorporationsCorporationIdCustomsOffices200Ok[] getCorporationsCorporationIdCustomsOffices($corporation_id, $datasource, $if_none_match, $page, $token)
 
 List corporation customs offices
 
@@ -178,7 +178,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\GetCorporationsCorporationIdCustomsOffices200Ok[]**](../Model/GetCorporationsCorporationIdCustomsOffices200Ok.md)
 
 ### Authorization
 

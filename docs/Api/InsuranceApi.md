@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **getInsurancePrices**
-> object[] getInsurancePrices($accept_language, $datasource, $if_none_match, $language)
+> \Swagger\Client\Model\GetInsurancePrices200Ok[] getInsurancePrices($accept_language, $datasource, $if_none_match, $language)
 
 List insurance levels
 
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\GetInsurancePrices200Ok[]**](../Model/GetInsurancePrices200Ok.md)
 
 ### Authorization
 

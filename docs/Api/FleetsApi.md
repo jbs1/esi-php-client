@@ -199,7 +199,7 @@ void (empty response body)
 
 Get character fleet info
 
-Return the fleet ID the character is in, if any.  --- Alternate route: `/dev/characters/{character_id}/fleet/`  Alternate route: `/legacy/characters/{character_id}/fleet/`  Alternate route: `/v1/characters/{character_id}/fleet/`  --- This route is cached for up to 60 seconds
+Return the fleet ID the character is in, if any.  --- Alternate route: `/legacy/characters/{character_id}/fleet/`  Alternate route: `/v1/characters/{character_id}/fleet/`  --- This route is cached for up to 60 seconds  --- Warning: This route has an upgrade available  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/characters/{character_id}/fleet/)
 
 ### Example
 ```php
@@ -313,7 +313,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getFleetsFleetIdMembers**
-> object[] getFleetsFleetIdMembers($fleet_id, $accept_language, $datasource, $if_none_match, $language, $token)
+> \Swagger\Client\Model\GetFleetsFleetIdMembers200Ok[] getFleetsFleetIdMembers($fleet_id, $accept_language, $datasource, $if_none_match, $language, $token)
 
 Get fleet members
 
@@ -362,7 +362,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\GetFleetsFleetIdMembers200Ok[]**](../Model/GetFleetsFleetIdMembers200Ok.md)
 
 ### Authorization
 
@@ -376,7 +376,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getFleetsFleetIdWings**
-> object[] getFleetsFleetIdWings($fleet_id, $accept_language, $datasource, $if_none_match, $language, $token)
+> \Swagger\Client\Model\GetFleetsFleetIdWings200Ok[] getFleetsFleetIdWings($fleet_id, $accept_language, $datasource, $if_none_match, $language, $token)
 
 Get fleet wings
 
@@ -425,7 +425,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\GetFleetsFleetIdWings200Ok[]**](../Model/GetFleetsFleetIdWings200Ok.md)
 
 ### Authorization
 

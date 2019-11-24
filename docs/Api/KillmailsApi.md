@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **getCharactersCharacterIdKillmailsRecent**
-> object[] getCharactersCharacterIdKillmailsRecent($character_id, $datasource, $if_none_match, $page, $token)
+> \Swagger\Client\Model\GetCharactersCharacterIdKillmailsRecent200Ok[] getCharactersCharacterIdKillmailsRecent($character_id, $datasource, $if_none_match, $page, $token)
 
 Get a character's recent kills and losses
 
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\GetCharactersCharacterIdKillmailsRecent200Ok[]**](../Model/GetCharactersCharacterIdKillmailsRecent200Ok.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCorporationsCorporationIdKillmailsRecent**
-> object[] getCorporationsCorporationIdKillmailsRecent($corporation_id, $datasource, $if_none_match, $page, $token)
+> \Swagger\Client\Model\GetCorporationsCorporationIdKillmailsRecent200Ok[] getCorporationsCorporationIdKillmailsRecent($corporation_id, $datasource, $if_none_match, $page, $token)
 
 Get a corporation's recent kills and losses
 
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\GetCorporationsCorporationIdKillmailsRecent200Ok[]**](../Model/GetCorporationsCorporationIdKillmailsRecent200Ok.md)
 
 ### Authorization
 

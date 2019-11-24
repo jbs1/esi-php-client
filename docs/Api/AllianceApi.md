@@ -66,7 +66,7 @@ No authorization required
 
 Get alliance information
 
-Public information about an alliance  --- Alternate route: `/dev/alliances/{alliance_id}/`  Alternate route: `/v3/alliances/{alliance_id}/`  --- This route is cached for up to 3600 seconds
+Public information about an alliance  --- Alternate route: `/v3/alliances/{alliance_id}/`  --- This route is cached for up to 3600 seconds  --- Warning: This route has an upgrade available  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/alliances/{alliance_id}/)
 
 ### Example
 ```php

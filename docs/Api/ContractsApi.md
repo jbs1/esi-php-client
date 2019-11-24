@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 # **getCharactersCharacterIdContracts**
-> object[] getCharactersCharacterIdContracts($character_id, $datasource, $if_none_match, $page, $token)
+> \Swagger\Client\Model\GetCharactersCharacterIdContracts200Ok[] getCharactersCharacterIdContracts($character_id, $datasource, $if_none_match, $page, $token)
 
 Get contracts
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\GetCharactersCharacterIdContracts200Ok[]**](../Model/GetCharactersCharacterIdContracts200Ok.md)
 
 ### Authorization
 
@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCharactersCharacterIdContractsContractIdBids**
-> object[] getCharactersCharacterIdContractsContractIdBids($character_id, $contract_id, $datasource, $if_none_match, $token)
+> \Swagger\Client\Model\GetCharactersCharacterIdContractsContractIdBids200Ok[] getCharactersCharacterIdContractsContractIdBids($character_id, $contract_id, $datasource, $if_none_match, $token)
 
 Get contract bids
 
@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\GetCharactersCharacterIdContractsContractIdBids200Ok[]**](../Model/GetCharactersCharacterIdContractsContractIdBids200Ok.md)
 
 ### Authorization
 
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCharactersCharacterIdContractsContractIdItems**
-> object[] getCharactersCharacterIdContractsContractIdItems($character_id, $contract_id, $datasource, $if_none_match, $token)
+> \Swagger\Client\Model\GetCharactersCharacterIdContractsContractIdItems200Ok[] getCharactersCharacterIdContractsContractIdItems($character_id, $contract_id, $datasource, $if_none_match, $token)
 
 Get contract items
 
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\GetCharactersCharacterIdContractsContractIdItems200Ok[]**](../Model/GetCharactersCharacterIdContractsContractIdItems200Ok.md)
 
 ### Authorization
 
@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getContractsPublicBidsContractId**
-> object[] getContractsPublicBidsContractId($contract_id, $datasource, $if_none_match, $page)
+> \Swagger\Client\Model\GetContractsPublicBidsContractId200Ok[] getContractsPublicBidsContractId($contract_id, $datasource, $if_none_match, $page)
 
 Get public contract bids
 
@@ -240,7 +240,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\GetContractsPublicBidsContractId200Ok[]**](../Model/GetContractsPublicBidsContractId200Ok.md)
 
 ### Authorization
 
@@ -254,7 +254,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getContractsPublicItemsContractId**
-> object[] getContractsPublicItemsContractId($contract_id, $datasource, $if_none_match, $page)
+> \Swagger\Client\Model\GetContractsPublicItemsContractId200Ok[] getContractsPublicItemsContractId($contract_id, $datasource, $if_none_match, $page)
 
 Get public contract items
 
@@ -295,7 +295,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\GetContractsPublicItemsContractId200Ok[]**](../Model/GetContractsPublicItemsContractId200Ok.md)
 
 ### Authorization
 
@@ -309,7 +309,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getContractsPublicRegionId**
-> object[] getContractsPublicRegionId($region_id, $datasource, $if_none_match, $page)
+> \Swagger\Client\Model\GetContractsPublicRegionId200Ok[] getContractsPublicRegionId($region_id, $datasource, $if_none_match, $page)
 
 Get public contracts
 
@@ -350,7 +350,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\GetContractsPublicRegionId200Ok[]**](../Model/GetContractsPublicRegionId200Ok.md)
 
 ### Authorization
 
@@ -364,7 +364,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCorporationsCorporationIdContracts**
-> object[] getCorporationsCorporationIdContracts($corporation_id, $datasource, $if_none_match, $page, $token)
+> \Swagger\Client\Model\GetCorporationsCorporationIdContracts200Ok[] getCorporationsCorporationIdContracts($corporation_id, $datasource, $if_none_match, $page, $token)
 
 Get corporation contracts
 
@@ -411,7 +411,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\GetCorporationsCorporationIdContracts200Ok[]**](../Model/GetCorporationsCorporationIdContracts200Ok.md)
 
 ### Authorization
 
@@ -425,7 +425,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCorporationsCorporationIdContractsContractIdBids**
-> object[] getCorporationsCorporationIdContractsContractIdBids($contract_id, $corporation_id, $datasource, $if_none_match, $page, $token)
+> \Swagger\Client\Model\GetCorporationsCorporationIdContractsContractIdBids200Ok[] getCorporationsCorporationIdContractsContractIdBids($contract_id, $corporation_id, $datasource, $if_none_match, $page, $token)
 
 Get corporation contract bids
 
@@ -474,7 +474,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\GetCorporationsCorporationIdContractsContractIdBids200Ok[]**](../Model/GetCorporationsCorporationIdContractsContractIdBids200Ok.md)
 
 ### Authorization
 
@@ -488,7 +488,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCorporationsCorporationIdContractsContractIdItems**
-> object[] getCorporationsCorporationIdContractsContractIdItems($contract_id, $corporation_id, $datasource, $if_none_match, $token)
+> \Swagger\Client\Model\GetCorporationsCorporationIdContractsContractIdItems200Ok[] getCorporationsCorporationIdContractsContractIdItems($contract_id, $corporation_id, $datasource, $if_none_match, $token)
 
 Get corporation contract items
 
@@ -535,7 +535,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object[]**
+[**\Swagger\Client\Model\GetCorporationsCorporationIdContractsContractIdItems200Ok[]**](../Model/GetCorporationsCorporationIdContractsContractIdItems200Ok.md)
 
 ### Authorization
 
