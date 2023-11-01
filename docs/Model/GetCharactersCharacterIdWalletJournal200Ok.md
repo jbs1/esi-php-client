@@ -17,6 +17,5 @@ Name | Type | Description | Notes
 **tax** | **double** | Tax amount received. Only applies to tax related transactions | [optional] 
 **tax_receiver_id** | **int** | The corporation ID receiving any tax paid. Only applies to tax related transactions | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

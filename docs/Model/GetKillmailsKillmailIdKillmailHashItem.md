@@ -10,6 +10,5 @@ Name | Type | Description | Notes
 **quantity_dropped** | **int** | How many of the item were dropped if any | [optional] 
 **singleton** | **int** | singleton integer | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

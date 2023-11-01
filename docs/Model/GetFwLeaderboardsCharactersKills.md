@@ -7,6 +7,5 @@ Name | Type | Description | Notes
 **last_week** | [**\Swagger\Client\Model\GetFwLeaderboardsCharactersLastWeekLastWeek[]**](GetFwLeaderboardsCharactersLastWeekLastWeek.md) | Top 100 ranking of pilots by kills in the past week | 
 **yesterday** | [**\Swagger\Client\Model\GetFwLeaderboardsCharactersYesterdayYesterday[]**](GetFwLeaderboardsCharactersYesterdayYesterday.md) | Top 100 ranking of pilots by kills in the past day | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

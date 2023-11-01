@@ -8,6 +8,5 @@ Name | Type | Description | Notes
 **isk_destroyed** | **float** | ISK value of ships the aggressor has destroyed | 
 **ships_killed** | **int** | The number of ships the aggressor has killed | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

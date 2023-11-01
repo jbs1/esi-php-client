@@ -4,21 +4,20 @@ All URIs are relative to *https://esi.evetech.net/latest*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deleteFleetsFleetIdMembersMemberId**](FleetsApi.md#deleteFleetsFleetIdMembersMemberId) | **DELETE** /fleets/{fleet_id}/members/{member_id}/ | Kick fleet member
-[**deleteFleetsFleetIdSquadsSquadId**](FleetsApi.md#deleteFleetsFleetIdSquadsSquadId) | **DELETE** /fleets/{fleet_id}/squads/{squad_id}/ | Delete fleet squad
-[**deleteFleetsFleetIdWingsWingId**](FleetsApi.md#deleteFleetsFleetIdWingsWingId) | **DELETE** /fleets/{fleet_id}/wings/{wing_id}/ | Delete fleet wing
-[**getCharactersCharacterIdFleet**](FleetsApi.md#getCharactersCharacterIdFleet) | **GET** /characters/{character_id}/fleet/ | Get character fleet info
-[**getFleetsFleetId**](FleetsApi.md#getFleetsFleetId) | **GET** /fleets/{fleet_id}/ | Get fleet information
-[**getFleetsFleetIdMembers**](FleetsApi.md#getFleetsFleetIdMembers) | **GET** /fleets/{fleet_id}/members/ | Get fleet members
-[**getFleetsFleetIdWings**](FleetsApi.md#getFleetsFleetIdWings) | **GET** /fleets/{fleet_id}/wings/ | Get fleet wings
-[**postFleetsFleetIdMembers**](FleetsApi.md#postFleetsFleetIdMembers) | **POST** /fleets/{fleet_id}/members/ | Create fleet invitation
-[**postFleetsFleetIdWings**](FleetsApi.md#postFleetsFleetIdWings) | **POST** /fleets/{fleet_id}/wings/ | Create fleet wing
-[**postFleetsFleetIdWingsWingIdSquads**](FleetsApi.md#postFleetsFleetIdWingsWingIdSquads) | **POST** /fleets/{fleet_id}/wings/{wing_id}/squads/ | Create fleet squad
-[**putFleetsFleetId**](FleetsApi.md#putFleetsFleetId) | **PUT** /fleets/{fleet_id}/ | Update fleet
-[**putFleetsFleetIdMembersMemberId**](FleetsApi.md#putFleetsFleetIdMembersMemberId) | **PUT** /fleets/{fleet_id}/members/{member_id}/ | Move fleet member
-[**putFleetsFleetIdSquadsSquadId**](FleetsApi.md#putFleetsFleetIdSquadsSquadId) | **PUT** /fleets/{fleet_id}/squads/{squad_id}/ | Rename fleet squad
-[**putFleetsFleetIdWingsWingId**](FleetsApi.md#putFleetsFleetIdWingsWingId) | **PUT** /fleets/{fleet_id}/wings/{wing_id}/ | Rename fleet wing
-
+[**deleteFleetsFleetIdMembersMemberId**](FleetsApi.md#deletefleetsfleetidmembersmemberid) | **DELETE** /fleets/{fleet_id}/members/{member_id}/ | Kick fleet member
+[**deleteFleetsFleetIdSquadsSquadId**](FleetsApi.md#deletefleetsfleetidsquadssquadid) | **DELETE** /fleets/{fleet_id}/squads/{squad_id}/ | Delete fleet squad
+[**deleteFleetsFleetIdWingsWingId**](FleetsApi.md#deletefleetsfleetidwingswingid) | **DELETE** /fleets/{fleet_id}/wings/{wing_id}/ | Delete fleet wing
+[**getCharactersCharacterIdFleet**](FleetsApi.md#getcharacterscharacteridfleet) | **GET** /characters/{character_id}/fleet/ | Get character fleet info
+[**getFleetsFleetId**](FleetsApi.md#getfleetsfleetid) | **GET** /fleets/{fleet_id}/ | Get fleet information
+[**getFleetsFleetIdMembers**](FleetsApi.md#getfleetsfleetidmembers) | **GET** /fleets/{fleet_id}/members/ | Get fleet members
+[**getFleetsFleetIdWings**](FleetsApi.md#getfleetsfleetidwings) | **GET** /fleets/{fleet_id}/wings/ | Get fleet wings
+[**postFleetsFleetIdMembers**](FleetsApi.md#postfleetsfleetidmembers) | **POST** /fleets/{fleet_id}/members/ | Create fleet invitation
+[**postFleetsFleetIdWings**](FleetsApi.md#postfleetsfleetidwings) | **POST** /fleets/{fleet_id}/wings/ | Create fleet wing
+[**postFleetsFleetIdWingsWingIdSquads**](FleetsApi.md#postfleetsfleetidwingswingidsquads) | **POST** /fleets/{fleet_id}/wings/{wing_id}/squads/ | Create fleet squad
+[**putFleetsFleetId**](FleetsApi.md#putfleetsfleetid) | **PUT** /fleets/{fleet_id}/ | Update fleet
+[**putFleetsFleetIdMembersMemberId**](FleetsApi.md#putfleetsfleetidmembersmemberid) | **PUT** /fleets/{fleet_id}/members/{member_id}/ | Move fleet member
+[**putFleetsFleetIdSquadsSquadId**](FleetsApi.md#putfleetsfleetidsquadssquadid) | **PUT** /fleets/{fleet_id}/squads/{squad_id}/ | Rename fleet squad
+[**putFleetsFleetIdWingsWingId**](FleetsApi.md#putfleetsfleetidwingswingid) | **PUT** /fleets/{fleet_id}/wings/{wing_id}/ | Rename fleet wing
 
 # **deleteFleetsFleetIdMembersMemberId**
 > deleteFleetsFleetIdMembersMemberId($fleet_id, $member_id, $datasource, $token)
@@ -73,7 +72,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -131,7 +130,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -189,7 +188,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -248,7 +247,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -307,7 +306,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -334,10 +333,10 @@ $apiInstance = new Swagger\Client\Api\FleetsApi(
     $config
 );
 $fleet_id = 789; // int | ID for a fleet
-$accept_language = "en-us"; // string | Language to use in the response
+$accept_language = "en"; // string | Language to use in the response
 $datasource = "tranquility"; // string | The server name you would like data from
 $if_none_match = "if_none_match_example"; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$language = "en-us"; // string | Language to use in the response, takes precedence over Accept-Language
+$language = "en"; // string | Language to use in the response, takes precedence over Accept-Language
 $token = "token_example"; // string | Access token to use if unable to set a header
 
 try {
@@ -354,10 +353,10 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fleet_id** | **int**| ID for a fleet |
- **accept_language** | **string**| Language to use in the response | [optional] [default to en-us]
+ **accept_language** | **string**| Language to use in the response | [optional] [default to en]
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **language** | **string**| Language to use in the response, takes precedence over Accept-Language | [optional] [default to en-us]
+ **language** | **string**| Language to use in the response, takes precedence over Accept-Language | [optional] [default to en]
  **token** | **string**| Access token to use if unable to set a header | [optional]
 
 ### Return type
@@ -370,7 +369,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -397,10 +396,10 @@ $apiInstance = new Swagger\Client\Api\FleetsApi(
     $config
 );
 $fleet_id = 789; // int | ID for a fleet
-$accept_language = "en-us"; // string | Language to use in the response
+$accept_language = "en"; // string | Language to use in the response
 $datasource = "tranquility"; // string | The server name you would like data from
 $if_none_match = "if_none_match_example"; // string | ETag from a previous request. A 304 will be returned if this matches the current ETag
-$language = "en-us"; // string | Language to use in the response, takes precedence over Accept-Language
+$language = "en"; // string | Language to use in the response, takes precedence over Accept-Language
 $token = "token_example"; // string | Access token to use if unable to set a header
 
 try {
@@ -417,10 +416,10 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fleet_id** | **int**| ID for a fleet |
- **accept_language** | **string**| Language to use in the response | [optional] [default to en-us]
+ **accept_language** | **string**| Language to use in the response | [optional] [default to en]
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **if_none_match** | **string**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **language** | **string**| Language to use in the response, takes precedence over Accept-Language | [optional] [default to en-us]
+ **language** | **string**| Language to use in the response, takes precedence over Accept-Language | [optional] [default to en]
  **token** | **string**| Access token to use if unable to set a header | [optional]
 
 ### Return type
@@ -433,13 +432,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postFleetsFleetIdMembers**
-> postFleetsFleetIdMembers($fleet_id, $invitation, $datasource, $token)
+> postFleetsFleetIdMembers($body, $fleet_id, $datasource, $token)
 
 Create fleet invitation
 
@@ -459,13 +458,13 @@ $apiInstance = new Swagger\Client\Api\FleetsApi(
     new GuzzleHttp\Client(),
     $config
 );
+$body = new \Swagger\Client\Model\PostFleetsFleetIdMembersInvitation(); // \Swagger\Client\Model\PostFleetsFleetIdMembersInvitation | Details of the invitation
 $fleet_id = 789; // int | ID for a fleet
-$invitation = new \Swagger\Client\Model\PostFleetsFleetIdMembersInvitation(); // \Swagger\Client\Model\PostFleetsFleetIdMembersInvitation | Details of the invitation
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
 
 try {
-    $apiInstance->postFleetsFleetIdMembers($fleet_id, $invitation, $datasource, $token);
+    $apiInstance->postFleetsFleetIdMembers($body, $fleet_id, $datasource, $token);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->postFleetsFleetIdMembers: ', $e->getMessage(), PHP_EOL;
 }
@@ -476,8 +475,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**\Swagger\Client\Model\PostFleetsFleetIdMembersInvitation**](../Model/PostFleetsFleetIdMembersInvitation.md)| Details of the invitation |
  **fleet_id** | **int**| ID for a fleet |
- **invitation** | [**\Swagger\Client\Model\PostFleetsFleetIdMembersInvitation**](../Model/PostFleetsFleetIdMembersInvitation.md)| Details of the invitation |
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **token** | **string**| Access token to use if unable to set a header | [optional]
 
@@ -548,7 +547,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -607,13 +606,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **putFleetsFleetId**
-> putFleetsFleetId($fleet_id, $new_settings, $datasource, $token)
+> putFleetsFleetId($body, $fleet_id, $datasource, $token)
 
 Update fleet
 
@@ -633,13 +632,13 @@ $apiInstance = new Swagger\Client\Api\FleetsApi(
     new GuzzleHttp\Client(),
     $config
 );
+$body = new \Swagger\Client\Model\PutFleetsFleetIdNewSettings(); // \Swagger\Client\Model\PutFleetsFleetIdNewSettings | What to update for this fleet
 $fleet_id = 789; // int | ID for a fleet
-$new_settings = new \Swagger\Client\Model\PutFleetsFleetIdNewSettings(); // \Swagger\Client\Model\PutFleetsFleetIdNewSettings | What to update for this fleet
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
 
 try {
-    $apiInstance->putFleetsFleetId($fleet_id, $new_settings, $datasource, $token);
+    $apiInstance->putFleetsFleetId($body, $fleet_id, $datasource, $token);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->putFleetsFleetId: ', $e->getMessage(), PHP_EOL;
 }
@@ -650,8 +649,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**\Swagger\Client\Model\PutFleetsFleetIdNewSettings**](../Model/PutFleetsFleetIdNewSettings.md)| What to update for this fleet |
  **fleet_id** | **int**| ID for a fleet |
- **new_settings** | [**\Swagger\Client\Model\PutFleetsFleetIdNewSettings**](../Model/PutFleetsFleetIdNewSettings.md)| What to update for this fleet |
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **token** | **string**| Access token to use if unable to set a header | [optional]
 
@@ -671,7 +670,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **putFleetsFleetIdMembersMemberId**
-> putFleetsFleetIdMembersMemberId($fleet_id, $member_id, $movement, $datasource, $token)
+> putFleetsFleetIdMembersMemberId($body, $fleet_id, $member_id, $datasource, $token)
 
 Move fleet member
 
@@ -691,14 +690,14 @@ $apiInstance = new Swagger\Client\Api\FleetsApi(
     new GuzzleHttp\Client(),
     $config
 );
+$body = new \Swagger\Client\Model\PutFleetsFleetIdMembersMemberIdMovement(); // \Swagger\Client\Model\PutFleetsFleetIdMembersMemberIdMovement | Details of the invitation
 $fleet_id = 789; // int | ID for a fleet
 $member_id = 56; // int | The character ID of a member in this fleet
-$movement = new \Swagger\Client\Model\PutFleetsFleetIdMembersMemberIdMovement(); // \Swagger\Client\Model\PutFleetsFleetIdMembersMemberIdMovement | Details of the invitation
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
 
 try {
-    $apiInstance->putFleetsFleetIdMembersMemberId($fleet_id, $member_id, $movement, $datasource, $token);
+    $apiInstance->putFleetsFleetIdMembersMemberId($body, $fleet_id, $member_id, $datasource, $token);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->putFleetsFleetIdMembersMemberId: ', $e->getMessage(), PHP_EOL;
 }
@@ -709,9 +708,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**\Swagger\Client\Model\PutFleetsFleetIdMembersMemberIdMovement**](../Model/PutFleetsFleetIdMembersMemberIdMovement.md)| Details of the invitation |
  **fleet_id** | **int**| ID for a fleet |
  **member_id** | **int**| The character ID of a member in this fleet |
- **movement** | [**\Swagger\Client\Model\PutFleetsFleetIdMembersMemberIdMovement**](../Model/PutFleetsFleetIdMembersMemberIdMovement.md)| Details of the invitation |
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **token** | **string**| Access token to use if unable to set a header | [optional]
 
@@ -731,7 +730,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **putFleetsFleetIdSquadsSquadId**
-> putFleetsFleetIdSquadsSquadId($fleet_id, $naming, $squad_id, $datasource, $token)
+> putFleetsFleetIdSquadsSquadId($body, $fleet_id, $squad_id, $datasource, $token)
 
 Rename fleet squad
 
@@ -751,14 +750,14 @@ $apiInstance = new Swagger\Client\Api\FleetsApi(
     new GuzzleHttp\Client(),
     $config
 );
+$body = new \Swagger\Client\Model\PutFleetsFleetIdSquadsSquadIdNaming(); // \Swagger\Client\Model\PutFleetsFleetIdSquadsSquadIdNaming | New name of the squad
 $fleet_id = 789; // int | ID for a fleet
-$naming = new \Swagger\Client\Model\PutFleetsFleetIdSquadsSquadIdNaming(); // \Swagger\Client\Model\PutFleetsFleetIdSquadsSquadIdNaming | New name of the squad
 $squad_id = 789; // int | The squad to rename
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
 
 try {
-    $apiInstance->putFleetsFleetIdSquadsSquadId($fleet_id, $naming, $squad_id, $datasource, $token);
+    $apiInstance->putFleetsFleetIdSquadsSquadId($body, $fleet_id, $squad_id, $datasource, $token);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->putFleetsFleetIdSquadsSquadId: ', $e->getMessage(), PHP_EOL;
 }
@@ -769,8 +768,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**\Swagger\Client\Model\PutFleetsFleetIdSquadsSquadIdNaming**](../Model/PutFleetsFleetIdSquadsSquadIdNaming.md)| New name of the squad |
  **fleet_id** | **int**| ID for a fleet |
- **naming** | [**\Swagger\Client\Model\PutFleetsFleetIdSquadsSquadIdNaming**](../Model/PutFleetsFleetIdSquadsSquadIdNaming.md)| New name of the squad |
  **squad_id** | **int**| The squad to rename |
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **token** | **string**| Access token to use if unable to set a header | [optional]
@@ -791,7 +790,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **putFleetsFleetIdWingsWingId**
-> putFleetsFleetIdWingsWingId($fleet_id, $naming, $wing_id, $datasource, $token)
+> putFleetsFleetIdWingsWingId($body, $fleet_id, $wing_id, $datasource, $token)
 
 Rename fleet wing
 
@@ -811,14 +810,14 @@ $apiInstance = new Swagger\Client\Api\FleetsApi(
     new GuzzleHttp\Client(),
     $config
 );
+$body = new \Swagger\Client\Model\PutFleetsFleetIdWingsWingIdNaming(); // \Swagger\Client\Model\PutFleetsFleetIdWingsWingIdNaming | New name of the wing
 $fleet_id = 789; // int | ID for a fleet
-$naming = new \Swagger\Client\Model\PutFleetsFleetIdWingsWingIdNaming(); // \Swagger\Client\Model\PutFleetsFleetIdWingsWingIdNaming | New name of the wing
 $wing_id = 789; // int | The wing to rename
 $datasource = "tranquility"; // string | The server name you would like data from
 $token = "token_example"; // string | Access token to use if unable to set a header
 
 try {
-    $apiInstance->putFleetsFleetIdWingsWingId($fleet_id, $naming, $wing_id, $datasource, $token);
+    $apiInstance->putFleetsFleetIdWingsWingId($body, $fleet_id, $wing_id, $datasource, $token);
 } catch (Exception $e) {
     echo 'Exception when calling FleetsApi->putFleetsFleetIdWingsWingId: ', $e->getMessage(), PHP_EOL;
 }
@@ -829,8 +828,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **body** | [**\Swagger\Client\Model\PutFleetsFleetIdWingsWingIdNaming**](../Model/PutFleetsFleetIdWingsWingIdNaming.md)| New name of the wing |
  **fleet_id** | **int**| ID for a fleet |
- **naming** | [**\Swagger\Client\Model\PutFleetsFleetIdWingsWingIdNaming**](../Model/PutFleetsFleetIdWingsWingIdNaming.md)| New name of the wing |
  **wing_id** | **int**| The wing to rename |
  **datasource** | **string**| The server name you would like data from | [optional] [default to tranquility]
  **token** | **string**| Access token to use if unable to set a header | [optional]

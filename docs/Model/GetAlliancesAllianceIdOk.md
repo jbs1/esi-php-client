@@ -11,6 +11,5 @@ Name | Type | Description | Notes
 **name** | **string** | the full name of the alliance | 
 **ticker** | **string** | the short name of the alliance | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

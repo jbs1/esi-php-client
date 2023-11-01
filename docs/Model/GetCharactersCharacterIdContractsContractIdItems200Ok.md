@@ -10,6 +10,5 @@ Name | Type | Description | Notes
 **record_id** | **int** | Unique ID for the item | 
 **type_id** | **int** | Type ID for item | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

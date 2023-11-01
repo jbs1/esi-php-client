@@ -4,8 +4,7 @@ All URIs are relative to *https://esi.evetech.net/latest*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getIncursions**](IncursionsApi.md#getIncursions) | **GET** /incursions/ | List incursions
-
+[**getIncursions**](IncursionsApi.md#getincursions) | **GET** /incursions/ | List incursions
 
 # **getIncursions**
 > \Swagger\Client\Model\GetIncursions200Ok[] getIncursions($datasource, $if_none_match)
@@ -53,7 +52,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

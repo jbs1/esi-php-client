@@ -7,6 +7,5 @@ Name | Type | Description | Notes
 **last_week** | [**\Swagger\Client\Model\GetFwLeaderboardsCorporationsLastWeekLastWeek1[]**](GetFwLeaderboardsCorporationsLastWeekLastWeek1.md) | Top 10 ranking of corporations by victory points in the past week | 
 **yesterday** | [**\Swagger\Client\Model\GetFwLeaderboardsCorporationsYesterdayYesterday1[]**](GetFwLeaderboardsCorporationsYesterdayYesterday1.md) | Top 10 ranking of corporations by victory points in the past day | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

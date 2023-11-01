@@ -12,6 +12,5 @@ Name | Type | Description | Notes
 **perception** | **int** | perception integer | 
 **willpower** | **int** | willpower integer | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

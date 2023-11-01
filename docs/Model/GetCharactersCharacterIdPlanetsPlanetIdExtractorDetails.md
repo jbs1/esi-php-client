@@ -9,6 +9,5 @@ Name | Type | Description | Notes
 **product_type_id** | **int** | product_type_id integer | [optional] 
 **qty_per_cycle** | **int** | qty_per_cycle integer | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

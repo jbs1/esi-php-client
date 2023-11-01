@@ -19,6 +19,5 @@ Name | Type | Description | Notes
 **volume_total** | **int** | Quantity of items required or offered at time order was placed | 
 **wallet_division** | **int** | The corporation wallet division used for this order. | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

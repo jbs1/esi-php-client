@@ -9,6 +9,5 @@ Name | Type | Description | Notes
 **pilots** | **int** | How many pilots the enlisted corporation has. Will not be included if corporation is not enlisted in faction warfare | [optional] 
 **victory_points** | [**\Swagger\Client\Model\GetCorporationsCorporationIdFwStatsVictoryPoints**](GetCorporationsCorporationIdFwStatsVictoryPoints.md) |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

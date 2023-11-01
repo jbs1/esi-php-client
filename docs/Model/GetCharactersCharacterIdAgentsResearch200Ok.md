@@ -9,6 +9,5 @@ Name | Type | Description | Notes
 **skill_type_id** | **int** | skill_type_id integer | 
 **started_at** | [**\DateTime**](\DateTime.md) | started_at string | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

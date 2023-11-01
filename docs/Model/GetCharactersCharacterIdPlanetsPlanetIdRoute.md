@@ -10,6 +10,5 @@ Name | Type | Description | Notes
 **source_pin_id** | **int** | source_pin_id integer | 
 **waypoints** | **int[]** | list of pin ID waypoints | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

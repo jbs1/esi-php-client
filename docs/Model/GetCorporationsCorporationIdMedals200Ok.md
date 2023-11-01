@@ -9,6 +9,5 @@ Name | Type | Description | Notes
 **medal_id** | **int** | medal_id integer | 
 **title** | **string** | title string | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

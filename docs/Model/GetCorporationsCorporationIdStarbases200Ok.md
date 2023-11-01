@@ -12,6 +12,5 @@ Name | Type | Description | Notes
 **type_id** | **int** | Starbase (POS) type | 
 **unanchor_at** | [**\DateTime**](\DateTime.md) | When the POS started unanchoring, for starbases (POSes) in unanchoring state | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

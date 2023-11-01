@@ -25,6 +25,5 @@ Name | Type | Description | Notes
 **range_chance** | **bool** | range_chance boolean | [optional] 
 **tracking_speed_attribute_id** | **int** | tracking_speed_attribute_id integer | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

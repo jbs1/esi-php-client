@@ -9,6 +9,5 @@ Name | Type | Description | Notes
 **systems_controlled** | **int** | The number of solar systems controlled by the given faction | 
 **victory_points** | [**\Swagger\Client\Model\GetFwStatsVictoryPoints**](GetFwStatsVictoryPoints.md) |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

@@ -9,6 +9,5 @@ Name | Type | Description | Notes
 **region_id** | **int** | The region this constellation is in | 
 **systems** | **int[]** | systems array | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

@@ -14,6 +14,5 @@ Name | Type | Description | Notes
 **start_time** | [**\DateTime**](\DateTime.md) | Time the event is scheduled to start. | 
 **structure_id** | **int** | The structure item ID that is related to this campaign. | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

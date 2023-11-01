@@ -10,6 +10,5 @@ Name | Type | Description | Notes
 **modifying_attribute_id** | **int** | modifying_attribute_id integer | [optional] 
 **operator** | **int** | operator integer | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

@@ -12,6 +12,5 @@ Name | Type | Description | Notes
 **sof_hull_name** | **string** | sof_hull_name string | [optional] 
 **sof_race_name** | **string** | sof_race_name string | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

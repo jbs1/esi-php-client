@@ -7,6 +7,5 @@ Name | Type | Description | Notes
 **last_week** | [**\Swagger\Client\Model\GetFwLeaderboardsLastWeekLastWeek1[]**](GetFwLeaderboardsLastWeekLastWeek1.md) | Top 4 ranking of factions by victory points in the past week | 
 **yesterday** | [**\Swagger\Client\Model\GetFwLeaderboardsYesterdayYesterday1[]**](GetFwLeaderboardsYesterdayYesterday1.md) | Top 4 ranking of factions by victory points in the past day | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

@@ -8,6 +8,5 @@ Name | Type | Description | Notes
 **px512x512** | **string** | px512x512 string | [optional] 
 **px64x64** | **string** | px64x64 string | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

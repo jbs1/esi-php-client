@@ -14,6 +14,5 @@ Name | Type | Description | Notes
 **takes_fleet_warp** | **bool** | Whether the member take fleet warps | 
 **wing_id** | **int** | ID of the wing the member is in. If not applicable, will be set to -1 | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

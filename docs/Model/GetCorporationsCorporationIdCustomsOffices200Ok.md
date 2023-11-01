@@ -18,6 +18,5 @@ Name | Type | Description | Notes
 **system_id** | **int** | ID of the solar system this customs office is located in | 
 **terrible_standing_tax_rate** | **float** | terrible_standing_tax_rate number | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

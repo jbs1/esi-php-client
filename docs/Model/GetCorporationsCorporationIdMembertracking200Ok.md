@@ -11,6 +11,5 @@ Name | Type | Description | Notes
 **ship_type_id** | **int** | ship_type_id integer | [optional] 
 **start_date** | [**\DateTime**](\DateTime.md) | start_date string | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

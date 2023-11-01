@@ -4,8 +4,7 @@ All URIs are relative to *https://esi.evetech.net/latest*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getRouteOriginDestination**](RoutesApi.md#getRouteOriginDestination) | **GET** /route/{origin}/{destination}/ | Get route
-
+[**getRouteOriginDestination**](RoutesApi.md#getrouteorigindestination) | **GET** /route/{origin}/{destination}/ | Get route
 
 # **getRouteOriginDestination**
 > int[] getRouteOriginDestination($destination, $origin, $avoid, $connections, $datasource, $flag, $if_none_match)
@@ -63,7 +62,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

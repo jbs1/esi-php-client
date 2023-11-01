@@ -26,6 +26,5 @@ Name | Type | Description | Notes
 **status** | **string** | status string | 
 **successful_runs** | **int** | Number of successful runs for this job. Equal to runs unless this is an invention job | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

@@ -18,6 +18,5 @@ Name | Type | Description | Notes
 **url** | **string** | url string | [optional] 
 **war_eligible** | **bool** | war_eligible boolean | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

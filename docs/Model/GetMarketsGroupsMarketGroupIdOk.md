@@ -9,6 +9,5 @@ Name | Type | Description | Notes
 **parent_group_id** | **int** | parent_group_id integer | [optional] 
 **types** | **int[]** | types array | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

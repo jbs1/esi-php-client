@@ -8,6 +8,5 @@ Name | Type | Description | Notes
 **is_voice_enabled** | **bool** | Is EVE Voice enabled | 
 **motd** | **string** | Fleet MOTD in CCP flavoured HTML | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

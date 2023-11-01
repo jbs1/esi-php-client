@@ -13,6 +13,5 @@ Name | Type | Description | Notes
 **ship_type_id** | **int** | What ship was the attacker flying | [optional] 
 **weapon_type_id** | **int** | What weapon was used by the attacker for the kill | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

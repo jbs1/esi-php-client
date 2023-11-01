@@ -9,6 +9,5 @@ Name | Type | Description | Notes
 **natural_decay_time** | [**\DateTime**](\DateTime.md) | The time at which the chunk being extracted will naturally fracture if it is not first fractured by the moon mining drill. | 
 **structure_id** | **int** | structure_id integer | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

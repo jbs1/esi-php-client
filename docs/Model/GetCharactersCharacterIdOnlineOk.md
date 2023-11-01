@@ -8,6 +8,5 @@ Name | Type | Description | Notes
 **logins** | **int** | Total number of times the character has logged in | [optional] 
 **online** | **bool** | If the character is online | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

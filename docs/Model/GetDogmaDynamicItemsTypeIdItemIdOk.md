@@ -9,6 +9,5 @@ Name | Type | Description | Notes
 **mutator_type_id** | **int** | The type ID of the mutator used to generate the dynamic item. | 
 **source_type_id** | **int** | The type ID of the source item the mutator was applied to create the dynamic item. | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

@@ -8,6 +8,5 @@ Name | Type | Description | Notes
 **skillpoints_in_skill** | **int** | skillpoints_in_skill integer | 
 **trained_skill_level** | **int** | trained_skill_level integer | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

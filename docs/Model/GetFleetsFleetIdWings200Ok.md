@@ -7,6 +7,5 @@ Name | Type | Description | Notes
 **name** | **string** | name string | 
 **squads** | [**\Swagger\Client\Model\GetFleetsFleetIdWingsSquad[]**](GetFleetsFleetIdWingsSquad.md) | squads array | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

@@ -18,6 +18,5 @@ Name | Type | Description | Notes
 **volume_remain** | **int** | Quantity of items still required or offered | 
 **volume_total** | **int** | Quantity of items required or offered at time order was placed | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

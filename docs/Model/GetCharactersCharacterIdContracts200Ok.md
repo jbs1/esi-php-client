@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **acceptor_id** | **int** | Who will accept the contract | 
-**assignee_id** | **int** | ID to whom the contract is assigned, can be corporation or character ID | 
+**assignee_id** | **int** | ID to whom the contract is assigned, can be alliance, corporation or character ID | 
 **availability** | **string** | To whom the contract is available | 
 **buyout** | **double** | Buyout price (for Auctions only) | [optional] 
 **collateral** | **double** | Collateral price (for Couriers only) | [optional] 
@@ -15,8 +15,8 @@ Name | Type | Description | Notes
 **date_issued** | [**\DateTime**](\DateTime.md) | Сreation date of the contract | 
 **days_to_complete** | **int** | Number of days to perform the contract | [optional] 
 **end_location_id** | **int** | End location ID (for Couriers contract) | [optional] 
-**for_corporation** | **bool** | true if the contract was issued on behalf of the issuer&#39;s corporation | 
-**issuer_corporation_id** | **int** | Character&#39;s corporation ID for the issuer | 
+**for_corporation** | **bool** | true if the contract was issued on behalf of the issuer&#x27;s corporation | 
+**issuer_corporation_id** | **int** | Character&#x27;s corporation ID for the issuer | 
 **issuer_id** | **int** | Character ID for the issuer | 
 **price** | **double** | Price of contract (for ItemsExchange and Auctions) | [optional] 
 **reward** | **double** | Remuneration for contract (for Couriers only) | [optional] 
@@ -26,6 +26,5 @@ Name | Type | Description | Notes
 **type** | **string** | Type of the contract | 
 **volume** | **double** | Volume of items in the contract | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

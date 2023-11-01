@@ -16,6 +16,5 @@ Name | Type | Description | Notes
 **quantity** | **int** | Quantity of the item being acted upon | [optional] 
 **type_id** | **int** | Type ID of the item being acted upon | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

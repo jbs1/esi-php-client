@@ -14,6 +14,5 @@ Name | Type | Description | Notes
 **station_count** | **int** | station_count integer | 
 **station_system_count** | **int** | station_system_count integer | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

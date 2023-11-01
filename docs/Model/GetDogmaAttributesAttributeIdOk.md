@@ -14,6 +14,5 @@ Name | Type | Description | Notes
 **stackable** | **bool** | stackable boolean | [optional] 
 **unit_id** | **int** | unit_id integer | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

@@ -11,6 +11,5 @@ Name | Type | Description | Notes
 **required_items** | [**\Swagger\Client\Model\GetLoyaltyStoresCorporationIdOffersRequiredItem[]**](GetLoyaltyStoresCorporationIdOffersRequiredItem.md) | required_items array | 
 **type_id** | **int** | type_id integer | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

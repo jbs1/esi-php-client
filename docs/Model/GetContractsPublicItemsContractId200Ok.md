@@ -13,6 +13,5 @@ Name | Type | Description | Notes
 **time_efficiency** | **int** | Time Efficiency Level of the blueprint | [optional] 
 **type_id** | **int** | Type ID for item | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
